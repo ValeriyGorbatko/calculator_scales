@@ -7,10 +7,303 @@
     android:background="@color/bc"
     tools:context=".MainActivity" >
 
+    <Spinner
+        android:id="@+id/types_verification"
+        android:layout_width="167dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/tv"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/white"
+        android:entries="@array/type_ver"
+        android:gravity="center_horizontal"
+        android:textAlignment="center" />
+
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="70dp"
-        android:layout_height="37dp"
-        android:text="TextView" />
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/types_verification"
+        android:layout_alignLeft="@+id/types_verification"
+        android:layout_alignEnd="@+id/types_verification"
+        android:layout_alignRight="@+id/types_verification"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:gravity="center_horizontal"
+        android:text="Види повірки"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/tzvt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/types_verification"
+        android:layout_alignStart="@+id/type_zvt"
+        android:layout_alignLeft="@+id/type_zvt"
+        android:layout_alignEnd="@+id/type_zvt"
+        android:layout_alignRight="@+id/type_zvt"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:gravity="center_horizontal"
+        android:text="Тип ваг"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/type_zvt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tzvt"
+        android:layout_alignStart="@+id/types_verification"
+        android:layout_alignLeft="@+id/types_verification"
+        android:layout_alignEnd="@+id/types_verification"
+        android:layout_alignRight="@+id/types_verification"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:hint="Вести тип ваг"
+        android:inputType="textPersonName"/>
+
+    <TextView
+        android:id="@+id/pidr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/type_zvt"
+        android:layout_alignStart="@+id/type_zvt"
+        android:layout_alignLeft="@+id/type_zvt"
+        android:layout_alignEnd="@+id/type_zvt"
+        android:layout_alignRight="@+id/type_zvt"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:gravity="center_horizontal"
+        android:text="Підрозділ"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/pidrozdil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pidr"
+        android:layout_alignStart="@+id/types_verification"
+        android:layout_alignLeft="@+id/types_verification"
+        android:layout_alignEnd="@+id/types_verification"
+        android:layout_alignRight="@+id/types_verification"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:hint="Вести підрозділ"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/vl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pidrozdil"
+        android:layout_alignStart="@+id/type_zvt"
+        android:layout_alignLeft="@+id/type_zvt"
+        android:layout_alignEnd="@+id/type_zvt"
+        android:layout_alignRight="@+id/type_zvt"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:gravity="center_horizontal"
+        android:text="Власник"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/vlasnik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vl"
+        android:layout_alignStart="@+id/types_verification"
+        android:layout_alignLeft="@+id/types_verification"
+        android:layout_alignEnd="@+id/types_verification"
+        android:layout_alignRight="@+id/types_verification"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:hint="Вести власника"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/zn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vlasnik"
+        android:layout_alignStart="@+id/type_zvt"
+        android:layout_alignLeft="@+id/type_zvt"
+        android:layout_alignEnd="@+id/type_zvt"
+        android:layout_alignRight="@+id/type_zvt"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:ems="8"
+        android:gravity="center_horizontal"
+        android:text="Заводський номер"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/zav_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/zn"
+        android:layout_alignStart="@+id/types_verification"
+        android:layout_alignLeft="@+id/types_verification"
+        android:layout_alignEnd="@+id/types_verification"
+        android:layout_alignRight="@+id/types_verification"
+        android:layout_marginTop="0dp"
+        android:hint="Заводський номер"
+        android:inputType="numberDecimal|numberSigned" />
+
+    <Spinner
+        android:id="@+id/accuracy_class"
+        android:layout_width="167dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/ac"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/white"
+        android:entries="@array/accuracy"
+        android:gravity="center_horizontal"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/ac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/accuracy_class"
+        android:layout_alignLeft="@+id/accuracy_class"
+        android:layout_alignEnd="@+id/accuracy_class"
+        android:layout_alignRight="@+id/accuracy_class"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="Клас очності"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/mnav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/accuracy_class"
+        android:layout_alignStart="@+id/min_nav"
+        android:layout_alignLeft="@+id/min_nav"
+        android:layout_alignEnd="@+id/min_nav"
+        android:layout_alignRight="@+id/min_nav"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:gravity="center_horizontal"
+        android:text="Мінімальне навантаження"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/min_nav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mnav"
+        android:layout_alignStart="@+id/accuracy_class"
+        android:layout_alignLeft="@+id/accuracy_class"
+        android:layout_alignEnd="@+id/accuracy_class"
+        android:layout_alignRight="@+id/accuracy_class"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:hint="Мінімальне навантаження"
+        android:inputType="numberDecimal|numberSigned" />
+
+    <TextView
+        android:id="@+id/manav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/min_nav"
+        android:layout_alignStart="@+id/max_nav"
+        android:layout_alignLeft="@+id/max_nav"
+        android:layout_alignEnd="@+id/max_nav"
+        android:layout_alignRight="@+id/max_nav"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="Максимальне навантаження"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/max_nav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/manav"
+        android:layout_alignStart="@+id/accuracy_class"
+        android:layout_alignLeft="@+id/accuracy_class"
+        android:layout_alignEnd="@+id/accuracy_class"
+        android:layout_alignRight="@+id/accuracy_class"
+        android:hint="Максимальне навантаження"
+        android:inputType="numberDecimal|numberSigned" />
+
+    <TextView
+        android:id="@+id/sd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/max_nav"
+        android:layout_alignStart="@+id/scale_division"
+        android:layout_alignLeft="@+id/scale_division"
+        android:layout_alignEnd="@+id/scale_division"
+        android:layout_alignRight="@+id/scale_division"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="Ціна повірочної поділки шкали"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/scale_division"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sd"
+        android:layout_alignStart="@+id/accuracy_class"
+        android:layout_alignLeft="@+id/accuracy_class"
+        android:layout_alignEnd="@+id/accuracy_class"
+        android:layout_alignRight="@+id/accuracy_class"
+        android:inputType="numberDecimal|numberSigned" />
+
+    <TextView
+        android:id="@+id/dv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scale_division"
+        android:layout_alignStart="@+id/divisions_valid"
+        android:layout_alignLeft="@+id/divisions_valid"
+        android:layout_alignEnd="@+id/divisions_valid"
+        android:layout_alignRight="@+id/divisions_valid"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="Ціна поділки дійсна"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/divisions_valid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dv"
+        android:layout_alignStart="@+id/accuracy_class"
+        android:layout_alignLeft="@+id/accuracy_class"
+        android:layout_alignEnd="@+id/accuracy_class"
+        android:layout_alignRight="@+id/accuracy_class"
+        android:inputType="numberDecimal|numberSigned" />
+
 </RelativeLayout>
 
