@@ -153,7 +153,8 @@
         android:ems="8"
         android:gravity="center_horizontal"
         android:text="Заводський номер"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textColor="#111" />
 
     <EditText
         android:id="@+id/zav_num"
@@ -166,7 +167,8 @@
         android:layout_alignRight="@+id/types_verification"
         android:layout_marginTop="0dp"
         android:hint="Заводський номер"
-        android:inputType="numberDecimal|numberSigned" />
+        android:inputType="numberDecimal|numberSigned"
+        android:importantForAutofill="no" />
 
     <Spinner
         android:id="@+id/accuracy_class"
@@ -226,7 +228,7 @@
         android:layout_marginTop="0dp"
         android:layout_marginEnd="0dp"
         android:layout_marginRight="0dp"
-        android:hint="Мінімальне навантаження"
+        android:hint="Мін. навантаження"
         android:inputType="numberDecimal|numberSigned" />
 
     <TextView
@@ -252,7 +254,7 @@
         android:layout_alignLeft="@+id/accuracy_class"
         android:layout_alignEnd="@+id/accuracy_class"
         android:layout_alignRight="@+id/accuracy_class"
-        android:hint="Максимальне навантаження"
+        android:hint="Макс. навантаження"
         android:inputType="numberDecimal|numberSigned" />
 
     <TextView
@@ -303,7 +305,38 @@
         android:layout_alignLeft="@+id/accuracy_class"
         android:layout_alignEnd="@+id/accuracy_class"
         android:layout_alignRight="@+id/accuracy_class"
-        android:inputType="numberDecimal|numberSigned" />
+        android:inputType="numberDecimal|numberSigned"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="145dp"
+        android:layout_marginLeft="145dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="145dp"
+        android:layout_marginRight="145dp"
+        android:layout_toStartOf="@+id/accuracy_class"
+        android:layout_toLeftOf="@+id/accuracy_class"
+        android:layout_toEndOf="@+id/types_verification"
+        android:layout_toRightOf="@+id/types_verification"
+        android:fontFamily="sans-serif-medium"
+        android:text="Рівноплечі ваги" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="122dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button"
+        android:layout_alignStart="@+id/button"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignEnd="@+id/button"
+        android:layout_alignRight="@+id/button"
+        android:layout_marginTop="30dp"
+        android:text="Платформні ваги"
+        android:typeface="normal" />
 
 </RelativeLayout>
 
