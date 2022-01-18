@@ -231,10 +231,11 @@
             android:layout_width="20dp"
             android:layout_height="1dp"
             android:background="#333"/>
-        
+
     </TableLayout>
 
     <TableLayout
+        android:id="@+id/num_vim"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -295,7 +296,391 @@
 
             <EditText
                 android:layout_width="100dp"
-                android:layout_height="wrap_content"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
@@ -313,5 +698,519 @@
                 android:textAlignment="center"
                 android:textColor="#222" />
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="27dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="27dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+
+    </TableLayout>
+    <TableLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/num_vim"
+        android:layout_toRightOf="@+id/num_vim" >
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center_horizontal"
+            android:text="Відлік за шкалою"
+            android:textAlignment="center"
+            android:textColor="#222" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="1dp"
+            android:background="#333" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="21dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:text="L`"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="21dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:text="L``"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="1dp"
+            android:background="#333" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="27dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:text="rfrfr"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="27dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+
     </TableLayout>
 </RelativeLayout>
