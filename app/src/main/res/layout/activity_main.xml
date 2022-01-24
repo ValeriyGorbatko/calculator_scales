@@ -48,11 +48,7 @@
         android:layout_alignLeft="@+id/type_zvt"
         android:layout_alignEnd="@+id/type_zvt"
         android:layout_alignRight="@+id/type_zvt"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"
         android:gravity="center_horizontal"
         android:text="Тип ваг"
         android:textAlignment="center" />
@@ -70,7 +66,7 @@
         android:layout_marginLeft="0dp"
         android:layout_marginTop="0dp"
         android:hint="Вести тип ваг"
-        android:inputType="textPersonName"/>
+        android:inputType="textPersonName" />
 
     <TextView
         android:id="@+id/pidr"

@@ -6,23 +6,341 @@
     android:layout_height="match_parent"
     tools:context=".ThirdActivity">
 
-    <android.support.design.widget.TabLayout
+    <TabHost
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <android.support.design.widget.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Monday" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <android.support.design.widget.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tuesday" />
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-        <android.support.design.widget.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Wednesday" />
-    </android.support.design.widget.TabLayout>
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/e"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/nz"
+                        android:layout_width="221dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center_horizontal"
+                        android:text="Номінальне значення маси гир"
+                        android:textColor="#101010" />
+
+                    <EditText
+                        android:id="@+id/nom_zn_gir"
+                        android:layout_width="221dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:backgroundColor="#333"/>
+                </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/r"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/vz"
+                        android:layout_width="221dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center_horizontal"
+                        android:text="Виміряне значення маси гир"
+                        android:textColor="#101010" />
+
+                    <EditText
+                        android:id="@+id/vim_zn_gir"
+                        android:layout_width="221dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp" />
+                    </LinearLayout>
+                </LinearLayout>
+<!--                    таблица-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/nzmg"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="50dp"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center_horizontal"
+                                android:textAlignment="center"
+                                android:text="Номінальне значення маси гир"
+                                android:textColor="#101010" />
+                            <View
+                                android:layout_width="100dp"
+                                android:layout_height="1dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:background="#333"/>
+                            <EditText
+                                android:id=""
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:background="@null"/>
+                            <View
+                                android:layout_width="100dp"
+                                android:layout_height="1dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:background="#333"/>
+                            <EditText
+                                android:id=""
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:background="@null"/>
+                            <View
+                                android:layout_width="100dp"
+                                android:layout_height="1dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="1dp"
+                                android:background="#333"/>
+                            <EditText
+                                android:id=""
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:background="@null"/>
+                            <View
+                                android:layout_width="100dp"
+                                android:layout_height="1dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="1dp"
+                                android:background="#333"/>
+                            <EditText
+                                android:id=""
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:background="@null"/>
+                            <View
+                                android:layout_width="100dp"
+                                android:layout_height="1dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="1dp"
+                                android:background="#333"/>
+                            <EditText
+                                android:id=""
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:background="@null"/>
+                            <View
+                                android:layout_width="100dp"
+                                android:layout_height="1dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="1dp"
+                                android:background="#333"/>
+                            <EditText
+                                android:id=""
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:background="@null"/>
+                            <View
+                                android:layout_width="100dp"
+                                android:layout_height="1dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="1dp"
+                                android:background="#333"/>
+                            <EditText
+                                android:id=""
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:background="@null"/>
+                            <View
+                                android:layout_width="100dp"
+                                android:layout_height="1dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="1dp"
+                                android:background="#333"/>
+                            <EditText
+                                android:id=""
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:background="@null"/>
+                            <View
+                                android:layout_width="100dp"
+                                android:layout_height="1dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="1dp"
+                                android:background="#333"/>
+                            <EditText
+                                android:id=""
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:background="@null"/>
+                            <View
+                                android:layout_width="100dp"
+                                android:layout_height="1dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="1dp"
+                                android:background="#333"/>
+                            <EditText
+                                android:id=""
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:background="@null"/>
+                            <View
+                                android:layout_width="100dp"
+                                android:layout_height="1dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="1dp"
+                                android:background="#333"/>
+                            <EditText
+                                android:id=""
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:background="@null"/>
+                            <View
+                                android:layout_width="100dp"
+                                android:layout_height="1dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="1dp"
+                                android:background="#333"/>
+
+
+                       </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/vzmg"
+                                android:layout_width="200dp"
+                                android:layout_height="38dp"
+                                android:layout_marginTop="11dp"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center_horizontal"
+                                android:textAlignment="center"
+                                android:text="Виміряне значення маси гир"
+                                android:textColor="#101010" />
+                            <View
+                                android:layout_width="200dp"
+                                android:layout_height="1dp"
+                                android:background="#333"/>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="55dp"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center_horizontal"
+                                    android:textAlignment="center"
+                                    android:text="При навантаженні"
+                                    android:textColor="#101010">
+
+                                </TextView>
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="55dp"
+                                    android:fontFamily="sans-serif"
+                                    android:gravity="center_horizontal"
+                                    android:textAlignment="center"
+                                    android:text="При розвантаженні"
+                                    android:textColor="#101010">
+
+                                </TextView>
+                            </LinearLayout>
+                            <View
+                                android:layout_width="200dp"
+                                android:layout_height="1dp"
+                                android:background="#333"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"/>
+
+                <LinearLayout
+                    android:id="@+id/tab3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
 </RelativeLayout>
