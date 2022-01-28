@@ -30,14 +30,12 @@
         android:layout_alignEnd="@+id/types_verification"
         android:layout_alignRight="@+id/types_verification"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"
         android:gravity="center_horizontal"
         android:text="Види повірки"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textSize="17sp"
+        android:textColor="#111"/>
 
     <TextView
         android:id="@+id/tzvt"
@@ -51,7 +49,9 @@
         android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
         android:text="Тип ваг"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textSize="17sp"
+        android:textColor="#111"/>
 
     <EditText
         android:id="@+id/type_zvt"
@@ -84,7 +84,9 @@
         android:layout_marginRight="0dp"
         android:gravity="center_horizontal"
         android:text="Підрозділ"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textSize="17sp"
+        android:textColor="#111"/>
 
     <EditText
         android:id="@+id/pidrozdil"
@@ -117,7 +119,9 @@
         android:layout_marginRight="0dp"
         android:gravity="center_horizontal"
         android:text="Власник"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textSize="17sp"
+        android:textColor="#111"/>
 
     <EditText
         android:id="@+id/vlasnik"
@@ -144,13 +148,11 @@
         android:layout_alignEnd="@+id/type_zvt"
         android:layout_alignRight="@+id/type_zvt"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"
-        android:ems="8"
+        android:textSize="17sp"
+        android:textColor="#111"
         android:gravity="center_horizontal"
         android:text="Заводський номер"
-        android:textAlignment="center"
-        android:textColor="#111" />
+        android:textAlignment="center"/>
 
     <EditText
         android:id="@+id/zav_num"
@@ -192,7 +194,9 @@
         android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
         android:text="Клас очності"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textSize="17sp"
+        android:textColor="#111"/>
 
     <TextView
         android:id="@+id/mnav"
@@ -203,14 +207,12 @@
         android:layout_alignLeft="@+id/min_nav"
         android:layout_alignEnd="@+id/min_nav"
         android:layout_alignRight="@+id/min_nav"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"
         android:gravity="center_horizontal"
         android:text="Мінімальне навантаження"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textSize="17sp"
+        android:textColor="#111"/>
 
     <EditText
         android:id="@+id/min_nav"
@@ -239,7 +241,9 @@
         android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
         android:text="Максимальне навантаження"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textSize="17sp"
+        android:textColor="#111"/>
 
     <EditText
         android:id="@+id/max_nav"
@@ -265,7 +269,9 @@
         android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
         android:text="Ціна повірочної поділки шкали"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textSize="17sp"
+        android:textColor="#111"/>
 
     <EditText
         android:id="@+id/scale_division"
@@ -290,7 +296,9 @@
         android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
         android:text="Ціна поділки дійсна"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textSize="17sp"
+        android:textColor="#111"/>
 
     <EditText
         android:id="@+id/divisions_valid"

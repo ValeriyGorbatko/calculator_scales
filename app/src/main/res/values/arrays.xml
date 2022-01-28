@@ -13,4 +13,10 @@
         <item>3</item>
     </string-array>
 
+    <string-array name="form_vag">
+        <item>прямокутна</item>
+        <item>трикутна</item>
+        <item>кругла</item>
+        <item>квадратна</item>
+    </string-array>
 </resources>
