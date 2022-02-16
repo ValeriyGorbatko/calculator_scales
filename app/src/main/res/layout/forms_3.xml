@@ -126,7 +126,6 @@
             android:textColor="#0E0E0E"
             android:textSize="20sp"
             android:textStyle="bold">
-
         </EditText>
 
         <EditText

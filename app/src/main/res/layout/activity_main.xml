@@ -313,7 +313,7 @@
         android:importantForAutofill="no" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/rivnoplechiv"
         android:layout_width="172dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -327,20 +327,22 @@
         android:layout_toEndOf="@+id/types_verification"
         android:layout_toRightOf="@+id/types_verification"
         android:fontFamily="sans-serif-medium"
-        android:text="Рівноплечі ваги" />
+        android:text="Рівноплечі ваги"
+        android:onClick="onClickRiv"/>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/platphormv"
         android:layout_width="122dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button"
-        android:layout_alignStart="@+id/button"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignEnd="@+id/button"
-        android:layout_alignRight="@+id/button"
+        android:layout_below="@+id/rivnoplechiv"
+        android:layout_alignStart="@+id/rivnoplechiv"
+        android:layout_alignLeft="@+id/rivnoplechiv"
+        android:layout_alignEnd="@+id/rivnoplechiv"
+        android:layout_alignRight="@+id/rivnoplechiv"
         android:layout_marginTop="30dp"
         android:text="Платформні ваги"
-        android:typeface="normal" />
+        android:typeface="normal"
+        android:onClick="onClickPla"/>
 
 </RelativeLayout>
 
