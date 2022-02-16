@@ -85,8 +85,8 @@
         android:gravity="center_horizontal"
         android:text="Підрозділ"
         android:textAlignment="center"
-        android:textSize="17sp"
-        android:textColor="#111"/>
+        android:textColor="#111"
+        android:textSize="17sp" />
 
     <EditText
         android:id="@+id/pidrozdil"
@@ -165,8 +165,8 @@
         android:layout_alignRight="@+id/types_verification"
         android:layout_marginTop="0dp"
         android:hint="Заводський номер"
-        android:inputType="numberDecimal|numberSigned"
-        android:importantForAutofill="no" />
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal|numberSigned" />
 
     <Spinner
         android:id="@+id/accuracy_class"
@@ -309,26 +309,26 @@
         android:layout_alignLeft="@+id/accuracy_class"
         android:layout_alignEnd="@+id/accuracy_class"
         android:layout_alignRight="@+id/accuracy_class"
-        android:inputType="numberDecimal|numberSigned"
-        android:importantForAutofill="no" />
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal|numberSigned" />
 
     <Button
         android:id="@+id/rivnoplechiv"
         android:layout_width="172dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="145dp"
-        android:layout_marginLeft="145dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginLeft="144dp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="145dp"
-        android:layout_marginRight="145dp"
+        android:layout_marginEnd="146dp"
+        android:layout_marginRight="146dp"
         android:layout_toStartOf="@+id/accuracy_class"
         android:layout_toLeftOf="@+id/accuracy_class"
         android:layout_toEndOf="@+id/types_verification"
         android:layout_toRightOf="@+id/types_verification"
         android:fontFamily="sans-serif-medium"
-        android:text="Рівноплечі ваги"
-        android:onClick="onClickRiv"/>
+        android:onClick="onClick"
+        android:text="Рівноплечі ваги" />
 
     <Button
         android:id="@+id/platphormv"
@@ -340,9 +340,9 @@
         android:layout_alignEnd="@+id/rivnoplechiv"
         android:layout_alignRight="@+id/rivnoplechiv"
         android:layout_marginTop="30dp"
+        android:onClick="onClick"
         android:text="Платформні ваги"
-        android:typeface="normal"
-        android:onClick="onClickPla"/>
+        android:typeface="normal" />
 
 </RelativeLayout>
 

@@ -35,8 +35,9 @@
                 android:layout_width="221dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginStart="10dp"
-                android:backgroundColor="#333"/>
+                android:layout_marginStart="10dp"/>
+<!--                android:backgroundColor="#333333"-->
+
         </LinearLayout>
 
         <LinearLayout
@@ -94,7 +95,6 @@
                 android:layout_marginLeft="10dp"
                 android:background="#333"/>
             <EditText
-                android:id=""
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -107,21 +107,6 @@
                 android:layout_marginLeft="10dp"
                 android:background="#333"/>
             <EditText
-                android:id=""
-                android:layout_width="140dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginStart="10dp"
-                android:background="@null"/>
-            <View
-                android:layout_width="140dp"
-                android:layout_height="1dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="1dp"
-                android:background="#333"/>
-            <EditText
-                android:id=""
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -135,7 +120,6 @@
                 android:layout_marginTop="1dp"
                 android:background="#333"/>
             <EditText
-                android:id=""
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -149,7 +133,6 @@
                 android:layout_marginTop="1dp"
                 android:background="#333"/>
             <EditText
-                android:id=""
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -163,20 +146,6 @@
                 android:layout_marginTop="1dp"
                 android:background="#333"/>
             <EditText
-                android:id=""
-                android:layout_width="140dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginStart="10dp"
-                android:background="@null"/>
-            <View
-                android:layout_width="140dp"
-                android:layout_height="1dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:background="#333"/>
-            <EditText
-                android:id=""
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -190,7 +159,6 @@
                 android:layout_marginTop="1dp"
                 android:background="#333"/>
             <EditText
-                android:id=""
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -203,21 +171,6 @@
                 android:layout_marginLeft="10dp"
                 android:background="#333"/>
             <EditText
-                android:id=""
-                android:layout_width="140dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginStart="10dp"
-                android:background="@null"/>
-            <View
-                android:layout_width="140dp"
-                android:layout_height="1dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="1dp"
-                android:background="#333"/>
-            <EditText
-                android:id=""
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -231,7 +184,44 @@
                 android:layout_marginTop="1dp"
                 android:background="#333"/>
             <EditText
-                android:id=""
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@null"/>
+            <View
+                android:layout_width="140dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="#333"/>
+            <EditText
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@null"/>
+            <View
+                android:layout_width="140dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="1dp"
+                android:background="#333"/>
+            <EditText
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@null"/>
+            <View
+                android:layout_width="140dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="1dp"/>
+<!--                android:background="#333"-->
+            <EditText
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -306,7 +296,6 @@
                     android:orientation="vertical">
 
                     <EditText
-                        android:id=""
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:background="@null"/>
@@ -315,7 +304,6 @@
                         android:layout_height="1dp"
                         android:background="#333"/>
                     <EditText
-                        android:id=""
                         android:layout_width="140dp"
                         android:layout_marginTop="1dp"
                         android:layout_height="wrap_content"
@@ -325,7 +313,6 @@
                         android:layout_height="1dp"
                         android:background="#333"/>
                     <EditText
-                        android:id=""
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
@@ -335,7 +322,6 @@
                         android:layout_height="1dp"
                         android:background="#333"/>
                     <EditText
-                        android:id=""
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
@@ -345,7 +331,6 @@
                         android:layout_height="1dp"
                         android:background="#333"/>
                     <EditText
-                        android:id=""
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
@@ -355,7 +340,6 @@
                         android:layout_height="1dp"
                         android:background="#333"/>
                     <EditText
-                        android:id=""
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:background="@null"/>
@@ -364,7 +348,6 @@
                         android:layout_height="1dp"
                         android:background="#333"/>
                     <EditText
-                        android:id=""
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:background="@null"/>
@@ -373,7 +356,6 @@
                         android:layout_height="1dp"
                         android:background="#333"/>
                     <EditText
-                        android:id=""
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
@@ -383,7 +365,6 @@
                         android:layout_height="1dp"
                         android:background="#333"/>
                     <EditText
-                        android:id=""
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
@@ -393,7 +374,6 @@
                         android:layout_height="1dp"
                         android:background="#333"/>
                     <EditText
-                        android:id=""
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
@@ -403,7 +383,6 @@
                         android:layout_height="1dp"
                         android:background="#333"/>
                     <EditText
-                        android:id=""
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
@@ -419,7 +398,6 @@
                     android:orientation="vertical">
 
                     <EditText
-                        android:id=""
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:background="@null"/>
@@ -428,7 +406,6 @@
                         android:layout_height="1dp"
                         android:background="#333"/>
                     <EditText
-                        android:id=""
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
@@ -438,7 +415,6 @@
                         android:layout_height="1dp"
                         android:background="#333"/>
                     <EditText
-                        android:id=""
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
@@ -448,7 +424,6 @@
                         android:layout_height="1dp"
                         android:background="#333"/>
                     <EditText
-                        android:id=""
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
@@ -458,7 +433,6 @@
                         android:layout_height="1dp"
                         android:background="#333"/>
                     <EditText
-                        android:id=""
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
@@ -468,7 +442,6 @@
                         android:layout_height="1dp"
                         android:background="#333"/>
                     <EditText
-                        android:id=""
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:background="@null"/>
@@ -477,7 +450,6 @@
                         android:layout_height="1dp"
                         android:background="#333"/>
                     <EditText
-                        android:id=""
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:background="@null"/>
@@ -486,7 +458,6 @@
                         android:layout_height="1dp"
                         android:background="#333"/>
                     <EditText
-                        android:id=""
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
@@ -496,7 +467,6 @@
                         android:layout_height="1dp"
                         android:background="#333"/>
                     <EditText
-                        android:id=""
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
@@ -506,7 +476,6 @@
                         android:layout_height="1dp"
                         android:background="#333"/>
                     <EditText
-                        android:id=""
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
@@ -516,7 +485,6 @@
                         android:layout_height="1dp"
                         android:background="#333"/>
                     <EditText
-                        android:id=""
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
