@@ -11,17 +11,17 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener
 {
-    String min_nav_key = "min_nav_key";
-    String max_nav_key = "max_nav_key";
-    String scale_division_key = "scale_division_key";
-    String divisions_valid_key = "divisions_valid_key";
+    static String min_nav_key = "min_nav_key";
+    static String max_nav_key = "max_nav_key";
+    static String scale_division_key = "scale_division_key";
+    static String divisions_valid_key = "divisions_valid_key";
 
     EditText in_min_nav;
     EditText in_max_nav;
     EditText in_scale_division;
     EditText in_divisions_valid;
 
-    SharedPreferences sharedPreferences;
+    static SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -99,4 +99,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return true;
     }
 
+    public static float GetMinNavValue()
+    {
+        return sharedPreferences.getFloat(min_nav_key, 0);
+    }
+
+    public static float GetMaxNavValue()
+    {
+        return sharedPreferences.getFloat(max_nav_key, 0);
+    }
+
+    public static float GetScaleDivisionValue()
+    {
+        return sharedPreferences.getFloat(scale_division_key, 0);
+    }
+
+    public static float GetDivisionsValidValue()
+    {
+        return sharedPreferences.getFloat(divisions_valid_key, 0);
+    }
 }
