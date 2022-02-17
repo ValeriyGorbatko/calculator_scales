@@ -157,6 +157,7 @@
             android:layout_marginTop="1dp"
             android:background="#333"/>
         <EditText
+            android:id="@+id/mg1"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
@@ -169,6 +170,7 @@
         </EditText>
 
         <EditText
+            android:id="@+id/mg2"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
@@ -180,6 +182,7 @@
         </EditText>
 
         <EditText
+            android:id="@+id/mg3"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
@@ -191,6 +194,7 @@
         </EditText>
 
         <EditText
+            android:id="@+id/mg4"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
@@ -202,6 +206,7 @@
         </EditText>
 
         <EditText
+            android:id="@+id/mg5"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
@@ -235,6 +240,7 @@
             android:layout_marginTop="1dp"
             android:background="#333"/>
         <EditText
+            android:id="@+id/vmg1"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
@@ -247,6 +253,7 @@
         </EditText>
 
         <EditText
+            android:id="@+id/vmg2"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
@@ -258,6 +265,7 @@
         </EditText>
 
         <EditText
+            android:id="@+id/vmg3"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
@@ -269,6 +277,7 @@
         </EditText>
 
         <EditText
+            android:id="@+id/vmg4"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"
@@ -280,6 +289,7 @@
         </EditText>
 
         <EditText
+            android:id="@+id/vmg5"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed"

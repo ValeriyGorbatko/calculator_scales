@@ -21,7 +21,7 @@
         android:layout_weight="1"
         android:fontFamily="sans-serif-condensed"
         android:textAlignment="center"
-        android:text="Номер навантаження"
+        android:text="Значення тари"
         android:textColor="#0E0E0E"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -34,6 +34,7 @@
             android:background="#333"/>
 
     <EditText
+        android:id="@+id/zt1"
         android:layout_width="170dp"
         android:layout_height="130dp"
         android:layout_marginStart="30dp"
@@ -52,6 +53,7 @@
             android:background="#333"/>
 
     <EditText
+        android:id="@+id/zt2"
         android:layout_width="170dp"
         android:layout_height="129dp"
         android:layout_marginTop="1dp"
@@ -96,6 +98,7 @@
             android:background="#333"/>
 
         <EditText
+            android:id="@+id/nz1"
             android:layout_width="170dp"
             android:textAlignment="center"
             android:gravity="center"
@@ -110,6 +113,7 @@
             android:background="#333"/>
 
         <EditText
+            android:id="@+id/nz2"
             android:layout_width="170dp"
             android:textAlignment="center"
             android:gravity="center"
@@ -123,6 +127,7 @@
             android:layout_marginTop="1dp"
             android:background="#333"/>
         <EditText
+            android:id="@+id/nz3"
             android:layout_width="170dp"
             android:textAlignment="center"
             android:gravity="center"
@@ -135,19 +140,7 @@
             android:layout_height="1dp"
             android:background="#333"/>
         <EditText
-            android:layout_width="170dp"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:background="@null"/>
-        <View
-            android:layout_width="170dp"
-            android:layout_height="1dp"
-            android:layout_marginTop="1dp"
-            android:background="#333"/>
-        <EditText
+            android:id="@+id/nz4"
             android:layout_width="170dp"
             android:textAlignment="center"
             android:gravity="center"
@@ -160,9 +153,8 @@
             android:layout_height="1dp"
             android:layout_marginTop="1dp"
             android:background="#333"/>
-
-
         <EditText
+            android:id="@+id/nz5"
             android:layout_width="170dp"
             android:textAlignment="center"
             android:gravity="center"
@@ -176,7 +168,24 @@
             android:layout_marginTop="1dp"
             android:background="#333"/>
 
+
         <EditText
+            android:id="@+id/nz6"
+            android:layout_width="170dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:background="@null"/>
+        <View
+            android:layout_width="170dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="1dp"
+            android:background="#333"/>
+
+        <EditText
+            android:id="@+id/nz7"
             android:layout_width="170dp"
             android:textAlignment="center"
             android:gravity="center"
@@ -190,6 +199,7 @@
             android:layout_marginTop="1dp"
             android:background="#333"/>
         <EditText
+            android:id="@+id/nz8"
             android:layout_width="170dp"
             android:textAlignment="center"
             android:gravity="center"
@@ -202,6 +212,7 @@
             android:layout_height="1dp"
             android:background="#333"/>
         <EditText
+            android:id="@+id/nz9"
             android:layout_width="170dp"
             android:textAlignment="center"
             android:gravity="center"
@@ -215,6 +226,7 @@
             android:layout_marginTop="1dp"
             android:background="#333"/>
         <EditText
+            android:id="@+id/nz10"
             android:layout_width="170dp"
             android:textAlignment="center"
             android:gravity="center"
@@ -278,6 +290,7 @@
                 android:background="#333"/>
 
             <EditText
+                android:id="@+id/nzn1"
                 android:layout_width="100dp"
                 android:textAlignment="center"
                 android:gravity="center"
@@ -291,6 +304,7 @@
                 android:background="#333"/>
 
             <EditText
+                android:id="@+id/nzn2"
                 android:layout_width="100dp"
                 android:textAlignment="center"
                 android:gravity="center"
@@ -304,6 +318,7 @@
                 android:layout_marginTop="1dp"
                 android:background="#333"/>
             <EditText
+                android:id="@+id/nzn3"
                 android:layout_width="100dp"
                 android:textAlignment="center"
                 android:gravity="center"
@@ -316,19 +331,7 @@
                 android:layout_height="1dp"
                 android:background="#333"/>
             <EditText
-                android:layout_width="100dp"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:background="@null"/>
-            <View
-                android:layout_width="100dp"
-                android:layout_height="1dp"
-                android:layout_marginTop="1dp"
-                android:background="#333"/>
-            <EditText
+                android:id="@+id/nzn4"
                 android:layout_width="100dp"
                 android:textAlignment="center"
                 android:gravity="center"
@@ -341,9 +344,8 @@
                 android:layout_height="1dp"
                 android:layout_marginTop="1dp"
                 android:background="#333"/>
-
-
             <EditText
+                android:id="@+id/nzn5"
                 android:layout_width="100dp"
                 android:textAlignment="center"
                 android:gravity="center"
@@ -357,7 +359,24 @@
                 android:layout_marginTop="1dp"
                 android:background="#333"/>
 
+
             <EditText
+                android:id="@+id/nzn6"
+                android:layout_width="100dp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:background="@null"/>
+            <View
+                android:layout_width="100dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="1dp"
+                android:background="#333"/>
+
+            <EditText
+                android:id="@+id/nzn7"
                 android:layout_width="100dp"
                 android:textAlignment="center"
                 android:gravity="center"
@@ -371,6 +390,7 @@
                 android:layout_marginTop="1dp"
                 android:background="#333"/>
             <EditText
+                android:id="@+id/nzn8"
                 android:layout_width="100dp"
                 android:textAlignment="center"
                 android:gravity="center"
@@ -383,6 +403,7 @@
                 android:layout_height="1dp"
                 android:background="#333"/>
             <EditText
+                android:id="@+id/nzn9"
                 android:layout_width="100dp"
                 android:textAlignment="center"
                 android:gravity="center"
@@ -396,6 +417,7 @@
                 android:layout_marginTop="1dp"
                 android:background="#333"/>
             <EditText
+                android:id="@+id/nzn10"
                 android:layout_width="100dp"
                 android:textAlignment="center"
                 android:gravity="center"
@@ -433,6 +455,7 @@
                     android:background="#333"/>
 
                 <EditText
+                    android:id="@+id/nzr1"
                     android:layout_width="100dp"
                     android:textAlignment="center"
                     android:gravity="center"
@@ -446,6 +469,7 @@
                     android:background="#333"/>
 
                 <EditText
+                    android:id="@+id/nzr2"
                     android:layout_width="100dp"
                     android:textAlignment="center"
                     android:gravity="center"
@@ -459,6 +483,7 @@
                     android:layout_marginTop="1dp"
                     android:background="#333"/>
                 <EditText
+                    android:id="@+id/nzr3"
                     android:layout_width="100dp"
                     android:textAlignment="center"
                     android:gravity="center"
@@ -471,19 +496,7 @@
                     android:layout_height="1dp"
                     android:background="#333"/>
                 <EditText
-                    android:layout_width="100dp"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:background="@null"/>
-                <View
-                    android:layout_width="100dp"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="1dp"
-                    android:background="#333"/>
-                <EditText
+                    android:id="@+id/nzr4"
                     android:layout_width="100dp"
                     android:textAlignment="center"
                     android:gravity="center"
@@ -496,9 +509,8 @@
                     android:layout_height="1dp"
                     android:layout_marginTop="1dp"
                     android:background="#333"/>
-
-
                 <EditText
+                    android:id="@+id/nzr5"
                     android:layout_width="100dp"
                     android:textAlignment="center"
                     android:gravity="center"
@@ -512,7 +524,24 @@
                     android:layout_marginTop="1dp"
                     android:background="#333"/>
 
+
                 <EditText
+                    android:id="@+id/nzr6"
+                    android:layout_width="100dp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:background="@null"/>
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="1dp"
+                    android:background="#333"/>
+
+                <EditText
+                    android:id="@+id/nzr7"
                     android:layout_width="100dp"
                     android:textAlignment="center"
                     android:gravity="center"
@@ -526,6 +555,7 @@
                     android:layout_marginTop="1dp"
                     android:background="#333"/>
                 <EditText
+                    android:id="@+id/nzr8"
                     android:layout_width="100dp"
                     android:textAlignment="center"
                     android:gravity="center"
@@ -538,6 +568,7 @@
                     android:layout_height="1dp"
                     android:background="#333"/>
                 <EditText
+                    android:id="@+id/nzr9"
                     android:layout_width="100dp"
                     android:textAlignment="center"
                     android:layout_height="wrap_content"
@@ -551,6 +582,7 @@
                     android:layout_marginTop="1dp"
                     android:background="#333"/>
                 <EditText
+                    android:id="@+id/nzr10"
                     android:layout_width="100dp"
                     android:textAlignment="center"
                     android:gravity="center"
