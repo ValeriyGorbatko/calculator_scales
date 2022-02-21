@@ -5,16 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TabHost;
-
-import java.io.Console;
-import java.util.List;
 
 public class ThirdActivity extends AppCompatActivity
 {
@@ -71,7 +67,7 @@ public class ThirdActivity extends AppCompatActivity
 
 
         LinearLayout ll3 = findViewById(R.id.linearLayout3);
-        View tabs3 = inflater.inflate(R.layout.tabs03, null);
+        View tabs3 = inflater.inflate(R.layout.tabs04, null);
         ll3.addView(tabs3);
 
         tabSpec = tabHost.newTabSpec(tag_3);
