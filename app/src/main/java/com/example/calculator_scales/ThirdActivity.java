@@ -7,19 +7,22 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TabHost;
 
 public class ThirdActivity extends AppCompatActivity
 {
-    private int total = 11;
-
     private String tag_1 = "tag_1";
     private String tag_2 = "tag_2";
     private String tag_3 = "tag_3";
+    private String tag_4 = "tag_4";
 
+    //Content 1
+    private int total = 11;
     private float l0;
     private float dL0;
     private float[] nn = new float[total];
@@ -34,6 +37,20 @@ public class ThirdActivity extends AppCompatActivity
     Button btn_tab2;
     EditText et_vim_zn_gir;
     EditText et_zag_mass_dgir;
+
+    //Content 2
+    private float [] vmg = new float[3];
+    private float [] mgDiff = new float[3];
+    private float [] mgvmg_output = new float[3];
+
+    private float [] ves = new float[3];
+    private float [] zch = new float[3];
+    private float sensitivity;
+
+    Button btn_tab3;
+    Button btn_tab4;
+    Spinner sp_form;
+    View currentLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,12 +84,21 @@ public class ThirdActivity extends AppCompatActivity
 
 
         LinearLayout ll3 = findViewById(R.id.linearLayout3);
-        View tabs3 = inflater.inflate(R.layout.tabs04, null);
+        View tabs3 = inflater.inflate(R.layout.tabs03, null);
         ll3.addView(tabs3);
 
         tabSpec = tabHost.newTabSpec(tag_3);
         tabSpec.setContent(R.id.linearLayout3);
         tabSpec.setIndicator("3");
+        tabHost.addTab(tabSpec);
+
+        LinearLayout ll4 = findViewById(R.id.linearLayout4);
+        View tabs4 = inflater.inflate(R.layout.tabs04, null);
+        ll4.addView(tabs4);
+
+        tabSpec = tabHost.newTabSpec(tag_4);
+        tabSpec.setContent(R.id.linearLayout4);
+        tabSpec.setIndicator("4");
         tabHost.addTab(tabSpec);
 
         tabHost.setOnTabChangedListener(onTabChanged);
@@ -87,6 +113,7 @@ public class ThirdActivity extends AppCompatActivity
             if(s.equals(tag_1)) InitContent1();
             else if (s.equals(tag_2)) InitContent2();
             else if (s.equals(tag_3)) InitContent3();
+            else if (s.equals(tag_4)) InitContent4();
         }
     };
 
@@ -111,8 +138,52 @@ public class ThirdActivity extends AppCompatActivity
         public abstract void onTextChanged(T target, Editable s);
     }
 
-    private void InitContent1()
-    {
+    private TextChangedListener<EditText> SubscribeEditText(int index, EditText editText, Button btn, float[] array) {
+        return new TextChangedListener<EditText>(editText)
+        {
+            public void onTextChanged(EditText target, Editable s)
+            {
+                SetButtonIdle(btn);
+                float value = 0;
+                if(MainActivity.IsValueValid(s)) value = Float.valueOf(s.toString());
+                array[index] = value;
+            }
+        };
+    }
+
+    private float CheckValueByAccuracy(float value) {
+        MainActivity.AccuracyData accuracyData = MainActivity.accuracyData[MainActivity.GetAccuracyIndex()];
+        for (int a = 0; a < accuracyData.Range.length; a++)
+        {
+            MainActivity.AccuracyRange range = accuracyData.Range[a];
+            if (value >= range.Min && value <= range.Max)
+            {
+                return range.Factor;
+            }
+        }
+        return -1;
+    }
+
+    private void SetButtonSuccess(Button btn) {
+        btn.setText("ГОДЕН");
+        int color = getResources().getColor(R.color.green);
+        btn.setBackgroundColor(color);
+    }
+
+    private void SetButtonFail(Button btn) {
+        btn.setText("НЕ ГОДЕН");
+        int color = getResources().getColor(R.color.red);
+        btn.setBackgroundColor(color);
+    }
+
+    private void SetButtonIdle(Button btn) {
+        btn.setText("ПРОВЕРИТЬ");
+        btn.setBackgroundColor(getResources().getColor(R.color.bc));
+    }
+
+
+    //Content 1
+    private void InitContent1() {
         btn_tab1 = findViewById(R.id.check_tab1);
         btn_tab2 = findViewById(R.id.check_tab2);
 
@@ -126,11 +197,11 @@ public class ThirdActivity extends AppCompatActivity
         {
             int nnId = getResources().getIdentifier("nn" + (i + 1), "id", getPackageName());
             EditText et_nn = findViewById(nnId);
-            et_nn.addTextChangedListener(SubscribeNN(i, et_nn));
+            et_nn.addTextChangedListener(SubscribeEditText(i, et_nn, btn_tab1, nn));
 
             int nrId = getResources().getIdentifier("nr" + (i + 1), "id", getPackageName());
             EditText et_nr = findViewById(nrId);
-            et_nr.addTextChangedListener(SubscribeNR(i, et_nr));
+            et_nr.addTextChangedListener(SubscribeEditText(i, et_nr, btn_tab2, nr));
         }
 
         et_vim_zn_gir.addTextChangedListener(new TextChangedListener<EditText>(et_vim_zn_gir) {
@@ -156,7 +227,7 @@ public class ThirdActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                boolean success = CheckTab1();
+                boolean success = CheckContent1Tab1();
                 if(success) SetButtonSuccess(btn_tab1);
                 else SetButtonFail(btn_tab1);
             }
@@ -166,7 +237,7 @@ public class ThirdActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                boolean success = CheckTab2();
+                boolean success = CheckContent1Tab2();
                 if(success) SetButtonSuccess(btn_tab2);
                 else SetButtonFail(btn_tab2);
             }
@@ -178,17 +249,11 @@ public class ThirdActivity extends AppCompatActivity
         nominalValues[total - 1] = maxVal;
 
         EditText[] nominalInputs = new EditText[total];
-        nominalInputs[0] = findViewById(R.id.n1);
-        nominalInputs[1] = findViewById(R.id.n2);
-        nominalInputs[2] = findViewById(R.id.n3);
-        nominalInputs[3] = findViewById(R.id.n4);
-        nominalInputs[4] = findViewById(R.id.n5);
-        nominalInputs[5] = findViewById(R.id.n6);
-        nominalInputs[6] = findViewById(R.id.n7);
-        nominalInputs[7] = findViewById(R.id.n8);
-        nominalInputs[8] = findViewById(R.id.n9);
-        nominalInputs[9] = findViewById(R.id.n10);
-        nominalInputs[10] = findViewById(R.id.n11);
+        for(int i = 0; i < nominalInputs.length; i++)
+        {
+            int id = getResources().getIdentifier("n" + (i + 1), "id", getPackageName());
+            nominalInputs[i] = findViewById(id);
+        }
 
         for (int i = 0; i < nominalValues.length; i++)
         {
@@ -209,22 +274,7 @@ public class ThirdActivity extends AppCompatActivity
         }
     }
 
-    private float CheckValueByAccuracy(float value)
-    {
-        MainActivity.AccuracyData accuracyData = MainActivity.accuracyData[MainActivity.GetAccuracyIndex()];
-        for (int a = 0; a < accuracyData.Range.length; a++)
-        {
-            MainActivity.AccuracyRange range = accuracyData.Range[a];
-            if (value >= range.Min && value <= range.Max)
-            {
-                return range.Factor;
-            }
-        }
-        return -1;
-    }
-
-    private boolean CheckTab1()
-    {
+    private boolean CheckContent1Tab1() {
         float e = MainActivity.GetScaleDivisionValue();
         float L0 = (e * 10f) * 1000f;
         float E0 = (l0 - L0 + (e * 0.5f) - dL0) / 1000f;
@@ -239,8 +289,7 @@ public class ThirdActivity extends AppCompatActivity
         return false;
     }
 
-    private boolean CheckTab2()
-    {
+    private boolean CheckContent1Tab2() {
         for (int i = 0; i < total; i++)
         {
             nnDiff[i] = nn[i] - nominalValues[i];
@@ -265,86 +314,151 @@ public class ThirdActivity extends AppCompatActivity
         return successCount == total;
     }
 
-    private void SetButtonSuccess(Button btn)
-    {
-        btn.setText("ГОДЕН");
-        int color = getResources().getColor(R.color.green);
-        btn.setBackgroundColor(color);
-    }
 
-    private void SetButtonFail(Button btn)
-    {
-        btn.setText("НЕ ГОДЕН");
-        int color = getResources().getColor(R.color.red);
-        btn.setBackgroundColor(color);
-    }
+    //Content 2
+    private void InitContent2() {
+        btn_tab3 = findViewById(R.id.check_tab3);
+        btn_tab4 = findViewById(R.id.check_tab4);
 
-    private void SetButtonIdle(Button btn)
-    {
-        btn.setText("ПРОВЕРИТЬ");
-        btn.setBackgroundColor(getResources().getColor(R.color.bc));
-    }
+        SetButtonIdle(btn_tab3);
+        SetButtonIdle(btn_tab4);
 
-    private TextChangedListener<EditText> SubscribeNN(int index, EditText editText)
-    {
-        return new TextChangedListener<EditText>(editText)
-        {
-            public void onTextChanged(EditText target, Editable s)
+        LinearLayout container = findViewById(R.id.forms);
+        LayoutInflater inflater = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        sp_form = findViewById(R.id.spinner);
+        sp_form.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l)
             {
-                SetButtonIdle(btn_tab2);
-                float value = 0;
-                if(MainActivity.IsValueValid(s)) value = Float.valueOf(s.toString());
-                SetNN(index, value);
+                if(currentLayout != null) container.removeView(currentLayout);
+
+                switch (i) {
+                    case 0: //прямокутна
+                        View layout3 = inflater.inflate(R.layout.forms_3, null);
+                        container.addView(layout3);
+                        currentLayout = layout3;
+                        InitContent2Form(3);
+                        break;
+                    case 1: //трикутна
+                        View layout4 = inflater.inflate(R.layout.forms_4, null);
+                        container.addView(layout4);
+                        currentLayout = layout4;
+                        InitContent2Form(4);
+                        break;
+                    case 2: //кругла
+                    case 3: //квадратна
+                        View layout5 = inflater.inflate(R.layout.forms_5, null);
+                        container.addView(layout5);
+                        currentLayout = layout5;
+                        InitContent2Form(5);
+                        break;
+                }
             }
-        };
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView)
+            {
+
+            }
+        });
+        sp_form.setSelection(0);
     }
 
-    private void SetNN(int index, float value)
-    {
-        for (int i = 0; i < nn.length; i++)
+    private void InitContent2Form(int count) {
+        float min = MainActivity.GetMinNavValue();
+        float max = MainActivity.GetMaxNavValue();
+
+        vmg = new float[count];
+        for (int i = 0; i < count; i++)
         {
-            if(i == index)
+            int mgId = getResources().getIdentifier("mg" + (i + 1),"id", getPackageName());
+            EditText et_mg = findViewById(mgId);
+            et_mg.setText(Math.round(max / 3f) + "");
+
+            int vmgId = getResources().getIdentifier("vmg" + (i + 1),"id", getPackageName());
+            EditText et_vmg = findViewById(vmgId);
+            et_vmg.addTextChangedListener(SubscribeEditText(i, et_vmg, btn_tab3, vmg));
+        }
+
+        int veszchCount = 3;
+        ves = new float[veszchCount];
+        ves[0] = min;
+        ves[1] = Math.round((max - min) / 2f);
+        ves[2] = max;
+
+        for (int i = 0; i < veszchCount; i++)
+        {
+            int vesId = getResources().getIdentifier("ves" + (i + 1),"id", getPackageName());
+            EditText et_ves = findViewById(vesId);
+            et_ves.setText(ves[i] + "");
+
+            int zchId = getResources().getIdentifier("zch" + (i + 1),"id", getPackageName());
+            EditText et_zch = findViewById(zchId);
+            et_zch.addTextChangedListener(SubscribeEditText(i, et_zch, btn_tab4, zch));
+        }
+
+        btn_tab3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
             {
-                nn[i] = value;
-                return;
+                boolean success = CheckContent2Tab3(count);
+                if(success) SetButtonSuccess(btn_tab3);
+                else SetButtonFail(btn_tab3);
+            }
+        });
+
+        btn_tab4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                boolean success = CheckContent2Tab4(count);
+                if(success) SetButtonSuccess(btn_tab4);
+                else SetButtonFail(btn_tab4);
+            }
+        });
+    }
+
+    private boolean CheckContent2Tab3(int count) {
+        mgDiff = new float[count];
+        mgvmg_output = new float[count];
+        int successCount = 0;
+        MainActivity.AccuracyData accuracyData = MainActivity.accuracyData[MainActivity.GetAccuracyIndex()];
+        for (int i = 0; i < count; i++)
+        {
+            mgDiff[i] = vmg[i] - Math.round(MainActivity.GetMaxNavValue() / 3f);
+            float factor = CheckValueByAccuracy(mgDiff[i]);
+            if(factor != -1)
+            {
+                mgvmg_output[i] = mgDiff[i] * factor;
+                successCount++;
             }
         }
+
+        return successCount == count;
     }
 
-    private TextChangedListener<EditText> SubscribeNR(int index, EditText editText)
-    {
-        return new TextChangedListener<EditText>(editText)
-        {
-            public void onTextChanged(EditText target, Editable s)
-            {
-                SetButtonIdle(btn_tab2);
-                float value = 0;
-                if(MainActivity.IsValueValid(s)) value = Float.valueOf(s.toString());
-                SetNR(index, value);
-            }
-        };
-    }
+    private boolean CheckContent2Tab4(int count) {
+        sensitivity = 1.4f * MainActivity.GetDivisionsValidValue();
 
-    private void SetNR(int index, float value)
-    {
-        for (int i = 0; i < nr.length; i++)
+        int successCount = 0;
+        for (int i = 0; i < count; i++)
         {
-            if(i == index)
-            {
-                nr[i] = value;
-                return;
-            }
+            if(zch[i] <= sensitivity) successCount++;
         }
+
+        return successCount == count;
     }
 
 
 
-    private void InitContent2()
-    {
 
-    }
 
     private void InitContent3()
+    {
+
+    }
+
+    private void InitContent4()
     {
 
     }

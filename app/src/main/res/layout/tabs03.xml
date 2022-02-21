@@ -23,7 +23,6 @@
             android:layout_height="111dp"
             android:fontFamily="sans-serif-condensed"
             android:textAlignment="center"
-            android:gravity="horizontal"
             android:text="Номер навантаження"
             android:textColor="#0E0E0E"
             android:textSize="20sp"
@@ -41,7 +40,6 @@
                 android:layout_height="39dp"
                 android:fontFamily="sans-serif-condensed"
                 android:textAlignment="center"
-                android:gravity="horizontal"
                 android:text="1"
                 android:textColor="#0E0E0E"
                 android:textSize="20sp"
@@ -58,7 +56,6 @@
                 android:layout_height="39dp"
                 android:fontFamily="sans-serif-condensed"
                 android:textAlignment="center"
-                android:gravity="horizontal"
                 android:text="2"
                 android:textColor="#0E0E0E"
                 android:textSize="20sp"
@@ -76,7 +73,6 @@
                 android:layout_height="39dp"
                 android:fontFamily="sans-serif-condensed"
                 android:textAlignment="center"
-                android:gravity="horizontal"
                 android:text="3"
                 android:textColor="#0E0E0E"
                 android:textSize="20sp"
@@ -136,7 +132,7 @@
                 android:layout_height="50dp"
                 android:fontFamily="sans-serif-condensed"
                 android:textAlignment="center"
-                android:gravity="horizontal"
+                android:gravity=""
                 android:text="Показання вагпри навантаженні"
                 android:textColor="#0E0E0E"
                 android:textSize="20sp"
@@ -154,7 +150,6 @@
                 <TextView
                     android:layout_width="150dp"
                     android:layout_height="60dp"
-                    android:layout_marginTop="-19dp"
                     android:fontFamily="sans-serif-condensed"
                     android:gravity="center_horizontal"
                     android:text="Половина максимальної"
@@ -168,11 +163,11 @@
                     android:layout_height="60dp"
                     android:fontFamily="sans-serif-condensed"
                     android:textAlignment="center"
-                    android:gravity="horizontal"
                     android:text="максимальна"
                     android:textColor="#0E0E0E"
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    tools:ignore="RtlCompat" />
             </LinearLayout>
             <View
                 android:layout_width="280dp"
