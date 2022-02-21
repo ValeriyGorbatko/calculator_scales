@@ -64,7 +64,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginStart="10dp" />
+
         </LinearLayout>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/check_tab1"
+            android:text="ПРОВЕРКА"
+            android:onClick="onClickTab1"/>
     </LinearLayout>
     <!--                    таблица-->
     <LinearLayout
@@ -530,6 +538,13 @@
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/check_tab2"
+            android:text="ПРОВЕРКА"
+            android:onClick="onClickTab2"/>
 
     </LinearLayout>
 
