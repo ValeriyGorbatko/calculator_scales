@@ -22,12 +22,11 @@
             android:layout_width="200dp"
             android:layout_height="111dp"
             android:fontFamily="sans-serif-condensed"
-            android:textAlignment="center"
             android:text="Номер навантаження"
             android:textColor="#0E0E0E"
             android:textSize="20sp"
             android:textStyle="bold"
-                tools:ignore="RtlCompat" />
+            android:layout_gravity="center_horizontal" />
 
             <View
                 android:layout_width="200dp"
@@ -37,7 +36,7 @@
                 android:background="#333"/>
             <TextView
                 android:layout_width="200dp"
-                android:layout_height="39dp"
+                android:layout_height="33dp"
                 android:fontFamily="sans-serif-condensed"
                 android:textAlignment="center"
                 android:text="1"
@@ -53,7 +52,7 @@
                 android:background="#333"/>
             <TextView
                 android:layout_width="200dp"
-                android:layout_height="39dp"
+                android:layout_height="33dp"
                 android:fontFamily="sans-serif-condensed"
                 android:textAlignment="center"
                 android:text="2"
@@ -70,7 +69,7 @@
                 android:background="#333"/>
             <TextView
                 android:layout_width="200dp"
-                android:layout_height="39dp"
+                android:layout_height="33dp"
                 android:fontFamily="sans-serif-condensed"
                 android:textAlignment="center"
                 android:text="3"
@@ -83,7 +82,119 @@
                 android:layout_height="1dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
+                android:background="#333"/>
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="33dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textAlignment="center"
+                android:text="4"
+                android:textColor="#0E0E0E"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="RtlCompat" />
+            <View
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="#333"/>
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="33dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textAlignment="center"
+                android:text="5"
+                android:textColor="#0E0E0E"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="RtlCompat" />
+            <View
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="#333"/>
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="32dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textAlignment="center"
+                android:text="6"
+                android:textColor="#0E0E0E"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="RtlCompat" />
+            <View
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="#333"/>
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="32dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textAlignment="center"
+                android:text="7"
+                android:textColor="#0E0E0E"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="RtlCompat" />
+            <View
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="1dp"
+                android:background="#333"/>
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="33dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textAlignment="center"
+                android:text="8"
+                android:textColor="#0E0E0E"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="RtlCompat" />
+            <View
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="#333"/>
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="33dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textAlignment="center"
+                android:text="9"
+                android:textColor="#0E0E0E"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="RtlCompat" />
+            <View
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="#333"/>
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="33dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textAlignment="center"
+                android:text="10"
+                android:textColor="#0E0E0E"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="RtlCompat" />
+            <View
+                android:layout_width="200dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
                 android:background="#333"/>
             <TextView
                 android:layout_width="200dp"
@@ -139,7 +250,7 @@
                 android:textStyle="bold"
                 tools:ignore="RtlCompat" />
             <View
-                android:layout_width="280dp"
+                android:layout_width="300dp"
                 android:layout_height="1dp"
                 android:background="@color/bg"/>
             <LinearLayout
@@ -149,7 +260,7 @@
 
                 <TextView
                     android:layout_width="150dp"
-                    android:layout_height="60dp"
+                    android:layout_height="59dp"
                     android:fontFamily="sans-serif-condensed"
                     android:gravity="center_horizontal"
                     android:text="Половина максимальної"
@@ -170,7 +281,7 @@
                     tools:ignore="RtlCompat" />
             </LinearLayout>
             <View
-                android:layout_width="280dp"
+                android:layout_width="300dp"
                 android:layout_height="1dp"
                 android:background="@color/bg"/>
             <LinearLayout
@@ -185,7 +296,7 @@
                     <EditText
                         android:id="@+id/nn1"
                         android:layout_width="150dp"
-                        android:layout_height="39dp"
+                        android:layout_height="33dp"
                         android:background="@null"/>
                     <View
                         android:layout_width="150dp"
@@ -194,7 +305,7 @@
                     <EditText
                         android:id="@+id/nn2"
                         android:layout_width="150dp"
-                        android:layout_height="39dp"
+                        android:layout_height="33dp"
                         android:background="@null"/>
                     <View
                         android:layout_width="150dp"
@@ -203,7 +314,7 @@
                     <EditText
                         android:id="@+id/nn3"
                         android:layout_width="150dp"
-                        android:layout_height="39dp"
+                        android:layout_height="33dp"
                         android:layout_marginTop="1dp"
                         android:background="@null"/>
                     <View
@@ -213,8 +324,7 @@
                     <EditText
                         android:id="@+id/nn4"
                         android:layout_width="150dp"
-                        android:layout_height="50dp"
-                        android:layout_marginTop="1dp"
+                        android:layout_height="33dp"
                         android:background="@null"/>
                     <View
                         android:layout_width="150dp"
@@ -223,12 +333,76 @@
                     <EditText
                         android:id="@+id/nn5"
                         android:layout_width="150dp"
-                        android:layout_height="50dp"
-                        android:layout_marginTop="1dp"
+                        android:layout_height="33dp"
                         android:background="@null"/>
                     <View
                         android:layout_width="150dp"
                         android:layout_height="1dp"
+                        android:background="@color/bg"/>
+                    <EditText
+                        android:id="@+id/nn6"
+                        android:layout_width="150dp"
+                        android:layout_height="33dp"
+                        android:background="@null"/>
+                    <View
+                        android:layout_width="150dp"
+                        android:layout_height="1dp"
+                        android:background="@color/bg"/>
+                    <EditText
+                        android:id="@+id/nn7"
+                        android:layout_width="150dp"
+                        android:layout_height="32dp"
+                        android:background="@null"/>
+                    <View
+                        android:layout_width="150dp"
+                        android:layout_height="1dp"
+                        android:background="@color/bg"/>
+                    <EditText
+                        android:id="@+id/nn8"
+                        android:layout_width="150dp"
+                        android:layout_height="33dp"
+                        android:background="@null"/>
+                    <View
+                        android:layout_width="150dp"
+                        android:layout_height="1dp"
+                        android:background="@color/bg"/>
+                    <EditText
+                        android:id="@+id/nn9"
+                        android:layout_width="150dp"
+                        android:layout_height="33dp"
+                        android:background="@null"/>
+                    <View
+                        android:layout_width="150dp"
+                        android:layout_height="1dp"
+                        android:background="@color/bg"/>
+                    <EditText
+                        android:id="@+id/nn10"
+                        android:layout_width="150dp"
+                        android:layout_height="33dp"
+                        android:background="@null"/>
+                    <View
+                        android:layout_width="150dp"
+                        android:layout_height="1dp"
+                        android:background="@color/bg"/>
+                    <EditText
+                        android:id="@+id/nn11"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:background="@null"/>
+                    <View
+                        android:layout_width="150dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="1dp"
+                        android:background="@color/bg"/>
+                    <EditText
+                        android:id="@+id/nn12"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:background="@null"/>
+                    <View
+                        android:layout_width="150dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="1dp"
                         android:background="@color/bg"/>
 
                 </LinearLayout>
@@ -239,63 +413,127 @@
 
                     <EditText
                         android:id="@+id/nr1"
-                        android:layout_width="140dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="150dp"
+                        android:layout_height="33dp"
                         android:background="@null"/>
                     <View
-                        android:layout_width="140dp"
+                        android:layout_width="150dp"
                         android:layout_height="1dp"
                         android:background="@color/bg"/>
                     <EditText
                         android:id="@+id/nr2"
-                        android:layout_width="140dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="150dp"
+                        android:layout_height="33dp"
                         android:background="@null"/>
                     <View
-                        android:layout_width="140dp"
+                        android:layout_width="150dp"
                         android:layout_height="1dp"
                         android:background="@color/bg"/>
                     <EditText
                         android:id="@+id/nr3"
-                        android:layout_width="140dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="1dp"
+                        android:layout_width="150dp"
+                        android:layout_height="33dp"
                         android:background="@null"/>
                     <View
-                        android:layout_width="140dp"
+                        android:layout_width="150dp"
                         android:layout_height="1dp"
                         android:background="@color/bg"/>
                     <EditText
                         android:id="@+id/nr4"
-                        android:layout_width="140dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="1dp"
+                        android:layout_width="150dp"
+                        android:layout_height="33dp"
                         android:background="@null"/>
                     <View
-                        android:layout_width="140dp"
+                        android:layout_width="150dp"
                         android:layout_height="1dp"
-                        android:background="#333"/>
+                        android:background="@color/bg"/>
                     <EditText
                         android:id="@+id/nr5"
-                        android:layout_width="140dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="1dp"
+                        android:layout_width="150dp"
+                        android:layout_height="33dp"
                         android:background="@null"/>
                     <View
-                        android:layout_width="140dp"
+                        android:layout_width="150dp"
                         android:layout_height="1dp"
+                        android:background="@color/bg"/>
+                    <EditText
+                        android:id="@+id/nr6"
+                        android:layout_width="150dp"
+                        android:layout_height="33dp"
+                        android:background="@null"/>
+                    <View
+                        android:layout_width="150dp"
+                        android:layout_height="1dp"
+                        android:background="@color/bg"/>
+                    <EditText
+                        android:id="@+id/nr7"
+                        android:layout_width="150dp"
+                        android:layout_height="33dp"
+                        android:background="@null"/>
+                    <View
+                        android:layout_width="150dp"
+                        android:layout_height="1dp"
+                        android:background="@color/bg"/>
+                    <EditText
+                        android:id="@+id/nr8"
+                        android:layout_width="150dp"
+                        android:layout_height="33dp"
+                        android:background="@null"/>
+                    <View
+                        android:layout_width="150dp"
+                        android:layout_height="1dp"
+                        android:background="@color/bg"/>
+                    <EditText
+                        android:id="@+id/nr9"
+                        android:layout_width="150dp"
+                        android:layout_height="33dp"
+                        android:background="@null"/>
+                    <View
+                        android:layout_width="150dp"
+                        android:layout_height="1dp"
+                        android:background="@color/bg"/>
+                    <EditText
+                        android:id="@+id/nr10"
+                        android:layout_width="150dp"
+                        android:layout_height="33dp"
+                        android:background="@null"/>
+                    <View
+                        android:layout_width="150dp"
+                        android:layout_height="1dp"
+                        android:background="@color/bg"/>
+                    <EditText
+                        android:id="@+id/nr11"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:background="@null"/>
+                    <View
+                        android:layout_width="150dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="1dp"
+                        android:background="#333"/>
+                    <EditText
+                        android:id="@+id/nr12"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:background="@null"/>
+                    <View
+                        android:layout_width="150dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="1dp"
                         android:background="#333"/>
 
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
         <Button
-            android:layout_width="100dp"
+            android:layout_width="115dp"
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
             android:id="@+id/check_tab5"
             android:text="ПРОВЕРКА"
-            android:onClick="onClickTab2"/>
+            android:onClick="onClickTab2"
+            android:layout_marginStart="10dp" />
 
     </LinearLayout>
 
