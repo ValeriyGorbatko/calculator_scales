@@ -295,6 +295,7 @@
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/vl1"
                 android:layout_width="100dp"
                 android:layout_height="25dp"
                 android:background="@null"
@@ -305,52 +306,7 @@
                 android:textColor="#222" />
 
             <EditText
-                android:layout_width="100dp"
-                android:layout_height="25dp"
-                android:background="@null"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="26dp"
-                android:background="@null"
-                android:baselineAligned="false"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="26dp"
-                android:background="@null"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="25dp"
-                android:background="@null"
-                android:baselineAligned="false"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-
-            <EditText
+                android:id="@+id/vp1"
                 android:layout_width="100dp"
                 android:layout_height="25dp"
                 android:background="@null"
@@ -364,6 +320,7 @@
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/vl2"
                 android:layout_width="100dp"
                 android:layout_height="26dp"
                 android:background="@null"
@@ -374,52 +331,7 @@
                 android:textColor="#222" />
 
             <EditText
-                android:layout_width="100dp"
-                android:layout_height="26dp"
-                android:background="@null"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="25dp"
-                android:background="@null"
-                android:baselineAligned="false"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="25dp"
-                android:background="@null"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="26dp"
-                android:background="@null"
-                android:baselineAligned="false"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-
-            <EditText
+                android:id="@+id/vp2"
                 android:layout_width="100dp"
                 android:layout_height="26dp"
                 android:background="@null"
@@ -433,6 +345,7 @@
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/vl3"
                 android:layout_width="100dp"
                 android:layout_height="25dp"
                 android:background="@null"
@@ -443,52 +356,7 @@
                 android:textColor="#222" />
 
             <EditText
-                android:layout_width="100dp"
-                android:layout_height="25dp"
-                android:background="@null"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="26dp"
-                android:background="@null"
-                android:baselineAligned="false"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="26dp"
-                android:background="@null"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="25dp"
-                android:background="@null"
-                android:baselineAligned="false"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-
-            <EditText
+                android:id="@+id/vp3"
                 android:layout_width="100dp"
                 android:layout_height="25dp"
                 android:background="@null"
@@ -502,6 +370,7 @@
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/vl4"
                 android:layout_width="100dp"
                 android:layout_height="26dp"
                 android:background="@null"
@@ -512,52 +381,7 @@
                 android:textColor="#222" />
 
             <EditText
-                android:layout_width="100dp"
-                android:layout_height="26dp"
-                android:background="@null"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="25dp"
-                android:background="@null"
-                android:baselineAligned="false"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="25dp"
-                android:background="@null"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="26dp"
-                android:background="@null"
-                android:baselineAligned="false"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-
-            <EditText
+                android:id="@+id/vp4"
                 android:layout_width="100dp"
                 android:layout_height="26dp"
                 android:background="@null"
@@ -571,6 +395,7 @@
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/vl5"
                 android:layout_width="100dp"
                 android:layout_height="25dp"
                 android:background="@null"
@@ -581,52 +406,7 @@
                 android:textColor="#222" />
 
             <EditText
-                android:layout_width="100dp"
-                android:layout_height="25dp"
-                android:background="@null"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="26dp"
-                android:background="@null"
-                android:baselineAligned="false"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="26dp"
-                android:background="@null"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="25dp"
-                android:background="@null"
-                android:baselineAligned="false"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-
-            <EditText
+                android:id="@+id/vp5"
                 android:layout_width="100dp"
                 android:layout_height="25dp"
                 android:background="@null"
@@ -640,6 +420,7 @@
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/vl6"
                 android:layout_width="100dp"
                 android:layout_height="26dp"
                 android:background="@null"
@@ -650,6 +431,7 @@
                 android:textColor="#222" />
 
             <EditText
+                android:id="@+id/vp6"
                 android:layout_width="100dp"
                 android:layout_height="26dp"
                 android:background="@null"
@@ -663,6 +445,7 @@
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/vl7"
                 android:layout_width="100dp"
                 android:layout_height="25dp"
                 android:background="@null"
@@ -673,6 +456,257 @@
                 android:textColor="#222" />
 
             <EditText
+                android:id="@+id/vp7"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/vl8"
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:id="@+id/vp8"
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/vl9"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:id="@+id/vp9"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/vl10"
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:id="@+id/vp10"
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/vl11"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:id="@+id/vp11"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/vl12"
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:id="@+id/vp12"
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/vl13"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:id="@+id/vp13"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/vl14"
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:id="@+id/vp14"
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/vl15"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:id="@+id/vp15"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/vl16"
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:id="@+id/vp16"
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/vl17"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:id="@+id/vp17"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:background="@null"
@@ -686,6 +720,7 @@
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/vl18"
                 android:layout_width="100dp"
                 android:layout_height="27dp"
                 android:background="@null"
@@ -696,6 +731,7 @@
                 android:textColor="#222" />
 
             <EditText
+                android:id="@+id/vp18"
                 android:layout_width="100dp"
                 android:layout_height="27dp"
                 android:background="@null"
@@ -766,6 +802,7 @@
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/shl1"
                 android:layout_width="100dp"
                 android:layout_height="25dp"
                 android:background="@null"
@@ -776,52 +813,7 @@
                 android:textColor="#222" />
 
             <EditText
-                android:layout_width="100dp"
-                android:layout_height="25dp"
-                android:background="@null"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="26dp"
-                android:background="@null"
-                android:baselineAligned="false"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="26dp"
-                android:background="@null"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="25dp"
-                android:background="@null"
-                android:baselineAligned="false"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-
-            <EditText
+                android:id="@+id/shp1"
                 android:layout_width="100dp"
                 android:layout_height="25dp"
                 android:background="@null"
@@ -835,6 +827,7 @@
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/shl2"
                 android:layout_width="100dp"
                 android:layout_height="26dp"
                 android:background="@null"
@@ -845,52 +838,7 @@
                 android:textColor="#222" />
 
             <EditText
-                android:layout_width="100dp"
-                android:layout_height="26dp"
-                android:background="@null"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="25dp"
-                android:background="@null"
-                android:baselineAligned="false"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="25dp"
-                android:background="@null"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="26dp"
-                android:background="@null"
-                android:baselineAligned="false"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-
-            <EditText
+                android:id="@+id/shp2"
                 android:layout_width="100dp"
                 android:layout_height="26dp"
                 android:background="@null"
@@ -904,6 +852,7 @@
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/shl3"
                 android:layout_width="100dp"
                 android:layout_height="25dp"
                 android:background="@null"
@@ -914,52 +863,7 @@
                 android:textColor="#222" />
 
             <EditText
-                android:layout_width="100dp"
-                android:layout_height="25dp"
-                android:background="@null"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="26dp"
-                android:background="@null"
-                android:baselineAligned="false"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="26dp"
-                android:background="@null"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="25dp"
-                android:background="@null"
-                android:baselineAligned="false"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-
-            <EditText
+                android:id="@+id/shp3"
                 android:layout_width="100dp"
                 android:layout_height="25dp"
                 android:background="@null"
@@ -973,6 +877,7 @@
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/shl4"
                 android:layout_width="100dp"
                 android:layout_height="26dp"
                 android:background="@null"
@@ -983,52 +888,7 @@
                 android:textColor="#222" />
 
             <EditText
-                android:layout_width="100dp"
-                android:layout_height="26dp"
-                android:background="@null"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="25dp"
-                android:background="@null"
-                android:baselineAligned="false"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="25dp"
-                android:background="@null"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="26dp"
-                android:background="@null"
-                android:baselineAligned="false"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-
-            <EditText
+                android:id="@+id/shp4"
                 android:layout_width="100dp"
                 android:layout_height="26dp"
                 android:background="@null"
@@ -1042,6 +902,7 @@
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/shl5"
                 android:layout_width="100dp"
                 android:layout_height="25dp"
                 android:background="@null"
@@ -1052,52 +913,7 @@
                 android:textColor="#222" />
 
             <EditText
-                android:layout_width="100dp"
-                android:layout_height="25dp"
-                android:background="@null"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="26dp"
-                android:background="@null"
-                android:baselineAligned="false"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="26dp"
-                android:background="@null"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:layout_width="100dp"
-                android:layout_height="25dp"
-                android:background="@null"
-                android:baselineAligned="false"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-
-            <EditText
+                android:id="@+id/shp5"
                 android:layout_width="100dp"
                 android:layout_height="25dp"
                 android:background="@null"
@@ -1111,6 +927,7 @@
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/shl6"
                 android:layout_width="100dp"
                 android:layout_height="26dp"
                 android:background="@null"
@@ -1121,6 +938,7 @@
                 android:textColor="#222" />
 
             <EditText
+                android:id="@+id/shp6"
                 android:layout_width="100dp"
                 android:layout_height="26dp"
                 android:background="@null"
@@ -1134,6 +952,7 @@
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/shl7"
                 android:layout_width="100dp"
                 android:layout_height="25dp"
                 android:background="@null"
@@ -1144,6 +963,257 @@
                 android:textColor="#222" />
 
             <EditText
+                android:id="@+id/shp7"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/shl8"
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:id="@+id/shp8"
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/shl9"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:id="@+id/shp9"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/shl10"
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:id="@+id/shp10"
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/shl11"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:id="@+id/shp11"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/shl12"
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:id="@+id/shp12"
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/shl13"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:id="@+id/shp13"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/shl14"
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:id="@+id/shp14"
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/shl15"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:id="@+id/shp15"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/shl16"
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:id="@+id/shp16"
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/shl17"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222" />
+
+            <EditText
+                android:id="@+id/shp17"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:background="@null"
@@ -1157,6 +1227,7 @@
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/shl18"
                 android:layout_width="100dp"
                 android:layout_height="27dp"
                 android:background="@null"
@@ -1167,6 +1238,7 @@
                 android:textColor="#222" />
 
             <EditText
+                android:id="@+id/shp18"
                 android:layout_width="100dp"
                 android:layout_height="27dp"
                 android:background="@null"
