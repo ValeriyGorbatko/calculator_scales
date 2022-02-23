@@ -13,6 +13,9 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TabHost;
+import android.widget.TabWidget;
+
+import java.lang.reflect.Array;
 
 public class ThirdActivity extends AppCompatActivity
 {
@@ -52,6 +55,37 @@ public class ThirdActivity extends AppCompatActivity
     Spinner sp_form;
     View currentLayout;
 
+    //Content 3
+    private float[] hmax = new float[10];
+    private float[] max = new float[10];
+    private float diff_hmax;
+    private float diff_max;
+    private float _1e1;
+    private float _1e2;
+
+    Button btn_tab5;
+
+    //Content 4
+    private int nzTotal = 5;
+    private float zt1;
+    private float zt2;
+    private float[] nz1 = new float[nzTotal];
+    private float[] nz2 = new float[nzTotal];
+    private float[] nzn1 = new float[nzTotal];
+    private float[] nzn2 = new float[nzTotal];
+    private float[] nzr1 = new float[nzTotal];
+    private float[] nzr2 = new float[nzTotal];
+    private float[] nz1Diff1 = new float[nzTotal];
+    private float[] nz1Diff2 = new float[nzTotal];
+    private float[] nz2Diff1 = new float[nzTotal];
+    private float[] nz2Diff2 = new float[nzTotal];
+    private float[] nz1_output = new float[nzTotal];
+    private float[] nz2_output = new float[nzTotal];
+
+    Button btn_tab6;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,14 +117,18 @@ public class ThirdActivity extends AppCompatActivity
         tabHost.addTab(tabSpec);
 
 
-        LinearLayout ll3 = findViewById(R.id.linearLayout3);
-        View tabs3 = inflater.inflate(R.layout.tabs03, null);
-        ll3.addView(tabs3);
+        if(MainActivity.GetAccuracyIndex() == 0 || MainActivity.GetAccuracyIndex() == 1 ||
+                (MainActivity.GetAccuracyIndex() == 2 && MainActivity.GetMaxNavValue() <= 50f))
+        {
+            LinearLayout ll3 = findViewById(R.id.linearLayout3);
+            View tabs3 = inflater.inflate(R.layout.tabs03, null);
+            ll3.addView(tabs3);
 
-        tabSpec = tabHost.newTabSpec(tag_3);
-        tabSpec.setContent(R.id.linearLayout3);
-        tabSpec.setIndicator("3");
-        tabHost.addTab(tabSpec);
+            tabSpec = tabHost.newTabSpec(tag_3);
+            tabSpec.setContent(R.id.linearLayout3);
+            tabSpec.setIndicator("3");
+            tabHost.addTab(tabSpec);
+        }
 
         LinearLayout ll4 = findViewById(R.id.linearLayout4);
         View tabs4 = inflater.inflate(R.layout.tabs04, null);
@@ -179,6 +217,46 @@ public class ThirdActivity extends AppCompatActivity
     private void SetButtonIdle(Button btn) {
         btn.setText("ПРОВЕРИТЬ");
         btn.setBackgroundColor(getResources().getColor(R.color.bc));
+    }
+
+    private class Pair {
+        public float Min;
+        public float Max;
+    }
+
+    private Pair GetMinMax(float[] array) {
+        Pair pair = new Pair();
+        int count = array.length;
+
+        if(count == 1)
+        {
+            pair.Min = array[0];
+            pair.Max = array[0];
+            return pair;
+        }
+
+        if (array[0] > array[1])
+        {
+            pair.Max = array[0];
+            pair.Min = array[1];
+        }
+        else
+        {
+            pair.Max = array[1];
+            pair.Min = array[0];
+        }
+
+        int i;
+        for(i = 2; i < count; i++)
+        {
+            if (array[i] > pair.Max)
+                pair.Max = array[i];
+
+            else if (array[i] < pair.Min)
+                pair.Min = array[i];
+        }
+
+        return pair;
     }
 
 
@@ -297,7 +375,6 @@ public class ThirdActivity extends AppCompatActivity
         }
 
         int successCount = 0;
-        MainActivity.AccuracyData accuracyData = MainActivity.accuracyData[MainActivity.GetAccuracyIndex()];
         for (int i = 0; i < total; i++)
         {
             float value = nnDiff[i];
@@ -422,7 +499,6 @@ public class ThirdActivity extends AppCompatActivity
         mgDiff = new float[count];
         mgvmg_output = new float[count];
         int successCount = 0;
-        MainActivity.AccuracyData accuracyData = MainActivity.accuracyData[MainActivity.GetAccuracyIndex()];
         for (int i = 0; i < count; i++)
         {
             mgDiff[i] = vmg[i] - Math.round(MainActivity.GetMaxNavValue() / 3f);
@@ -452,14 +528,186 @@ public class ThirdActivity extends AppCompatActivity
 
 
 
+    //Content 3
+    private void InitContent3() {
+        btn_tab5 = findViewById(R.id.check_tab5);
+        SetButtonIdle(btn_tab5);
 
-    private void InitContent3()
-    {
+        _1e1 = MainActivity.GetScaleDivisionValue();
+        EditText et_1e1 = findViewById(R.id._1e1);
+        et_1e1.setText(String.valueOf(_1e1));
 
+        _1e2 = MainActivity.GetScaleDivisionValue();
+        EditText et_1e2 = findViewById(R.id._1e2);
+        et_1e2.setText(String.valueOf(_1e2));
+
+        for (int i = 0; i < 10; i++)
+        {
+            int number = i + 1;
+
+            int hmaxId = getResources().getIdentifier("hmax" + number, "id", getPackageName());
+            EditText et_hmax = findViewById(hmaxId);
+            et_hmax.addTextChangedListener(SubscribeEditText(i, et_hmax, btn_tab5, hmax));
+
+            int maxId = getResources().getIdentifier("max" + number, "id", getPackageName());
+            EditText et_max = findViewById(maxId);
+            et_max.addTextChangedListener(SubscribeEditText(i, et_max, btn_tab5, max));
+        }
+
+        btn_tab5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                boolean success = CheckContent3Tab5();
+                if(success) SetButtonSuccess(btn_tab5);
+                else SetButtonFail(btn_tab5);
+            }
+        });
     }
+
+    private boolean CheckContent3Tab5() {
+        Pair pair1 = GetMinMax(hmax);
+        float foundMin1 = pair1.Min;
+        float foundMax1 = pair1.Max;
+        diff_hmax = foundMax1 - foundMin1;
+        EditText et_diff_hmax = findViewById(R.id.diff_hmax);
+        et_diff_hmax.setText(String.valueOf(diff_hmax * 1000f));
+
+        Pair pair2 = GetMinMax(max);
+        float foundMin2 = pair2.Min;
+        float foundMax2 = pair2.Max;
+        diff_max = foundMax2 - foundMin2;
+        EditText et_diff_max = findViewById(R.id.diff_max);
+        et_diff_max.setText(String.valueOf(diff_max));
+
+        //надо ли домножать...................................................................................
+        float factor1 = CheckValueByAccuracy(diff_hmax);
+        float factor2 = CheckValueByAccuracy(diff_max);
+
+        boolean success1 = factor1 != -1;
+        boolean success2 = factor2 != -1;
+
+        return success1 && success2;
+    }
+
+
+
+
 
     private void InitContent4()
     {
+        btn_tab6 = findViewById(R.id.check_tab6);
+        SetButtonIdle(btn_tab6);
 
+        zt1 = MainActivity.GetMaxNavValue() * 0.1f;
+        zt1 -= zt1 % 5;
+
+        EditText et_zt1 = findViewById(R.id.zt1);
+        et_zt1.setText(String.valueOf(zt1));
+
+
+        zt2 = MainActivity.GetMaxNavValue() * 0.7f;
+        zt2 -= zt2 % 5;
+
+        EditText et_zt2 = findViewById(R.id.zt2);
+        et_zt2.setText(String.valueOf(zt2));
+
+        for (int i = 0; i < nzTotal; i++)
+        {
+            int nzn1Id = getResources().getIdentifier("nzn" + (i + 1), "id", getPackageName());
+            EditText et_nzn1 = findViewById(nzn1Id);
+            et_nzn1.addTextChangedListener(SubscribeEditText(i, et_nzn1, btn_tab6, nzn1));
+
+            int nzr1Id = getResources().getIdentifier("nzr" + (i + 1), "id", getPackageName());
+            EditText et_nzr1 = findViewById(nzr1Id);
+            et_nzr1.addTextChangedListener(SubscribeEditText(i, et_nzr1, btn_tab6, nzr1));
+
+            int nzn2Id = getResources().getIdentifier("nzn" + (i + nzTotal + 1), "id", getPackageName());
+            EditText et_nzn2 = findViewById(nzn2Id);
+            et_nzn2.addTextChangedListener(SubscribeEditText(i, et_nzn2, btn_tab6, nzn2));
+
+            int nzr2Id = getResources().getIdentifier("nzr" + (i + nzTotal + 1), "id", getPackageName());
+            EditText et_nzr2 = findViewById(nzr2Id);
+            et_nzr2.addTextChangedListener(SubscribeEditText(i, et_nzr2, btn_tab6, nzr2));
+        }
+
+        for (int i = 1; i <= nzTotal; i++)
+        {
+            float origin = MainActivity.GetMaxNavValue() - zt1;
+
+            float valPerItem = origin / 5;
+            float newValue = valPerItem * i;
+            newValue = Math.round(newValue);
+            int step = origin >= 25 ? 5 : 1;
+            newValue -= newValue % step;
+            nz1[i - 1] = newValue;
+
+            int nzId = getResources().getIdentifier("nz" + i, "id", getPackageName());
+            EditText et_nz = findViewById(nzId);
+            et_nz.setText(String.valueOf(newValue));
+        }
+
+        for (int i = 1; i <= nzTotal; i++)
+        {
+            float origin = MainActivity.GetMaxNavValue() - zt2;
+
+            float valPerItem = origin / 5;
+            float newValue = valPerItem * i;
+            newValue = Math.round(newValue);
+            int step = origin >= 25 ? 5 : 1;
+            newValue -= newValue % step;
+            nz2[i - 1] = newValue;
+
+            int nzId = getResources().getIdentifier("nz" + (i + nzTotal), "id", getPackageName());
+            EditText et_nz = findViewById(nzId);
+            et_nz.setText(String.valueOf(newValue));
+        }
+
+        btn_tab6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                boolean success = CheckContent4Tab6();
+                if(success) SetButtonSuccess(btn_tab6);
+                else SetButtonFail(btn_tab6);
+            }
+        });
+    }
+
+    private boolean CheckContent4Tab6() {
+        for (int i = 0; i < nzTotal; i++)
+        {
+            nz1Diff1[i] = nzn1[i] - nz1[i];
+            nz1Diff2[i] = nzr1[i] - nz1[i];
+
+            nz2Diff1[i] = nzn2[i] - nz2[i];
+            nz2Diff2[i] = nzr2[i] - nz2[i];
+        }
+
+        int successCount = 0;
+        for (int i = 0; i < nzTotal; i++)
+        {
+            float value1 = nz1Diff1[i];
+            if(value1 <= 0) value1 = nz1Diff2[i];
+
+            float factor1 = CheckValueByAccuracy(value1);
+            if(factor1 != -1)
+            {
+                nz1_output[i] = MainActivity.GetScaleDivisionValue() * factor1;
+                successCount++;
+            }
+
+            float value2 = nz2Diff1[i];
+            if(value2 <= 0) value2 = nz2Diff2[i];
+
+            float factor2 = CheckValueByAccuracy(value2);
+            if(factor2 != -1)
+            {
+                nz2_output[i] = MainActivity.GetScaleDivisionValue() * factor2;
+                successCount++;
+            }
+        }
+
+        return successCount == nzTotal * 2;
     }
 }
