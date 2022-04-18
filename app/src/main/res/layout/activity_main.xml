@@ -139,7 +139,7 @@
         android:inputType="textPersonName" />
 
     <TextView
-        android:id="@+id/zn"
+        android:id="@+id/vikPov"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/vlasnik"
@@ -148,11 +148,40 @@
         android:layout_alignEnd="@+id/type_zvt"
         android:layout_alignRight="@+id/type_zvt"
         android:layout_marginTop="10dp"
-        android:textSize="17sp"
+        android:gravity="center_horizontal"
+        android:text="Виконав повірку"
+        android:textAlignment="center"
         android:textColor="#111"
+        android:textSize="17sp" />
+
+    <EditText
+        android:id="@+id/vikPovir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vikPov"
+        android:layout_alignStart="@+id/types_verification"
+        android:layout_alignLeft="@+id/types_verification"
+        android:layout_alignEnd="@+id/types_verification"
+        android:layout_alignRight="@+id/types_verification"
+        android:layout_marginTop="0dp"
+        android:hint="Віконав повірку"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/zn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vikPovir"
+        android:layout_alignStart="@+id/type_zvt"
+        android:layout_alignLeft="@+id/type_zvt"
+        android:layout_alignEnd="@+id/type_zvt"
+        android:layout_alignRight="@+id/type_zvt"
+        android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
         android:text="Заводський номер"
-        android:textAlignment="center"/>
+        android:textAlignment="center"
+        android:textColor="#111"
+        android:textSize="17sp" />
 
     <EditText
         android:id="@+id/zav_num"

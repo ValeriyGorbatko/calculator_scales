@@ -35,7 +35,8 @@
                 android:layout_width="221dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginStart="10dp"/>
+                android:layout_marginStart="10dp"
+                android:inputType="numberDecimal|numberSigned"/>
 
         </LinearLayout>
 
@@ -61,7 +62,8 @@
                 android:layout_width="221dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginStart="10dp" />
+                android:layout_marginStart="10dp"
+                android:inputType="numberDecimal|numberSigned"/>
 
         </LinearLayout>
         <Button
@@ -106,7 +108,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginStart="10dp"
-                android:background="@null"/>
+                android:background="@null"
+                android:inputType="numberDecimal|numberSigned"/>
             <View
                 android:layout_width="140dp"
                 android:layout_height="1dp"
@@ -119,7 +122,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginStart="10dp"
-                android:background="@null"/>
+                android:background="@null"
+                android:inputType="numberDecimal|numberSigned"/>
             <View
                 android:layout_width="140dp"
                 android:layout_height="1dp"
@@ -133,7 +137,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginStart="10dp"
-                android:background="@null"/>
+                android:background="@null"
+                android:inputType="numberDecimal|numberSigned"/>
             <View
                 android:layout_width="140dp"
                 android:layout_height="1dp"
@@ -147,7 +152,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginStart="10dp"
-                android:background="@null"/>
+                android:background="@null"
+                android:inputType="numberDecimal|numberSigned"/>
             <View
                 android:layout_width="140dp"
                 android:layout_height="1dp"
@@ -161,7 +167,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginStart="10dp"
-                android:background="@null"/>
+                android:background="@null"
+                android:inputType="numberDecimal|numberSigned"/>
             <View
                 android:layout_width="140dp"
                 android:layout_height="1dp"
@@ -175,7 +182,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginStart="10dp"
-                android:background="@null"/>
+                android:background="@null"
+                android:inputType="numberDecimal|numberSigned"/>
             <View
                 android:layout_width="140dp"
                 android:layout_height="1dp"
@@ -188,7 +196,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginStart="10dp"
-                android:background="@null"/>
+                android:background="@null"
+                android:inputType="numberDecimal|numberSigned"/>
             <View
                 android:layout_width="140dp"
                 android:layout_height="1dp"
@@ -201,7 +210,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginStart="10dp"
-                android:background="@null"/>
+                android:background="@null"
+                android:inputType="numberDecimal|numberSigned"/>
             <View
                 android:layout_width="140dp"
                 android:layout_height="1dp"
@@ -215,7 +225,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginStart="10dp"
-                android:background="@null"/>
+                android:background="@null"
+                android:inputType="numberDecimal|numberSigned"/>
             <View
                 android:layout_width="140dp"
                 android:layout_height="1dp"
@@ -229,7 +240,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginStart="10dp"
-                android:background="@null"/>
+                android:background="@null"
+                android:inputType="numberDecimal|numberSigned"/>
             <View
                 android:layout_width="140dp"
                 android:layout_height="1dp"
@@ -244,7 +256,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginStart="10dp"
-                android:background="@null"/>
+                android:background="@null"
+                android:inputType="numberDecimal|numberSigned"/>
             <View
                 android:layout_width="140dp"
                 android:layout_height="1dp"
@@ -267,7 +280,8 @@
                 android:gravity="center_horizontal"
                 android:textAlignment="center"
                 android:text="Виміряне значення маси гир"
-                android:textColor="#101010" />
+                android:textColor="#101010"
+                android:inputType="numberDecimal|numberSigned"/>
             <View
                 android:layout_width="280dp"
                 android:layout_height="1dp"
@@ -283,9 +297,9 @@
                     android:gravity="center_horizontal"
                     android:textAlignment="center"
                     android:text="При навантаженні"
-                    android:textColor="#101010">
+                    android:textColor="#101010"
+                    android:inputType="numberDecimal|numberSigned"/>
 
-                </TextView>
 
                 <TextView
                     android:layout_width="140dp"
@@ -294,9 +308,9 @@
                     android:gravity="center_horizontal"
                     android:text="При розвантаженні"
                     android:textAlignment="center"
-                    android:textColor="#101010">
+                    android:textColor="#101010"
+                    android:inputType="numberDecimal|numberSigned"/>
 
-                </TextView>
             </LinearLayout>
             <View
                 android:layout_width="280dp"
@@ -315,7 +329,8 @@
                         android:id="@+id/nn1"
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
-                        android:background="@null"/>
+                        android:background="@null"
+                        android:inputType="numberDecimal|numberSigned"/>
                     <View
                         android:layout_width="140dp"
                         android:layout_height="1dp"
@@ -324,7 +339,8 @@
                         android:id="@+id/nn2"
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
-                        android:background="@null"/>
+                        android:background="@null"
+                        android:inputType="numberDecimal|numberSigned"/>
                     <View
                         android:layout_width="140dp"
                         android:layout_height="1dp"
@@ -334,7 +350,8 @@
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
-                        android:background="@null"/>
+                        android:background="@null"
+                        android:inputType="numberDecimal|numberSigned"/>
                     <View
                         android:layout_width="140dp"
                         android:layout_height="1dp"
@@ -344,7 +361,8 @@
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
-                        android:background="@null"/>
+                        android:background="@null"
+                        android:inputType="numberDecimal|numberSigned"/>
                     <View
                         android:layout_width="140dp"
                         android:layout_height="1dp"
@@ -354,7 +372,8 @@
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
-                        android:background="@null"/>
+                        android:background="@null"
+                        android:inputType="numberDecimal|numberSigned"/>
                     <View
                         android:layout_width="140dp"
                         android:layout_height="1dp"
@@ -363,7 +382,8 @@
                         android:id="@+id/nn6"
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
-                        android:background="@null"/>
+                        android:background="@null"
+                        android:inputType="numberDecimal|numberSigned"/>
                     <View
                         android:layout_width="140dp"
                         android:layout_height="1dp"
@@ -372,7 +392,8 @@
                         android:id="@+id/nn7"
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
-                        android:background="@null"/>
+                        android:background="@null"
+                        android:inputType="numberDecimal|numberSigned"/>
                     <View
                         android:layout_width="140dp"
                         android:layout_height="1dp"
@@ -382,7 +403,8 @@
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
-                        android:background="@null"/>
+                        android:background="@null"
+                        android:inputType="numberDecimal|numberSigned"/>
                     <View
                         android:layout_width="140dp"
                         android:layout_height="1dp"
@@ -392,7 +414,8 @@
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
-                        android:background="@null"/>
+                        android:background="@null"
+                        android:inputType="numberDecimal|numberSigned"/>
                     <View
                         android:layout_width="140dp"
                         android:layout_height="1dp"
@@ -402,7 +425,8 @@
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
-                        android:background="@null"/>
+                        android:background="@null"
+                        android:inputType="numberDecimal|numberSigned"/>
                     <View
                         android:layout_width="140dp"
                         android:layout_height="1dp"
@@ -412,7 +436,8 @@
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
-                        android:background="@null"/>
+                        android:background="@null"
+                        android:inputType="numberDecimal|numberSigned"/>
                     <View
                         android:layout_width="140dp"
                         android:layout_height="1dp"
@@ -427,7 +452,8 @@
                         android:id="@+id/nr1"
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
-                        android:background="@null"/>
+                        android:background="@null"
+                        android:inputType="numberDecimal|numberSigned"/>
                     <View
                         android:layout_width="140dp"
                         android:layout_height="1dp"
@@ -436,7 +462,8 @@
                         android:id="@+id/nr2"
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
-                        android:background="@null"/>
+                        android:background="@null"
+                        android:inputType="numberDecimal|numberSigned"/>
                     <View
                         android:layout_width="140dp"
                         android:layout_height="1dp"
@@ -446,7 +473,8 @@
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
-                        android:background="@null"/>
+                        android:background="@null"
+                        android:inputType="numberDecimal|numberSigned"/>
                     <View
                         android:layout_width="140dp"
                         android:layout_height="1dp"
@@ -456,7 +484,8 @@
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
-                        android:background="@null"/>
+                        android:background="@null"
+                        android:inputType="numberDecimal|numberSigned"/>
                     <View
                         android:layout_width="140dp"
                         android:layout_height="1dp"
@@ -466,7 +495,8 @@
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
-                        android:background="@null"/>
+                        android:background="@null"
+                        android:inputType="numberDecimal|numberSigned"/>
                     <View
                         android:layout_width="140dp"
                         android:layout_height="1dp"
@@ -475,7 +505,8 @@
                         android:id="@+id/nr6"
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
-                        android:background="@null"/>
+                        android:background="@null"
+                        android:inputType="numberDecimal|numberSigned"/>
                     <View
                         android:layout_width="140dp"
                         android:layout_height="1dp"
@@ -484,7 +515,8 @@
                         android:id="@+id/nr7"
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
-                        android:background="@null"/>
+                        android:background="@null"
+                        android:inputType="numberDecimal|numberSigned"/>
                     <View
                         android:layout_width="140dp"
                         android:layout_height="1dp"
@@ -494,7 +526,8 @@
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
-                        android:background="@null"/>
+                        android:background="@null"
+                        android:inputType="numberDecimal|numberSigned"/>
                     <View
                         android:layout_width="140dp"
                         android:layout_height="1dp"
@@ -504,7 +537,8 @@
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
-                        android:background="@null"/>
+                        android:background="@null"
+                        android:inputType="numberDecimal|numberSigned"/>
                     <View
                         android:layout_width="140dp"
                         android:layout_height="1dp"
@@ -514,7 +548,8 @@
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
-                        android:background="@null"/>
+                        android:background="@null"
+                        android:inputType="numberDecimal|numberSigned"/>
                     <View
                         android:layout_width="140dp"
                         android:layout_height="1dp"
@@ -524,7 +559,8 @@
                         android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="1dp"
-                        android:background="@null"/>
+                        android:background="@null"
+                        android:inputType="numberDecimal|numberSigned"/>
                     <View
                         android:layout_width="140dp"
                         android:layout_height="1dp"

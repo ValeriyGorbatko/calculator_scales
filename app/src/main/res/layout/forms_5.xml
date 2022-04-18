@@ -23,7 +23,7 @@
         android:textColor="#0E0E0E"
         android:textSize="20sp"
         android:textStyle="bold"
-         />
+        android:inputType="numberDecimal|numberSigned" />
         <View
             android:layout_width="150dp"
             android:layout_height="1dp"
@@ -42,9 +42,9 @@
             android:text="1"
             android:textColor="#0E0E0E"
             android:textSize="20sp"
-            android:textStyle="bold">
+            android:textStyle="bold"
+            android:inputType="numberDecimal|numberSigned"/>
 
-        </TextView>
         <View
             android:layout_width="150dp"
             android:layout_height="1dp"
@@ -63,8 +63,8 @@
             android:text="2"
             android:textColor="#0E0E0E"
             android:textSize="20sp"
-            android:textStyle="bold">
-        </TextView>
+            android:textStyle="bold"
+            android:inputType="numberDecimal|numberSigned"/>
         <View
             android:layout_width="150dp"
             android:layout_height="1dp"
@@ -84,8 +84,9 @@
             android:text="3"
             android:textColor="#0E0E0E"
             android:textSize="20sp"
-            android:textStyle="bold">
-        </TextView>
+            android:textStyle="bold"
+            android:inputType="numberDecimal|numberSigned"/>
+
         <View
             android:layout_width="150dp"
             android:layout_height="1dp"
@@ -105,8 +106,8 @@
             android:text="4"
             android:textColor="#0E0E0E"
             android:textSize="20sp"
-            android:textStyle="bold">
-        </TextView>
+            android:textStyle="bold"
+            android:inputType="numberDecimal|numberSigned"/>
         <View
             android:layout_width="150dp"
             android:layout_height="1dp"
@@ -126,8 +127,9 @@
             android:text="5"
             android:textColor="#0E0E0E"
             android:textSize="20sp"
-            android:textStyle="bold">
-        </TextView>
+            android:textStyle="bold"
+            android:inputType="numberDecimal|numberSigned"/>
+
         <View
             android:layout_width="150dp"
             android:layout_height="1dp"
@@ -150,7 +152,8 @@
         android:text="Номінальне знпчення маси гир"
         android:textColor="#0E0E0E"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:inputType="numberDecimal|numberSigned"/>
         <View
             android:layout_width="150dp"
             android:layout_height="1dp"
@@ -165,9 +168,9 @@
             android:gravity="center_horizontal"
             android:textColor="#0E0E0E"
             android:textSize="20sp"
-            android:textStyle="bold">
+            android:textStyle="bold"
+            android:inputType="numberDecimal|numberSigned"/>
 
-        </EditText>
 
         <EditText
             android:id="@+id/mg2"
@@ -178,8 +181,8 @@
             android:gravity="center_horizontal"
             android:textColor="#0E0E0E"
             android:textSize="20sp"
-            android:textStyle="bold">
-        </EditText>
+            android:textStyle="bold"
+            android:inputType="numberDecimal|numberSigned"/>
 
         <EditText
             android:id="@+id/mg3"
@@ -190,8 +193,8 @@
             android:gravity="center_horizontal"
             android:textColor="#0E0E0E"
             android:textSize="20sp"
-            android:textStyle="bold">
-        </EditText>
+            android:textStyle="bold"
+            android:inputType="numberDecimal|numberSigned"/>
 
         <EditText
             android:id="@+id/mg4"
@@ -202,8 +205,8 @@
             android:gravity="center_horizontal"
             android:textColor="#0E0E0E"
             android:textSize="20sp"
-            android:textStyle="bold">
-        </EditText>
+            android:textStyle="bold"
+            android:inputType="numberDecimal|numberSigned"/>
 
         <EditText
             android:id="@+id/mg5"
@@ -214,8 +217,8 @@
             android:gravity="center_horizontal"
             android:textColor="#0E0E0E"
             android:textSize="20sp"
-            android:textStyle="bold">
-        </EditText>
+            android:textStyle="bold"
+            android:inputType="numberDecimal|numberSigned"/>
 
     </LinearLayout>
     <LinearLayout
@@ -233,7 +236,8 @@
         android:text="Виміряне знпчення маси гир"
         android:textColor="#0E0E0E"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:inputType="numberDecimal|numberSigned"/>
         <View
             android:layout_width="150dp"
             android:layout_height="1dp"
@@ -248,9 +252,9 @@
             android:gravity="center_horizontal"
             android:textColor="#0E0E0E"
             android:textSize="20sp"
-            android:textStyle="bold">
+            android:textStyle="bold"
+            android:inputType="numberDecimal|numberSigned"/>
 
-        </EditText>
 
         <EditText
             android:id="@+id/vmg2"
@@ -261,8 +265,9 @@
             android:gravity="center_horizontal"
             android:textColor="#0E0E0E"
             android:textSize="20sp"
-            android:textStyle="bold">
-        </EditText>
+            android:textStyle="bold"
+            android:inputType="numberDecimal|numberSigned"/>
+
 
         <EditText
             android:id="@+id/vmg3"
@@ -273,8 +278,8 @@
             android:gravity="center_horizontal"
             android:textColor="#0E0E0E"
             android:textSize="20sp"
-            android:textStyle="bold">
-        </EditText>
+            android:textStyle="bold"
+            android:inputType="numberDecimal|numberSigned"/>
 
         <EditText
             android:id="@+id/vmg4"
@@ -285,8 +290,8 @@
             android:gravity="center_horizontal"
             android:textColor="#0E0E0E"
             android:textSize="20sp"
-            android:textStyle="bold">
-        </EditText>
+            android:textStyle="bold"
+            android:inputType="numberDecimal|numberSigned"/>
 
         <EditText
             android:id="@+id/vmg5"
@@ -297,8 +302,8 @@
             android:gravity="center_horizontal"
             android:textColor="#0E0E0E"
             android:textSize="20sp"
-            android:textStyle="bold">
-        </EditText>
+            android:textStyle="bold"
+            android:inputType="numberDecimal|numberSigned"/>
     </LinearLayout>
 
 

@@ -15,7 +15,16 @@ import android.widget.Spinner;
 import android.widget.TabHost;
 import android.widget.TabWidget;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.lang.reflect.Array;
+import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class ThirdActivity extends AppCompatActivity
 {
@@ -34,6 +43,7 @@ public class ThirdActivity extends AppCompatActivity
     private float[] nrDiff = new float[total];
     private float[] nominalValues = new float[total];
     private float[] nnnr_output = new float[total];
+    private float E0;
     private float E0_output;
 
     Button btn_tab1;
@@ -41,7 +51,11 @@ public class ThirdActivity extends AppCompatActivity
     EditText et_vim_zn_gir;
     EditText et_zag_mass_dgir;
 
+    boolean successContent1Tab1 = false;
+    boolean successContent1Tab2 = false;
+
     //Content 2
+    private float [] mg = new float[3];
     private float [] vmg = new float[3];
     private float [] mgDiff = new float[3];
     private float [] mgvmg_output = new float[3];
@@ -55,7 +69,11 @@ public class ThirdActivity extends AppCompatActivity
     Spinner sp_form;
     View currentLayout;
 
+    boolean successContent2Tab3 = false;
+    boolean successContent2Tab4 = false;
+
     //Content 3
+    boolean isActiveContent3 = false;
     private float[] hmax = new float[10];
     private float[] max = new float[10];
     private float diff_hmax;
@@ -64,6 +82,8 @@ public class ThirdActivity extends AppCompatActivity
     private float _1e2;
 
     Button btn_tab5;
+
+    boolean successContent3Tab5 = false;
 
     //Content 4
     private int nzTotal = 5;
@@ -83,6 +103,9 @@ public class ThirdActivity extends AppCompatActivity
     private float[] nz2_output = new float[nzTotal];
 
     Button btn_tab6;
+    Button btn_protocol;
+
+    boolean successContent4Tab6 = false;
 
 
 
@@ -117,8 +140,9 @@ public class ThirdActivity extends AppCompatActivity
         tabHost.addTab(tabSpec);
 
 
-        if(MainActivity.GetAccuracyIndex() == 0 || MainActivity.GetAccuracyIndex() == 1 ||
-                (MainActivity.GetAccuracyIndex() == 2 && MainActivity.GetMaxNavValue() <= 50f))
+        isActiveContent3 = MainActivity.GetAccuracyIndex() == 0 || MainActivity.GetAccuracyIndex() == 1 ||
+                (MainActivity.GetAccuracyIndex() == 2 && MainActivity.GetMaxNavValue() <= 50f);
+        if(isActiveContent3)
         {
             LinearLayout ll3 = findViewById(R.id.linearLayout3);
             View tabs3 = inflater.inflate(R.layout.tabs03, null);
@@ -305,8 +329,8 @@ public class ThirdActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                boolean success = CheckContent1Tab1();
-                if(success) SetButtonSuccess(btn_tab1);
+                successContent1Tab1 = CheckContent1Tab1();
+                if(successContent1Tab1) SetButtonSuccess(btn_tab1);
                 else SetButtonFail(btn_tab1);
             }
         });
@@ -315,15 +339,15 @@ public class ThirdActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                boolean success = CheckContent1Tab2();
-                if(success) SetButtonSuccess(btn_tab2);
+                successContent1Tab2 = CheckContent1Tab2();
+                if(successContent1Tab2) SetButtonSuccess(btn_tab2);
                 else SetButtonFail(btn_tab2);
             }
         });
 
         float minVal = MainActivity.GetMinNavValue();
         nominalValues[0] = minVal;
-        float maxVal = nominalValues[total - 1] = MainActivity.GetMaxNavValue();
+        float maxVal = MainActivity.GetMaxNavValue();
         nominalValues[total - 1] = maxVal;
 
         EditText[] nominalInputs = new EditText[total];
@@ -355,13 +379,14 @@ public class ThirdActivity extends AppCompatActivity
     private boolean CheckContent1Tab1() {
         float e = MainActivity.GetScaleDivisionValue();
         float L0 = (e * 10f) * 1000f;
-        float E0 = (l0 - L0 + (e * 0.5f) - dL0) / 1000f;
+        E0 = (l0 - L0 + (e * 0.5f) - dL0) / 1000f;
 
         float factor = CheckValueByAccuracy(E0);
         if(factor != -1)
         {
             E0_output = (E0 * 1000f) * factor;
-            return true;
+            float abs = Math.abs(E0_output);
+            if(E0 >= -abs && E0 <= abs) return true;
         }
 
         return false;
@@ -384,7 +409,11 @@ public class ThirdActivity extends AppCompatActivity
             if(factor != -1)
             {
                 nnnr_output[i] = MainActivity.GetScaleDivisionValue() * factor;
-                successCount++;
+                float abs = Math.abs(nnnr_output[i]);
+                if(value >= -abs && value <= abs)
+                {
+                    successCount++;
+                }
             }
         }
 
@@ -445,12 +474,14 @@ public class ThirdActivity extends AppCompatActivity
         float min = MainActivity.GetMinNavValue();
         float max = MainActivity.GetMaxNavValue();
 
+        mg = new float[count];
         vmg = new float[count];
         for (int i = 0; i < count; i++)
         {
             int mgId = getResources().getIdentifier("mg" + (i + 1),"id", getPackageName());
             EditText et_mg = findViewById(mgId);
-            et_mg.setText(Math.round(max / 3f) + "");
+            mg[i] = Math.round(max / 3f);
+            et_mg.setText(String.valueOf(mg[i]));
 
             int vmgId = getResources().getIdentifier("vmg" + (i + 1),"id", getPackageName());
             EditText et_vmg = findViewById(vmgId);
@@ -478,8 +509,8 @@ public class ThirdActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                boolean success = CheckContent2Tab3(count);
-                if(success) SetButtonSuccess(btn_tab3);
+                successContent2Tab3 = CheckContent2Tab3(count);
+                if(successContent2Tab3) SetButtonSuccess(btn_tab3);
                 else SetButtonFail(btn_tab3);
             }
         });
@@ -488,8 +519,8 @@ public class ThirdActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                boolean success = CheckContent2Tab4(count);
-                if(success) SetButtonSuccess(btn_tab4);
+                successContent2Tab4 = CheckContent2Tab4(count);
+                if(successContent2Tab4) SetButtonSuccess(btn_tab4);
                 else SetButtonFail(btn_tab4);
             }
         });
@@ -506,7 +537,8 @@ public class ThirdActivity extends AppCompatActivity
             if(factor != -1)
             {
                 mgvmg_output[i] = mgDiff[i] * factor;
-                successCount++;
+                float abs = Math.abs(mgvmg_output[i]);
+                if(mgDiff[i] >= -abs && mgDiff[i] <= abs) successCount++;
             }
         }
 
@@ -558,8 +590,8 @@ public class ThirdActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                boolean success = CheckContent3Tab5();
-                if(success) SetButtonSuccess(btn_tab5);
+                successContent3Tab5 = CheckContent3Tab5();
+                if(successContent3Tab5) SetButtonSuccess(btn_tab5);
                 else SetButtonFail(btn_tab5);
             }
         });
@@ -594,10 +626,14 @@ public class ThirdActivity extends AppCompatActivity
 
 
 
-    private void InitContent4()
-    {
+    private void InitContent4() {
         btn_tab6 = findViewById(R.id.check_tab6);
         SetButtonIdle(btn_tab6);
+
+        btn_protocol = findViewById(R.id.protocol_button);
+        btn_protocol.setText("СОХРАНИТЬ");
+        int color = getResources().getColor(R.color.bc);
+        btn_protocol.setBackgroundColor(color);
 
         zt1 = MainActivity.GetMaxNavValue() * 0.1f;
         zt1 -= zt1 % 5;
@@ -667,9 +703,24 @@ public class ThirdActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                boolean success = CheckContent4Tab6();
-                if(success) SetButtonSuccess(btn_tab6);
+                successContent4Tab6 = CheckContent4Tab6();
+                if(successContent4Tab6) SetButtonSuccess(btn_tab6);
                 else SetButtonFail(btn_tab6);
+
+                btn_protocol.setText("СОХРАНИТЬ");
+                int color = getResources().getColor(R.color.bc);
+                btn_protocol.setBackgroundColor(color);
+            }
+        });
+
+        btn_protocol.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                SaveToFile();
+                btn_protocol.setText("СОХРАНЕНО!");
+                int color = getResources().getColor(R.color.green);
+                btn_protocol.setBackgroundColor(color);
             }
         });
     }
@@ -694,7 +745,8 @@ public class ThirdActivity extends AppCompatActivity
             if(factor1 != -1)
             {
                 nz1_output[i] = MainActivity.GetScaleDivisionValue() * factor1;
-                successCount++;
+                float abs = Math.abs(nz1_output[i]);
+                if(value1 >= -abs && value1 <= abs) successCount++;
             }
 
             float value2 = nz2Diff1[i];
@@ -704,10 +756,327 @@ public class ThirdActivity extends AppCompatActivity
             if(factor2 != -1)
             {
                 nz2_output[i] = MainActivity.GetScaleDivisionValue() * factor2;
-                successCount++;
+                float abs = Math.abs(nz2_output[i]);
+                if(value2 >= -abs && value2 <= abs) successCount++;
             }
         }
 
         return successCount == nzTotal * 2;
+    }
+
+    private void SaveToFile()
+    {
+        String ten = "#.##"; //0.00
+        DecimalFormat decimalFormatter = new DecimalFormat(ten);
+
+        SimpleDateFormat dateFormatter = new SimpleDateFormat("dd.MM.yyyy");
+        Date now = new Date(System.currentTimeMillis());
+
+        //Берём текущий номер протокола
+        int protocol_number = MainActivity.GetProtocolNumber();
+
+        //Объявляем название будущего файла с текущим номером протокола
+        String new_protocol_filename = "Протокол №" + protocol_number + " " + dateFormatter.format(now) + ".xml";
+
+        //Название папки с протоколами
+        String protocol_folders_name = "Протоколы весы";
+
+        //Пытаемся считать нужный нам шаблон. (160х160, 250х250 и т.д.)
+        try (InputStream input = getResources().openRawResource(getResources().getIdentifier("first","raw", getPackageName())))
+        {
+            //Считываем байты с шаблона
+            byte[] inputBytes = GetBytes(input);
+
+            //Редактируем наш будущий файл, находя нужные нам поля по ключам.
+            String content;
+
+            //Титульный экран
+            content = new String(inputBytes).replace("keyProtocolNumber", String.valueOf(protocol_number));
+
+            String key = "keyType";
+            String origin = "<w:t>" + key + "</w:t>";
+            String newVal = origin.replace(key, MainActivity.GetZVTType());
+            content = content.replace(origin, newVal);
+
+            content = content.replace("keyPidrozdil", MainActivity.GetPidrozdil());
+            content = content.replace("keyZavnum", MainActivity.GetFactoryNumber());
+            content = content.replace("keyPovScale", String.valueOf(MainActivity.GetScaleDivisionValue()));
+            content = content.replace("keyVlasnik", MainActivity.GetOwner());
+            content = content.replace("keyMax", String.valueOf(MainActivity.GetMaxNavValue()));
+            content = content.replace("keyClass", getResources().getStringArray(R.array.accuracy)[MainActivity.GetAccuracyIndex()]);
+            content = content.replace("keyMin", String.valueOf(MainActivity.GetMinNavValue()));
+            content = content.replace("keyTruScale", String.valueOf(MainActivity.GetDivisionsValidValue()));
+
+            key = "keyTypePovir";
+            origin = "<w:t>" + key + "</w:t>";
+            newVal = origin.replace(key, getResources().getStringArray(R.array.type_ver)[MainActivity.GetTypeVerificationIndex()]);
+            content = content.replace(origin, newVal);
+
+
+            //Таблица №1
+            content = content.replace("keyNomMass", String.valueOf(MainActivity.GetScaleDivisionValue()));
+            content = content.replace("keyVimZna", String.valueOf(l0));
+            content = content.replace("keyDodatkgir", String.valueOf(dL0));
+            content = content.replace("keyZnabsolute", decimalFormatter.format(E0));
+            content = content.replace("Gdoap1", String.valueOf(E0_output));
+            content = content.replace("keytable1", successContent1Tab1 ? "Придатний" : "Не придатний");
+
+
+            //Таблица №2
+            for (int i = 0; i < total; i++)
+            {
+                key = "kNM" + (i + 1);
+                origin = "<w:t>" + key + "</w:t>";
+                newVal = origin.replace(key, String.valueOf(nominalValues[i]));
+                content = content.replace(origin, newVal);
+
+                key = "keyNavant" + (i + 1);
+                origin = "<w:t>" + key + "</w:t>";
+                newVal = origin.replace(key, String.valueOf(nn[i]));
+                content = content.replace(origin, newVal);
+
+                key = "keyRozvant" + (i + 1);
+                origin = "<w:t>" + key + "</w:t>";
+                newVal = origin.replace(key, String.valueOf(nr[i]));
+                content = content.replace(origin, newVal);
+
+                key = "keyAbsNavant" + (i + 1);
+                origin = "<w:t>" + key + "</w:t>";
+                newVal = origin.replace(key, String.valueOf(nnDiff[i]));
+                content = content.replace(origin, newVal);
+
+                key = "keyAbsRozvant" + (i + 1);
+                origin = "<w:t>" + key + "</w:t>";
+                newVal = origin.replace(key, String.valueOf(nrDiff[i]));
+                content = content.replace(origin, newVal);
+
+                key = "Gdoap" + (i + 2);
+                origin = "<w:t>" + key + "</w:t>";
+                newVal = origin.replace(key, String.valueOf(nnnr_output[i]));
+                content = content.replace(origin, newVal);
+            }
+            content = content.replace("keytable2", successContent1Tab2 ? "Придатний" : "Не придатний");
+
+
+            //Таблица №3
+            for (int i = 0; i < 5; i++)
+            {
+                key = "kNM" + (i + 12);
+                origin = "<w:t>" + key + "</w:t>";
+                float value = 0;
+                if(i < mg.length) value = mg[i];
+                newVal = origin.replace(key, String.valueOf(value));
+                content = content.replace(origin, newVal);
+
+                key = "Vzmg" + (i + 1);
+                origin = "<w:t>" + key + "</w:t>";
+                value = 0;
+                if(i < vmg.length) value = vmg[i];
+                newVal = origin.replace(key, String.valueOf(value));
+                content = content.replace(origin, newVal);
+
+                key = "Zap" + (i + 1);
+                origin = "<w:t>" + key + "</w:t>";
+                value = 0;
+                if(i < mgDiff.length) value = mgDiff[i];
+                newVal = origin.replace(key, String.valueOf(value));
+                content = content.replace(origin, newVal);
+            }
+
+            key = "Gdoap13";
+            origin = "<w:t>" + key + "</w:t>";
+            newVal = origin.replace(key, String.valueOf(mgvmg_output[0]));
+            content = content.replace(origin, newVal);
+
+            content = content.replace("keytable3", successContent2Tab3 ? "Придатний" : "Не придатний");
+
+
+            //Таблица №4
+            for (int i = 0; i < ves.length; i++)
+            {
+                key = "kNM" + (i + 17);
+                origin = "<w:t>" + key + "</w:t>";
+                float value = ves[i];
+                newVal = origin.replace(key, String.valueOf(value));
+                content = content.replace(origin, newVal);
+
+                key = "Zch" + (i + 1);
+                origin = "<w:t>" + key + "</w:t>";
+                value = zch[i];
+                newVal = origin.replace(key, String.valueOf(value));
+                content = content.replace(origin, newVal);
+            }
+
+            key = "Dzpch1";
+            origin = "<w:t>" + key + "</w:t>";
+            newVal = origin.replace(key, String.valueOf(sensitivity));
+            content = content.replace(origin, newVal);
+
+            content = content.replace("keytable4", successContent2Tab4 ? "Придатний" : "Не придатний");
+
+
+            //Таблица №5
+            for (int i = 0; i < 10; i++)
+            {
+                key = "Pm" + (i + 1);
+                origin = "<w:t>" + key + "</w:t>";
+                float value = isActiveContent3 ? hmax[i] : 0;
+                newVal = origin.replace(key, String.valueOf(value));
+                content = content.replace(origin, newVal);
+
+                key = "M" + (i + 1);
+                origin = "<w:t>" + key + "</w:t>";
+                value = isActiveContent3 ? max[i] : 0;
+                newVal = origin.replace(key, String.valueOf(value));
+                content = content.replace(origin, newVal);
+            }
+
+            key = "Pm11";
+            origin = "<w:t>" + key + "</w:t>";
+            newVal = origin.replace(key, String.valueOf(isActiveContent3 ? diff_hmax : 0));
+            content = content.replace(origin, newVal);
+
+            key = "M11";
+            origin = "<w:t>" + key + "</w:t>";
+            newVal = origin.replace(key, String.valueOf(isActiveContent3 ? diff_max : 0));
+            content = content.replace(origin, newVal);
+
+            key = "Pm12";
+            origin = "<w:t>" + key + "</w:t>";
+            newVal = origin.replace(key, String.valueOf(isActiveContent3 ? _1e1 : 0));
+            content = content.replace(origin, newVal);
+
+            key = "M12";
+            origin = "<w:t>" + key + "</w:t>";
+            newVal = origin.replace(key, String.valueOf(isActiveContent3 ? _1e2 : 0));
+            content = content.replace(origin, newVal);
+
+            content = content.replace("keytable5", isActiveContent3 ? successContent3Tab5 ? "Придатний" : "Не придатний" : "Не використовується");
+
+
+            //Таблица №6
+            content = content.replace("Zt1", String.valueOf(zt1));
+            content = content.replace("Zt2", String.valueOf(zt2));
+
+            for (int i = 1; i <= nzTotal; i++)
+            {
+                key = "Nzmg" + i;
+                origin = "<w:t>" + key + "</w:t>";
+                newVal = origin.replace(key, String.valueOf(nz1[i - 1]));
+                content = content.replace(origin, newVal);
+
+                key = "Nzmg" + (i + nzTotal);
+                origin = "<w:t>" + key + "</w:t>";
+                newVal = origin.replace(key, String.valueOf(nz2[i - 1]));
+                content = content.replace(origin, newVal);
+
+                key = "vzPn" + i;
+                origin = "<w:t>" + key + "</w:t>";
+                newVal = origin.replace(key, String.valueOf(nzn1[i - 1]));
+                content = content.replace(origin, newVal);
+
+                key = "vzPn" + (i + nzTotal);
+                origin = "<w:t>" + key + "</w:t>";
+                newVal = origin.replace(key, String.valueOf(nzn2[i - 1]));
+                content = content.replace(origin, newVal);
+
+                key = "vzPr" + i;
+                origin = "<w:t>" + key + "</w:t>";
+                newVal = origin.replace(key, String.valueOf(nzr1[i - 1]));
+                content = content.replace(origin, newVal);
+
+                key = "vzPr" + (i + nzTotal);
+                origin = "<w:t>" + key + "</w:t>";
+                newVal = origin.replace(key, String.valueOf(nzr2[i - 1]));
+                content = content.replace(origin, newVal);
+
+                key = "Zppn" + i;
+                origin = "<w:t>" + key + "</w:t>";
+                newVal = origin.replace(key, String.valueOf(nz1Diff1[i - 1]));
+                content = content.replace(origin, newVal);
+
+                key = "Zppn" + (i + nzTotal);
+                origin = "<w:t>" + key + "</w:t>";
+                newVal = origin.replace(key, String.valueOf(nz2Diff1[i - 1]));
+                content = content.replace(origin, newVal);
+
+                key = "Zppr" + i;
+                origin = "<w:t>" + key + "</w:t>";
+                newVal = origin.replace(key, String.valueOf(nz1Diff2[i - 1]));
+                content = content.replace(origin, newVal);
+
+                key = "Zppr" + (i + nzTotal);
+                origin = "<w:t>" + key + "</w:t>";
+                newVal = origin.replace(key, String.valueOf(nz2Diff2[i - 1]));
+                content = content.replace(origin, newVal);
+
+                key = "Gdoap" + (i + 13);
+                origin = "<w:t>" + key + "</w:t>";
+                newVal = origin.replace(key, String.valueOf(nz1_output[i - 1]));
+                content = content.replace(origin, newVal);
+
+                key = "Gdoap" + (i + 13 + nzTotal);
+                origin = "<w:t>" + key + "</w:t>";
+                newVal = origin.replace(key, String.valueOf(nz2_output[i - 1]));
+                content = content.replace(origin, newVal);
+            }
+            content = content.replace("keytable6", successContent4Tab6 ? "Придатний" : "Не придатний");
+
+
+
+
+            content = content.replace("keyvikPovir", MainActivity.GetVikPovir());
+
+            boolean success =
+                    successContent1Tab1 &&
+                    successContent1Tab2 &&
+                    successContent2Tab3 &&
+                    successContent2Tab4 &&
+                    successContent4Tab6;
+            boolean totalSuccess = isActiveContent3 ? success && successContent3Tab5 : success;
+            content = content.replace("totalSuccess", totalSuccess ? "Придатний" : "Не придатний");
+
+            content = content.replace("date", dateFormatter.format(now));
+
+
+
+
+            //Получаем или создаём папку, куда будет сохранён наш новый файл
+            File folder = new File("/storage/emulated/0/", protocol_folders_name);
+            if(!folder.mkdir()) folder.mkdir();
+
+            //Записываем отредактируемую строку в файл
+            File new_protocol = new File(folder, new_protocol_filename);
+            try (OutputStream output = new FileOutputStream(new_protocol))
+            {
+                output.write(content.getBytes());
+            }
+            //Проверка на ошибки
+            catch (IOException e)
+            {
+                e.printStackTrace();
+            }
+        }
+        //Проверка на ошибки
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+
+        //Увеличиваем номер следующего протокола
+        MainActivity.IncreaseProtocolNumber();
+    }
+
+    private byte[] GetBytes(InputStream is) throws IOException {
+        ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+        int nRead;
+        byte[] data = new byte[16384];
+
+        while ((nRead = is.read(data, 0, data.length)) != -1)
+        {
+            buffer.write(data, 0, nRead);
+        }
+
+        return buffer.toByteArray();
     }
 }
