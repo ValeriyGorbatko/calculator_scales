@@ -33,13 +33,31 @@
         android:entries="@array/form_vag"
         />
 
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:id="@+id/check_tab3"
-            android:text="ПРОВЕРКА"
-            android:onClick="onClickTab2"/>
+        <LinearLayout
+            android:id="@+id/ree3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/uniq_e_tab3"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:hint="Абсолютна похибка"
+                android:inputType="numberDecimal|numberSigned"
+                />
+            <Button
+                android:id="@+id/check_tab3"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:onClick="onClickTab3"
+                android:text="Перевірка"
+                android:layout_marginStart="10dp" />
+        </LinearLayout>
+
+
     </LinearLayout>
     <LinearLayout
         android:id="@+id/forms"
@@ -133,7 +151,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <TextView
-            android:layout_width="150dp"
+            android:layout_width="190dp"
             android:layout_height="80dp"
             android:layout_marginTop="30dp"
             android:layout_weight="1"
@@ -146,13 +164,13 @@
             android:textStyle="bold"
             android:inputType="numberDecimal|numberSigned"/>
         <View
-            android:layout_width="150dp"
+            android:layout_width="190dp"
             android:layout_height="1dp"
             android:layout_marginTop="1dp"
             android:background="#333"/>
         <EditText
             android:id="@+id/zch1"
-            android:layout_width="150dp"
+            android:layout_width="190dp"
             android:layout_height="39dp"
             android:fontFamily="sans-serif-condensed"
             android:textAlignment="center"
@@ -164,7 +182,7 @@
 
         <EditText
             android:id="@+id/zch2"
-            android:layout_width="150dp"
+            android:layout_width="190dp"
             android:layout_height="39dp"
             android:fontFamily="sans-serif-condensed"
             android:layout_marginTop="8dp"
@@ -178,7 +196,7 @@
 
         <EditText
             android:id="@+id/zch3"
-            android:layout_width="150dp"
+            android:layout_width="190dp"
             android:layout_height="39dp"
             android:layout_marginTop="8dp"
             android:fontFamily="sans-serif-condensed"
@@ -191,12 +209,20 @@
 
 
     </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
         <Button
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
             android:id="@+id/check_tab4"
-            android:text="ПРОВЕРКА"
-            android:onClick="onClickTab2"/>
+            android:text="перевірка"
+            android:onClick="onClickTab4"
+            android:layout_marginStart="10dp" />
+
     </LinearLayout>
+</LinearLayout>
 </LinearLayout>

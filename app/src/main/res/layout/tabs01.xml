@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/tabs01"
@@ -20,7 +21,7 @@
             android:layout_marginTop="10dp"
             android:orientation="vertical">
             <TextView
-                android:layout_width="221dp"
+                android:layout_width="190dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
@@ -32,7 +33,7 @@
 
             <EditText
                 android:id="@+id/vim_zn_gir"
-                android:layout_width="221dp"
+                android:layout_width="190dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginStart="10dp"
@@ -47,32 +48,50 @@
             android:layout_marginTop="10dp"
             android:orientation="vertical">
             <TextView
-                android:layout_width="221dp"
+                android:layout_width="205dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif"
                 android:gravity="center_horizontal"
-                android:text="Загальна масса додаткових гир"
+                android:text="Загальна маса додаткових гир"
                 android:textColor="#101010" />
 
             <EditText
                 android:id="@+id/zag_mass_dgir"
-                android:layout_width="221dp"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginStart="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
                 android:inputType="numberDecimal|numberSigned"/>
 
         </LinearLayout>
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="50dp"
+
+        <LinearLayout
+            android:id="@+id/rre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:orientation="vertical">
+        <EditText
+            android:id="@+id/uniq_e_tab1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:hint="Абсолютна похибка"
+            android:inputType="numberDecimal|numberSigned"
+            />
+        <Button
             android:id="@+id/check_tab1"
-            android:text="ПРОВЕРКА"
-            android:onClick="onClickTab1"/>
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:onClick="onClickTab1"
+            android:text="Перевірка"
+            android:layout_marginStart="10dp" />
+        </LinearLayout>
     </LinearLayout>
     <!--                    таблица-->
     <LinearLayout
@@ -568,13 +587,30 @@
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:id="@+id/check_tab2"
-            android:text="ПРОВЕРКА"
-            android:onClick="onClickTab2"/>
+
+        <LinearLayout
+            android:id="@+id/ree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/uniq_e_tab2"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:hint="Абсолютна похибка"
+                android:inputType="numberDecimal|numberSigned"
+                />
+            <Button
+                android:id="@+id/check_tab2"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:onClick="onClickTab2"
+                android:text="Перевірка"
+                android:layout_marginStart="10dp" />
+        </LinearLayout>
 
     </LinearLayout>
 

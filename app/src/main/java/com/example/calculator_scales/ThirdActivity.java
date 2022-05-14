@@ -46,10 +46,17 @@ public class ThirdActivity extends AppCompatActivity
     private float E0;
     private float E0_output;
 
+    private float uniq_e_tab1;
+    private float uniq_e_tab2;
+
     Button btn_tab1;
     Button btn_tab2;
+
     EditText et_vim_zn_gir;
     EditText et_zag_mass_dgir;
+
+    EditText et_uniq_e_tab1;
+    EditText et_uniq_e_tab2;
 
     boolean successContent1Tab1 = false;
     boolean successContent1Tab2 = false;
@@ -64,10 +71,15 @@ public class ThirdActivity extends AppCompatActivity
     private float [] zch = new float[3];
     private float sensitivity;
 
+    private float uniq_e_tab3;
+
     Button btn_tab3;
     Button btn_tab4;
+
     Spinner sp_form;
     View currentLayout;
+
+    EditText et_uniq_e_tab3;
 
     boolean successContent2Tab3 = false;
     boolean successContent2Tab4 = false;
@@ -81,7 +93,10 @@ public class ThirdActivity extends AppCompatActivity
     private float _1e1;
     private float _1e2;
 
+    private float uniq_e_tab5;
+
     Button btn_tab5;
+    EditText et_uniq_e_tab5;
 
     boolean successContent3Tab5 = false;
 
@@ -102,8 +117,12 @@ public class ThirdActivity extends AppCompatActivity
     private float[] nz1_output = new float[nzTotal];
     private float[] nz2_output = new float[nzTotal];
 
+    private float uniq_e_tab6;
+
     Button btn_tab6;
     Button btn_protocol;
+
+    EditText et_uniq_e_tab6;
 
     boolean successContent4Tab6 = false;
 
@@ -291,6 +310,8 @@ public class ThirdActivity extends AppCompatActivity
 
         et_vim_zn_gir = findViewById(R.id.vim_zn_gir);
         et_zag_mass_dgir = findViewById(R.id.zag_mass_dgir);
+        et_uniq_e_tab1 = findViewById(R.id.uniq_e_tab1);
+        et_uniq_e_tab2 = findViewById(R.id.uniq_e_tab2);
 
         SetButtonIdle(btn_tab1);
         SetButtonIdle(btn_tab2);
@@ -322,6 +343,26 @@ public class ThirdActivity extends AppCompatActivity
                 SetButtonIdle(btn_tab1);
                 if(!MainActivity.IsValueValid(et_zag_mass_dgir.getText())) dL0 = 0;
                 else dL0 = Float.valueOf(et_zag_mass_dgir.getText().toString());
+            }
+        });
+
+        et_uniq_e_tab1.addTextChangedListener(new TextChangedListener<EditText>(et_uniq_e_tab1) {
+            @Override
+            public void onTextChanged(EditText target, Editable s)
+            {
+                SetButtonIdle(btn_tab1);
+                if(!MainActivity.IsValueValid(et_uniq_e_tab1.getText())) uniq_e_tab1 = 0;
+                else uniq_e_tab1 = Float.valueOf(et_uniq_e_tab1.getText().toString());
+            }
+        });
+
+        et_uniq_e_tab2.addTextChangedListener(new TextChangedListener<EditText>(et_uniq_e_tab2) {
+            @Override
+            public void onTextChanged(EditText target, Editable s)
+            {
+                SetButtonIdle(btn_tab2);
+                if(!MainActivity.IsValueValid(et_uniq_e_tab2.getText())) uniq_e_tab2 = 0;
+                else uniq_e_tab2 = Float.valueOf(et_uniq_e_tab2.getText().toString());
             }
         });
 
@@ -382,9 +423,11 @@ public class ThirdActivity extends AppCompatActivity
         E0 = (l0 - L0 + (e * 0.5f) - dL0) / 1000f;
 
         float factor = CheckValueByAccuracy(E0);
-        if(factor != -1)
+        boolean isUniqE = uniq_e_tab1 != 0;
+        boolean inRange = isUniqE ? E0 >= -uniq_e_tab1 && E0 <= uniq_e_tab1 :factor != -1;
+        E0_output = isUniqE ? uniq_e_tab1 : (E0 * 1000f) * factor;
+        if(inRange)
         {
-            E0_output = (E0 * 1000f) * factor;
             float abs = Math.abs(E0_output);
             if(E0 >= -abs && E0 <= abs) return true;
         }
@@ -406,9 +449,11 @@ public class ThirdActivity extends AppCompatActivity
             if(value <= 0) value = nrDiff[i];
 
             float factor = CheckValueByAccuracy(value);
-            if(factor != -1)
+            boolean isUniqE = uniq_e_tab2 != 0;
+            boolean inRange = isUniqE ? value >= -uniq_e_tab2 && value <= uniq_e_tab2 : factor != -1;
+            nnnr_output[i] = isUniqE ? uniq_e_tab2 : MainActivity.GetScaleDivisionValue() * factor;
+            if(inRange)
             {
-                nnnr_output[i] = MainActivity.GetScaleDivisionValue() * factor;
                 float abs = Math.abs(nnnr_output[i]);
                 if(value >= -abs && value <= abs)
                 {
@@ -425,6 +470,8 @@ public class ThirdActivity extends AppCompatActivity
     private void InitContent2() {
         btn_tab3 = findViewById(R.id.check_tab3);
         btn_tab4 = findViewById(R.id.check_tab4);
+
+        et_uniq_e_tab3 = findViewById(R.id.uniq_e_tab3);
 
         SetButtonIdle(btn_tab3);
         SetButtonIdle(btn_tab4);
@@ -468,6 +515,16 @@ public class ThirdActivity extends AppCompatActivity
             }
         });
         sp_form.setSelection(0);
+
+        et_uniq_e_tab3.addTextChangedListener(new TextChangedListener<EditText>(et_uniq_e_tab3) {
+            @Override
+            public void onTextChanged(EditText target, Editable s)
+            {
+                SetButtonIdle(btn_tab3);
+                if(!MainActivity.IsValueValid(et_uniq_e_tab3.getText())) uniq_e_tab3 = 0;
+                else uniq_e_tab3 = Float.valueOf(et_uniq_e_tab3.getText().toString());
+            }
+        });
     }
 
     private void InitContent2Form(int count) {
@@ -534,9 +591,11 @@ public class ThirdActivity extends AppCompatActivity
         {
             mgDiff[i] = vmg[i] - Math.round(MainActivity.GetMaxNavValue() / 3f);
             float factor = CheckValueByAccuracy(mgDiff[i]);
-            if(factor != -1)
+            boolean isUniqE = uniq_e_tab3 != 0;
+            boolean inRange = isUniqE ? mgDiff[i] >= -uniq_e_tab3 && mgDiff[i] <= uniq_e_tab3 : factor != -1;
+            mgvmg_output[i] = isUniqE ? uniq_e_tab3 : mgDiff[i] * factor;
+            if(inRange)
             {
-                mgvmg_output[i] = mgDiff[i] * factor;
                 float abs = Math.abs(mgvmg_output[i]);
                 if(mgDiff[i] >= -abs && mgDiff[i] <= abs) successCount++;
             }
@@ -564,6 +623,8 @@ public class ThirdActivity extends AppCompatActivity
     private void InitContent3() {
         btn_tab5 = findViewById(R.id.check_tab5);
         SetButtonIdle(btn_tab5);
+
+        et_uniq_e_tab5 = findViewById(R.id.uniq_e_tab5);
 
         _1e1 = MainActivity.GetScaleDivisionValue();
         EditText et_1e1 = findViewById(R.id._1e1);
@@ -595,6 +656,16 @@ public class ThirdActivity extends AppCompatActivity
                 else SetButtonFail(btn_tab5);
             }
         });
+
+        et_uniq_e_tab5.addTextChangedListener(new TextChangedListener<EditText>(et_uniq_e_tab5) {
+            @Override
+            public void onTextChanged(EditText target, Editable s)
+            {
+                SetButtonIdle(btn_tab5);
+                if(!MainActivity.IsValueValid(et_uniq_e_tab5.getText())) uniq_e_tab5 = 0;
+                else uniq_e_tab5 = Float.valueOf(et_uniq_e_tab5.getText().toString());
+            }
+        });
     }
 
     private boolean CheckContent3Tab5() {
@@ -616,8 +687,10 @@ public class ThirdActivity extends AppCompatActivity
         float factor1 = CheckValueByAccuracy(diff_hmax);
         float factor2 = CheckValueByAccuracy(diff_max);
 
-        boolean success1 = factor1 != -1;
-        boolean success2 = factor2 != -1;
+        boolean isUniqE = uniq_e_tab5 != 0;
+
+        boolean success1 = isUniqE ? diff_hmax >= -uniq_e_tab5 && diff_hmax <= uniq_e_tab5 : factor1 != -1;
+        boolean success2 = isUniqE ? diff_max >= -uniq_e_tab5 && diff_max <= uniq_e_tab5 : factor2 != -1;
 
         return success1 && success2;
     }
@@ -629,6 +702,8 @@ public class ThirdActivity extends AppCompatActivity
     private void InitContent4() {
         btn_tab6 = findViewById(R.id.check_tab6);
         SetButtonIdle(btn_tab6);
+
+        et_uniq_e_tab6 = findViewById(R.id.uniq_e_tab6);
 
         btn_protocol = findViewById(R.id.protocol_button);
         btn_protocol.setText("СОХРАНИТЬ");
@@ -713,6 +788,16 @@ public class ThirdActivity extends AppCompatActivity
             }
         });
 
+        et_uniq_e_tab6.addTextChangedListener(new TextChangedListener<EditText>(et_uniq_e_tab6) {
+            @Override
+            public void onTextChanged(EditText target, Editable s)
+            {
+                SetButtonIdle(btn_tab6);
+                if(!MainActivity.IsValueValid(et_uniq_e_tab6.getText())) uniq_e_tab6 = 0;
+                else uniq_e_tab6 = Float.valueOf(et_uniq_e_tab6.getText().toString());
+            }
+        });
+
         btn_protocol.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
@@ -735,6 +820,8 @@ public class ThirdActivity extends AppCompatActivity
             nz2Diff2[i] = nzr2[i] - nz2[i];
         }
 
+        boolean isUniqE = uniq_e_tab6 != 0;
+
         int successCount = 0;
         for (int i = 0; i < nzTotal; i++)
         {
@@ -742,9 +829,11 @@ public class ThirdActivity extends AppCompatActivity
             if(value1 <= 0) value1 = nz1Diff2[i];
 
             float factor1 = CheckValueByAccuracy(value1);
-            if(factor1 != -1)
+
+            boolean inRange1 = isUniqE ? value1 >= -uniq_e_tab6 && value1 <= uniq_e_tab6 : factor1 != -1;
+            nz1_output[i] = isUniqE ? uniq_e_tab6 : MainActivity.GetScaleDivisionValue() * factor1;
+            if(inRange1)
             {
-                nz1_output[i] = MainActivity.GetScaleDivisionValue() * factor1;
                 float abs = Math.abs(nz1_output[i]);
                 if(value1 >= -abs && value1 <= abs) successCount++;
             }
@@ -753,9 +842,10 @@ public class ThirdActivity extends AppCompatActivity
             if(value2 <= 0) value2 = nz2Diff2[i];
 
             float factor2 = CheckValueByAccuracy(value2);
-            if(factor2 != -1)
+            boolean inRange2 = isUniqE ? value2 >= -uniq_e_tab6 && value2 <= uniq_e_tab6 : factor2 != -1;
+            nz2_output[i] = isUniqE ? uniq_e_tab6 : MainActivity.GetScaleDivisionValue() * factor2;
+            if(inRange2)
             {
-                nz2_output[i] = MainActivity.GetScaleDivisionValue() * factor2;
                 float abs = Math.abs(nz2_output[i]);
                 if(value2 >= -abs && value2 <= abs) successCount++;
             }
@@ -764,8 +854,7 @@ public class ThirdActivity extends AppCompatActivity
         return successCount == nzTotal * 2;
     }
 
-    private void SaveToFile()
-    {
+    private void SaveToFile() {
         String ten = "#.##"; //0.00
         DecimalFormat decimalFormatter = new DecimalFormat(ten);
 
@@ -814,11 +903,16 @@ public class ThirdActivity extends AppCompatActivity
 
 
             //Таблица №1
-            content = content.replace("keyNomMass", String.valueOf(MainActivity.GetScaleDivisionValue()));
+            content = content.replace("keyNomMass", String.valueOf((MainActivity.GetScaleDivisionValue() * 10f) * 1000f));
             content = content.replace("keyVimZna", String.valueOf(l0));
             content = content.replace("keyDodatkgir", String.valueOf(dL0));
             content = content.replace("keyZnabsolute", decimalFormatter.format(E0));
-            content = content.replace("Gdoap1", String.valueOf(E0_output));
+
+            key = "Gdoap1";
+            origin = "<w:t>" + key + "</w:t>";
+            newVal = origin.replace(key, String.valueOf(E0_output));
+            content = content.replace(origin, newVal);
+
             content = content.replace("keytable1", successContent1Tab1 ? "Придатний" : "Не придатний");
 
 
@@ -943,12 +1037,12 @@ public class ThirdActivity extends AppCompatActivity
 
             key = "Pm12";
             origin = "<w:t>" + key + "</w:t>";
-            newVal = origin.replace(key, String.valueOf(isActiveContent3 ? _1e1 : 0));
+            newVal = origin.replace(key, String.valueOf(isActiveContent3 ? uniq_e_tab5 != 0 ? uniq_e_tab5 : _1e1 : 0));
             content = content.replace(origin, newVal);
 
             key = "M12";
             origin = "<w:t>" + key + "</w:t>";
-            newVal = origin.replace(key, String.valueOf(isActiveContent3 ? _1e2 : 0));
+            newVal = origin.replace(key, String.valueOf(isActiveContent3 ? uniq_e_tab5 != 0 ? uniq_e_tab5 : _1e2 : 0));
             content = content.replace(origin, newVal);
 
             content = content.replace("keytable5", isActiveContent3 ? successContent3Tab5 ? "Придатний" : "Не придатний" : "Не використовується");

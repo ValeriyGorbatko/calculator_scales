@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     static String accuracy_key = "accuracy_key";
     static String zvt_type_key = "zvt_type_key";
     static String protocol_number_key = "protocol_number";
+    static String protocol_number_2_key = "protocol_number_2";
     static String pidrozdil_key = "pidrozdil_key";
     static String factory_number_key = "factory_number_key";
     static String owner_key = "factory_number_key";
@@ -247,10 +248,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return sharedPreferences.getInt(protocol_number_key, 1);
     }
 
+    public static int GetProtocolNumber2()
+    {
+        return sharedPreferences.getInt(protocol_number_2_key, 1);
+    }
+
     public static void IncreaseProtocolNumber()
     {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt(protocol_number_key, GetProtocolNumber() + 1);
+        editor.commit();
+    }
+
+    public static void IncreaseProtocolNumber2()
+    {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt(protocol_number_2_key, GetProtocolNumber() + 1);
         editor.commit();
     }
 }
