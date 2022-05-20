@@ -36,7 +36,7 @@
     <EditText
         android:id="@+id/zt1"
         android:layout_width="170dp"
-        android:layout_height="130dp"
+        android:layout_height="169dp"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
         android:textAlignment="center"
@@ -44,8 +44,7 @@
         android:layout_weight="1"
         android:background="@null"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:inputType="numberDecimal|numberSigned"/>
+        android:textStyle="bold"/>
         <View
             android:layout_width="170dp"
             android:layout_height="1dp"
@@ -56,7 +55,7 @@
     <EditText
         android:id="@+id/zt2"
         android:layout_width="170dp"
-        android:layout_height="129dp"
+        android:layout_height="169dp"
         android:layout_marginTop="1dp"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
@@ -65,8 +64,7 @@
         android:layout_weight="1"
         android:background="@null"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:inputType="numberDecimal|numberSigned"/>
+        android:textStyle="bold"/>
         <View
             android:layout_width="170dp"
             android:layout_height="1dp"
@@ -268,8 +266,7 @@
             android:text="Виміряне значення маси гир"
             android:textColor="#0E0E0E"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:inputType="numberDecimal|numberSigned"/>
+            android:textStyle="bold"/>
         <View
             android:layout_width="200dp"
             android:layout_height="1dp"
@@ -296,8 +293,7 @@
                 android:textColor="#0E0E0E"
                 android:textSize="15sp"
                 android:textStyle="bold"
-                android:gravity="center_horizontal"
-                android:inputType="numberDecimal|numberSigned"/>
+                android:gravity="center_horizontal"/>
             <View
                 android:layout_width="100dp"
                 android:layout_height="1dp"

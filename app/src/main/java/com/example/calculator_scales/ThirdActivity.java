@@ -246,19 +246,19 @@ public class ThirdActivity extends AppCompatActivity
     }
 
     private void SetButtonSuccess(Button btn) {
-        btn.setText("ГОДЕН");
+        btn.setText("придатний");
         int color = getResources().getColor(R.color.green);
         btn.setBackgroundColor(color);
     }
 
     private void SetButtonFail(Button btn) {
-        btn.setText("НЕ ГОДЕН");
+        btn.setText("не придатний");
         int color = getResources().getColor(R.color.red);
         btn.setBackgroundColor(color);
     }
 
     private void SetButtonIdle(Button btn) {
-        btn.setText("ПРОВЕРИТЬ");
+        btn.setText("Перевірка");
         btn.setBackgroundColor(getResources().getColor(R.color.bc));
     }
 
