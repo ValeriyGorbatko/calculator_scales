@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/tabs02"
-    android:orientation="vertical">
+    android:orientation="horizontal">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -15,23 +15,28 @@
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:fontFamily="sans-serif-medium"
         android:text="Обрати форму ваг:"
-        android:textColor="#121111"
-        android:textSize="15sp">
+        android:fontFamily="sans-serif-condensed"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textColor="#0E0E0E"
+        android:textSize="20sp"
+        android:textStyle="bold">
 
     </TextView>
         <!--        style="@android:style/Widget.Spinner"-->
     <Spinner
         android:id="@+id/spinner"
-
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:entries="@array/form_vag"
-        />
+        android:fontFamily="sans-serif-condensed"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textColor="#0E0E0E"
+        android:entries="@array/form_vag"/>
 
         <LinearLayout
             android:id="@+id/ree3"
@@ -45,15 +50,26 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginStart="5dp"
                 android:hint="Абсолютна похибка"
-                android:inputType="numberDecimal|numberSigned"
-                />
+                android:fontFamily="sans-serif-condensed"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:textColor="#0E0E0E"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:inputType="numberDecimal|numberSigned"/>
+            <View
+                android:layout_width="190dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="#333"/>
             <Button
                 android:id="@+id/check_tab3"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:onClick="onClickTab3"
-                android:text="Перевірка"
+                android:text="Висновок"
                 android:layout_marginStart="10dp" />
         </LinearLayout>
 
@@ -218,12 +234,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
         <Button
-            android:layout_width="100dp"
-            android:layout_height="50dp"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:id="@+id/check_tab4"
-            android:text="перевірка"
+            android:text="Висновок"
             android:onClick="onClickTab4"
             android:layout_marginStart="10dp" />
 

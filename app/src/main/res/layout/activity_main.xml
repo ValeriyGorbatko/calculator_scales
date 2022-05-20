@@ -297,10 +297,10 @@
         android:layout_alignRight="@+id/scale_division"
         android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
-        android:text="Ціна повірочної поділки шкали"
+        android:text="Ціна повірочної поділки шкали КГ"
         android:textAlignment="center"
-        android:textSize="17sp"
-        android:textColor="#111"/>
+        android:textColor="#111"
+        android:textSize="17sp" />
 
     <EditText
         android:id="@+id/scale_division"
@@ -324,7 +324,7 @@
         android:layout_alignRight="@+id/divisions_valid"
         android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
-        android:text="Ціна поділки дійсна"
+        android:text="Ціна поділки дійсна КГ"
         android:textAlignment="center"
         android:textColor="#111"
         android:textSize="17sp" />
