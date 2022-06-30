@@ -11,12 +11,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Calculator_scales">
         <activity
+            android:screenOrientation="landscape"
             android:name=".ThirdActivity"
             android:exported="true" />
         <activity
+            android:screenOrientation="landscape"
             android:name=".SecondActivity"
             android:exported="true" />
         <activity
+            android:screenOrientation="landscape"
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

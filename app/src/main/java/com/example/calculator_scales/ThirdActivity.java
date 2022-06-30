@@ -420,7 +420,7 @@ public class ThirdActivity extends AppCompatActivity
     private boolean CheckContent1Tab1() {
         float e = MainActivity.GetScaleDivisionValue();
         float L0 = (e * 10f) * 1000f;
-        E0 = (l0 - L0 + (e * 0.5f) - dL0) / 1000f;
+        E0 = ((l0 * 1000f) - L0 + (e * 0.5f) - dL0) / 1000f;
 
         float factor = CheckValueByAccuracy(E0);
         boolean isUniqE = uniq_e_tab1 != 0;
@@ -903,14 +903,14 @@ public class ThirdActivity extends AppCompatActivity
 
 
             //Таблица №1
-            content = content.replace("keyNomMass", String.valueOf((MainActivity.GetScaleDivisionValue() * 10f) * 1000f));
+            content = content.replace("keyNomMass", decimalFormatter.format((MainActivity.GetScaleDivisionValue() * 10f) * 1000f));
             content = content.replace("keyVimZna", String.valueOf(l0));
             content = content.replace("keyDodatkgir", String.valueOf(dL0));
             content = content.replace("keyZnabsolute", decimalFormatter.format(E0));
 
             key = "Gdoap1";
             origin = "<w:t>" + key + "</w:t>";
-            newVal = origin.replace(key, String.valueOf(E0_output));
+            newVal = origin.replace(key, decimalFormatter.format(E0_output));
             content = content.replace(origin, newVal);
 
             content = content.replace("keytable1", successContent1Tab1 ? "Придатний" : "Не придатний");
@@ -953,6 +953,8 @@ public class ThirdActivity extends AppCompatActivity
 
 
             //Таблица №3
+            content = content.replace("Keyformtype", getResources().getStringArray(R.array.form_vag)[sp_form.getSelectedItemPosition()]);
+
             for (int i = 0; i < 5; i++)
             {
                 key = "kNM" + (i + 12);
@@ -1003,7 +1005,7 @@ public class ThirdActivity extends AppCompatActivity
 
             key = "Dzpch1";
             origin = "<w:t>" + key + "</w:t>";
-            newVal = origin.replace(key, String.valueOf(sensitivity));
+            newVal = origin.replace(key, decimalFormatter.format(sensitivity));
             content = content.replace(origin, newVal);
 
             content = content.replace("keytable4", successContent2Tab4 ? "Придатний" : "Не придатний");
