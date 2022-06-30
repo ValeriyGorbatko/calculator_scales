@@ -3,21 +3,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/tabs04"
-    android:orientation="horizontal">
+    android:background="@color/bgr"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="690dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Визначення запобіжності показань приладу"
+        android:fontFamily="sans-serif-condensed"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textColor="#0E0E0E"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp" />
+    <View
+        android:layout_width="690dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="#333"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="10dp">
 
-
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical"
+        android:layout_marginStart="10dp">
 
     <TextView
         android:layout_width="170dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_height="121dp"
         android:layout_weight="1"
         android:fontFamily="sans-serif-condensed"
         android:textAlignment="center"
@@ -29,49 +56,39 @@
         <View
             android:layout_width="170dp"
             android:layout_height="1dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginLeft="30dp"
             android:background="#333"/>
 
     <EditText
         android:id="@+id/zt1"
         android:layout_width="170dp"
-        android:layout_height="130dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
+        android:layout_height="171dp"
         android:textAlignment="center"
         android:gravity="center"
         android:layout_weight="1"
         android:background="@null"
+        android:textColor="#0E0E0E"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:inputType="numberDecimal|numberSigned"/>
+        android:textStyle="bold"/>
         <View
             android:layout_width="170dp"
             android:layout_height="1dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginLeft="30dp"
             android:background="#333"/>
 
     <EditText
         android:id="@+id/zt2"
         android:layout_width="170dp"
-        android:layout_height="129dp"
+        android:layout_height="170dp"
         android:layout_marginTop="1dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
         android:textAlignment="center"
         android:gravity="center"
+        android:textColor="#0E0E0E"
         android:layout_weight="1"
         android:background="@null"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:inputType="numberDecimal|numberSigned"/>
+        android:textStyle="bold"/>
         <View
             android:layout_width="170dp"
             android:layout_height="1dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginLeft="30dp"
             android:background="#333"/>
 
 
@@ -79,14 +96,14 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:orientation="vertical">
 
 
 
         <TextView
             android:layout_width="170dp"
-            android:layout_height="120dp"
-            android:layout_marginTop="30dp"
+            android:layout_height="121dp"
             android:layout_weight="1"
             android:fontFamily="sans-serif-condensed"
             android:gravity="center"
@@ -102,28 +119,21 @@
         <EditText
             android:id="@+id/nz1"
             android:layout_width="170dp"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
+            android:layout_height="33dp"
             android:background="@null"
+            android:textColor="#0E0E0E"
             android:inputType="numberDecimal|numberSigned"/>
         <View
             android:layout_width="170dp"
             android:layout_height="1dp"
-            android:layout_marginTop="1dp"
             android:background="#333"/>
 
         <EditText
             android:id="@+id/nz2"
             android:layout_width="170dp"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
+            android:layout_height="33dp"
             android:background="@null"
+            android:textColor="#0E0E0E"
             android:inputType="numberDecimal|numberSigned"/>
         <View
             android:layout_width="170dp"
@@ -133,12 +143,9 @@
         <EditText
             android:id="@+id/nz3"
             android:layout_width="170dp"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
+            android:layout_height="33dp"
             android:background="@null"
+            android:textColor="#0E0E0E"
             android:inputType="numberDecimal|numberSigned"/>
         <View
             android:layout_width="170dp"
@@ -147,12 +154,9 @@
         <EditText
             android:id="@+id/nz4"
             android:layout_width="170dp"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
+            android:layout_height="33dp"
             android:background="@null"
+            android:textColor="#0E0E0E"
             android:inputType="numberDecimal|numberSigned"/>
         <View
             android:layout_width="170dp"
@@ -162,12 +166,9 @@
         <EditText
             android:id="@+id/nz5"
             android:layout_width="170dp"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
+            android:layout_height="33dp"
             android:background="@null"
+            android:textColor="#0E0E0E"
             android:inputType="numberDecimal|numberSigned"/>
         <View
             android:layout_width="170dp"
@@ -179,12 +180,9 @@
         <EditText
             android:id="@+id/nz6"
             android:layout_width="170dp"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
+            android:layout_height="33dp"
             android:background="@null"
+            android:textColor="#0E0E0E"
             android:inputType="numberDecimal|numberSigned"/>
         <View
             android:layout_width="170dp"
@@ -195,12 +193,9 @@
         <EditText
             android:id="@+id/nz7"
             android:layout_width="170dp"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
+            android:layout_height="33dp"
             android:background="@null"
+            android:textColor="#0E0E0E"
             android:inputType="numberDecimal|numberSigned"/>
         <View
             android:layout_width="170dp"
@@ -210,12 +205,9 @@
         <EditText
             android:id="@+id/nz8"
             android:layout_width="170dp"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
+            android:layout_height="33dp"
             android:background="@null"
+            android:textColor="#0E0E0E"
             android:inputType="numberDecimal|numberSigned"/>
         <View
             android:layout_width="170dp"
@@ -224,12 +216,9 @@
         <EditText
             android:id="@+id/nz9"
             android:layout_width="170dp"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
+            android:layout_height="33dp"
             android:background="@null"
+            android:textColor="#0E0E0E"
             android:inputType="numberDecimal|numberSigned"/>
         <View
             android:layout_width="170dp"
@@ -239,12 +228,9 @@
         <EditText
             android:id="@+id/nz10"
             android:layout_width="170dp"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
+            android:layout_height="33dp"
             android:background="@null"
+            android:textColor="#0E0E0E"
             android:inputType="numberDecimal|numberSigned"/>
         <View
             android:layout_width="170dp"
@@ -255,12 +241,12 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="200dp"
+            android:layout_width="340dp"
             android:layout_height="60dp"
-            android:layout_marginTop="30dp"
             android:layout_weight="1"
             android:fontFamily="sans-serif-condensed"
             android:textAlignment="center"
@@ -268,10 +254,9 @@
             android:text="Виміряне значення маси гир"
             android:textColor="#0E0E0E"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:inputType="numberDecimal|numberSigned"/>
+            android:textStyle="bold"/>
         <View
-            android:layout_width="200dp"
+            android:layout_width="340dp"
             android:layout_height="1dp"
             android:layout_marginTop="1dp"
             android:background="#333"/>
@@ -287,93 +272,76 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="100dp"
+                android:layout_width="170dp"
                 android:layout_height="59dp"
-                android:layout_weight="1"
                 android:fontFamily="sans-serif-condensed"
-                android:textAlignment="center"
-                android:text="при навантаженні"
-                android:textColor="#0E0E0E"
-                android:textSize="15sp"
-                android:textStyle="bold"
                 android:gravity="center_horizontal"
-                android:inputType="numberDecimal|numberSigned"/>
+                android:text="при навантаженні"
+                android:textAlignment="center"
+                android:textColor="#0E0E0E"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
             <View
-                android:layout_width="100dp"
+                android:layout_width="170dp"
                 android:layout_height="1dp"
                 android:background="#333"/>
 
             <EditText
                 android:id="@+id/nzn1"
-                android:layout_width="100dp"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
+                android:layout_width="170dp"
+                android:layout_height="33dp"
                 android:background="@null"
+                android:textColor="#0E0E0E"
                 android:inputType="numberDecimal|numberSigned"/>
             <View
-                android:layout_width="100dp"
+                android:layout_width="170dp"
                 android:layout_height="1dp"
                 android:background="#333"/>
 
             <EditText
                 android:id="@+id/nzn2"
-                android:layout_width="100dp"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
+                android:layout_width="170dp"
+                android:layout_height="33dp"
                 android:background="@null"
+                android:textColor="#0E0E0E"
                 android:inputType="numberDecimal|numberSigned"/>
             <View
-                android:layout_width="100dp"
+                android:layout_width="170dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="1dp"
                 android:background="#333"/>
             <EditText
                 android:id="@+id/nzn3"
-                android:layout_width="100dp"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
+                android:layout_width="170dp"
+                android:layout_height="33dp"
                 android:background="@null"
+                android:textColor="#0E0E0E"
                 android:inputType="numberDecimal|numberSigned"/>
             <View
-                android:layout_width="100dp"
+                android:layout_width="170dp"
                 android:layout_height="1dp"
                 android:background="#333"/>
             <EditText
                 android:id="@+id/nzn4"
-                android:layout_width="100dp"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
+                android:layout_width="170dp"
+                android:layout_height="33dp"
                 android:background="@null"
+                android:textColor="#0E0E0E"
                 android:inputType="numberDecimal|numberSigned"/>
             <View
-                android:layout_width="100dp"
+                android:layout_width="170dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="1dp"
                 android:background="#333"/>
             <EditText
                 android:id="@+id/nzn5"
-                android:layout_width="100dp"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
+                android:layout_width="170dp"
+                android:layout_height="33dp"
                 android:background="@null"
+                android:textColor="#0E0E0E"
                 android:inputType="numberDecimal|numberSigned"/>
             <View
-                android:layout_width="100dp"
+                android:layout_width="170dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="1dp"
                 android:background="#333"/>
@@ -381,76 +349,61 @@
 
             <EditText
                 android:id="@+id/nzn6"
-                android:layout_width="100dp"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
+                android:layout_width="170dp"
+                android:layout_height="33dp"
                 android:background="@null"
+                android:textColor="#0E0E0E"
                 android:inputType="numberDecimal|numberSigned"/>
             <View
-                android:layout_width="100dp"
+                android:layout_width="170dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="1dp"
                 android:background="#333"/>
 
             <EditText
                 android:id="@+id/nzn7"
-                android:layout_width="100dp"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
+                android:layout_width="170dp"
+                android:layout_height="33dp"
                 android:background="@null"
+                android:textColor="#0E0E0E"
                 android:inputType="numberDecimal|numberSigned"/>
             <View
-                android:layout_width="100dp"
+                android:layout_width="170dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="1dp"
                 android:background="#333"/>
             <EditText
                 android:id="@+id/nzn8"
-                android:layout_width="100dp"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
+                android:layout_width="170dp"
+                android:layout_height="33dp"
                 android:background="@null"
+                android:textColor="#0E0E0E"
                 android:inputType="numberDecimal|numberSigned"/>
             <View
-                android:layout_width="100dp"
+                android:layout_width="170dp"
                 android:layout_height="1dp"
                 android:background="#333"/>
             <EditText
                 android:id="@+id/nzn9"
-                android:layout_width="100dp"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
+                android:layout_width="170dp"
+                android:layout_height="33dp"
                 android:background="@null"
+                android:textColor="#0E0E0E"
                 android:inputType="numberDecimal|numberSigned"/>
             <View
-                android:layout_width="100dp"
+                android:layout_width="170dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="1dp"
                 android:background="#333"/>
             <EditText
                 android:id="@+id/nzn10"
-                android:layout_width="100dp"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
+                android:layout_width="170dp"
+                android:layout_height="33dp"
                 android:background="@null"
+                android:textColor="#0E0E0E"
                 android:inputType="numberDecimal|numberSigned"/>
             <View
-                android:layout_width="100dp"
+                android:layout_width="170dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="1dp"
                 android:background="#333"/>
@@ -463,92 +416,76 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="100dp"
+                    android:layout_width="170dp"
                     android:layout_height="59dp"
-                    android:layout_weight="1"
                     android:fontFamily="sans-serif-condensed"
-                    android:textAlignment="center"
+                    android:gravity="center_horizontal"
                     android:text="при розвантаженні"
+                    android:textAlignment="center"
                     android:textColor="#0E0E0E"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:gravity="center_horizontal" />
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
                 <View
-                    android:layout_width="100dp"
+                    android:layout_width="170dp"
                     android:layout_height="1dp"
                     android:background="#333"/>
 
                 <EditText
                     android:id="@+id/nzr1"
-                    android:layout_width="100dp"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
+                    android:layout_width="170dp"
+                    android:layout_height="33dp"
                     android:background="@null"
+                    android:textColor="#0E0E0E"
                     android:inputType="numberDecimal|numberSigned"/>
                 <View
-                    android:layout_width="100dp"
+                    android:layout_width="170dp"
                     android:layout_height="1dp"
                     android:background="#333"/>
 
                 <EditText
                     android:id="@+id/nzr2"
-                    android:layout_width="100dp"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
+                    android:layout_width="170dp"
+                    android:layout_height="33dp"
                     android:background="@null"
+                    android:textColor="#0E0E0E"
                     android:inputType="numberDecimal|numberSigned"/>
                 <View
-                    android:layout_width="100dp"
+                    android:layout_width="170dp"
                     android:layout_height="1dp"
                     android:layout_marginTop="1dp"
                     android:background="#333"/>
                 <EditText
                     android:id="@+id/nzr3"
-                    android:layout_width="100dp"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
+                    android:layout_width="170dp"
+                    android:layout_height="33dp"
                     android:background="@null"
+                    android:textColor="#0E0E0E"
                     android:inputType="numberDecimal|numberSigned"/>
                 <View
-                    android:layout_width="100dp"
+                    android:layout_width="170dp"
                     android:layout_height="1dp"
                     android:background="#333"/>
                 <EditText
                     android:id="@+id/nzr4"
-                    android:layout_width="100dp"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
+                    android:layout_width="170dp"
+                    android:layout_height="33dp"
                     android:background="@null"
+                    android:textColor="#0E0E0E"
                     android:inputType="numberDecimal|numberSigned"/>
                 <View
-                    android:layout_width="100dp"
+                    android:layout_width="170dp"
                     android:layout_height="1dp"
                     android:layout_marginTop="1dp"
                     android:background="#333"/>
                 <EditText
                     android:id="@+id/nzr5"
-                    android:layout_width="100dp"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
+                    android:layout_width="170dp"
+                    android:layout_height="33dp"
                     android:background="@null"
+                    android:textColor="#0E0E0E"
                     android:inputType="numberDecimal|numberSigned"/>
                 <View
-                    android:layout_width="100dp"
+                    android:layout_width="170dp"
                     android:layout_height="1dp"
                     android:layout_marginTop="1dp"
                     android:background="#333"/>
@@ -556,76 +493,61 @@
 
                 <EditText
                     android:id="@+id/nzr6"
-                    android:layout_width="100dp"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
+                    android:layout_width="170dp"
+                    android:layout_height="33dp"
                     android:background="@null"
+                    android:textColor="#0E0E0E"
                     android:inputType="numberDecimal|numberSigned"/>
                 <View
-                    android:layout_width="100dp"
+                    android:layout_width="170dp"
                     android:layout_height="1dp"
                     android:layout_marginTop="1dp"
                     android:background="#333"/>
 
                 <EditText
                     android:id="@+id/nzr7"
-                    android:layout_width="100dp"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
+                    android:layout_width="170dp"
+                    android:layout_height="33dp"
                     android:background="@null"
+                    android:textColor="#0E0E0E"
                     android:inputType="numberDecimal|numberSigned"/>
                 <View
-                    android:layout_width="100dp"
+                    android:layout_width="170dp"
                     android:layout_height="1dp"
                     android:layout_marginTop="1dp"
                     android:background="#333"/>
                 <EditText
                     android:id="@+id/nzr8"
-                    android:layout_width="100dp"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
+                    android:layout_width="170dp"
+                    android:layout_height="33dp"
                     android:background="@null"
+                    android:textColor="#0E0E0E"
                     android:inputType="numberDecimal|numberSigned"/>
                 <View
-                    android:layout_width="100dp"
+                    android:layout_width="170dp"
                     android:layout_height="1dp"
                     android:background="#333"/>
                 <EditText
                     android:id="@+id/nzr9"
-                    android:layout_width="100dp"
-                    android:textAlignment="center"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
+                    android:layout_width="170dp"
+                    android:layout_height="33dp"
                     android:background="@null"
-                    android:gravity="center"
+                    android:textColor="#0E0E0E"
                     android:inputType="numberDecimal|numberSigned"/>
                 <View
-                    android:layout_width="100dp"
+                    android:layout_width="170dp"
                     android:layout_height="1dp"
                     android:layout_marginTop="1dp"
                     android:background="#333"/>
                 <EditText
                     android:id="@+id/nzr10"
-                    android:layout_width="100dp"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
+                    android:layout_width="170dp"
+                    android:layout_height="33dp"
                     android:background="@null"
+                    android:textColor="#0E0E0E"
                     android:inputType="numberDecimal|numberSigned"/>
                 <View
-                    android:layout_width="100dp"
+                    android:layout_width="170dp"
                     android:layout_height="1dp"
                     android:layout_marginTop="1dp"
                     android:background="#333"/>
@@ -639,35 +561,75 @@
         android:id="@+id/ree6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Абсолютна похибка"
+            android:fontFamily="sans-serif-condensed"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:textColor="#0E0E0E"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
         <EditText
             android:id="@+id/uniq_e_tab6"
-            android:layout_width="200dp"
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginStart="5dp"
-            android:hint="Абсолютна похибка"
-            android:inputType="numberDecimal|numberSigned"
-            />
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:textColor="#0E0E0E"
+            android:inputType="numberDecimal|numberSigned"/>
+        <View
+            android:layout_width="170dp"
+
+            android:layout_height="1dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="#333"/>
+            </LinearLayout>
+
         <Button
             android:id="@+id/check_tab6"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
             android:layout_marginLeft="10dp"
             android:onClick="onClickTab2"
-            android:text="Перевірка"
+            android:text="Висновок"
             android:layout_marginStart="10dp" />
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="200dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginLeft="70dp">
         <Button
             android:id="@+id/protocol_button"
-            android:layout_width="150dp"
-            android:layout_height="0dp"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
-            android:text="Запис"
+            android:text="Запис результата"
             android:onClick="onClick"
-            android:layout_marginStart="10dp" />
-
+            android:layout_marginStart="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+        </LinearLayout>
     </LinearLayout>
-
-
+</LinearLayout>
 </LinearLayout>

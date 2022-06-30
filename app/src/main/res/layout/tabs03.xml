@@ -4,8 +4,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/tabs03"
+    android:background="@color/bgr"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="690dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Визначення запобіжності показань приладу"
+        android:fontFamily="sans-serif-condensed"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textColor="#0E0E0E"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp" />
+    <View
+        android:layout_width="690dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="#333"/>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -243,7 +263,6 @@
                 android:layout_height="50dp"
                 android:fontFamily="sans-serif-condensed"
                 android:textAlignment="center"
-                android:gravity=""
                 android:text="Показання вагпри навантаженні"
                 android:textColor="#0E0E0E"
                 android:textSize="20sp"
@@ -554,22 +573,41 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Абсолютна похибка"
+                android:fontFamily="sans-serif-condensed"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:textColor="#0E0E0E"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
             <EditText
                 android:id="@+id/uniq_e_tab5"
-                android:layout_width="200dp"
+                android:layout_width="170dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginStart="5dp"
-                android:hint="Абсолютна похибка"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:inputType="numberDecimal|numberSigned"
                 />
+            <View
+                android:layout_width="170dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="#333"/>
             <Button
                 android:id="@+id/check_tab5"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
                 android:onClick="onClickTab2"
-                android:text="Перевірка"
+                android:text="Висновок"
                 android:layout_marginStart="10dp" />
         </LinearLayout>
 

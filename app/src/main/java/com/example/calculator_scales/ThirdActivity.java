@@ -246,19 +246,19 @@ public class ThirdActivity extends AppCompatActivity
     }
 
     private void SetButtonSuccess(Button btn) {
-        btn.setText("ГОДЕН");
+        btn.setText("придатний");
         int color = getResources().getColor(R.color.green);
         btn.setBackgroundColor(color);
     }
 
     private void SetButtonFail(Button btn) {
-        btn.setText("НЕ ГОДЕН");
+        btn.setText("не придатний");
         int color = getResources().getColor(R.color.red);
         btn.setBackgroundColor(color);
     }
 
     private void SetButtonIdle(Button btn) {
-        btn.setText("ПРОВЕРИТЬ");
+        btn.setText("Висновок");
         btn.setBackgroundColor(getResources().getColor(R.color.bc));
     }
 
@@ -706,7 +706,7 @@ public class ThirdActivity extends AppCompatActivity
         et_uniq_e_tab6 = findViewById(R.id.uniq_e_tab6);
 
         btn_protocol = findViewById(R.id.protocol_button);
-        btn_protocol.setText("СОХРАНИТЬ");
+        btn_protocol.setText("Зберегти");
         int color = getResources().getColor(R.color.bc);
         btn_protocol.setBackgroundColor(color);
 
@@ -782,7 +782,7 @@ public class ThirdActivity extends AppCompatActivity
                 if(successContent4Tab6) SetButtonSuccess(btn_tab6);
                 else SetButtonFail(btn_tab6);
 
-                btn_protocol.setText("СОХРАНИТЬ");
+                btn_protocol.setText("Зберегти");
                 int color = getResources().getColor(R.color.bc);
                 btn_protocol.setBackgroundColor(color);
             }
@@ -803,7 +803,7 @@ public class ThirdActivity extends AppCompatActivity
             public void onClick(View view)
             {
                 SaveToFile();
-                btn_protocol.setText("СОХРАНЕНО!");
+                btn_protocol.setText("Збережено!");
                 int color = getResources().getColor(R.color.green);
                 btn_protocol.setBackgroundColor(color);
             }
@@ -855,7 +855,7 @@ public class ThirdActivity extends AppCompatActivity
     }
 
     private void SaveToFile() {
-        String ten = "#.##"; //0.00
+        String ten = "#,##"; //0,00
         DecimalFormat decimalFormatter = new DecimalFormat(ten);
 
         SimpleDateFormat dateFormatter = new SimpleDateFormat("dd.MM.yyyy");
@@ -868,7 +868,7 @@ public class ThirdActivity extends AppCompatActivity
         String new_protocol_filename = "Протокол №" + protocol_number + " " + dateFormatter.format(now) + ".xml";
 
         //Название папки с протоколами
-        String protocol_folders_name = "Протоколы весы";
+        String protocol_folders_name = "Протоколы ваги";
 
         //Пытаемся считать нужный нам шаблон. (160х160, 250х250 и т.д.)
         try (InputStream input = getResources().openRawResource(getResources().getIdentifier("first","raw", getPackageName())))

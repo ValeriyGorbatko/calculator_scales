@@ -3,74 +3,173 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/tabs02"
-    android:orientation="vertical">
+    android:background="@color/bgr"
+    android:orientation="horizontal">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="540dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Визначення основної абсолютної похибки ід розташування"
+            android:fontFamily="sans-serif-condensed"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:textColor="#0E0E0E"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp" />
+        <View
+            android:layout_width="540dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="#333"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:fontFamily="sans-serif-medium"
         android:text="Обрати форму ваг:"
-        android:textColor="#121111"
-        android:textSize="15sp">
+        android:fontFamily="sans-serif-condensed"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textColor="#0E0E0E"
+        android:textSize="17sp"
+        android:textStyle="bold">
 
     </TextView>
         <!--        style="@android:style/Widget.Spinner"-->
     <Spinner
         android:id="@+id/spinner"
-
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:entries="@array/form_vag"
-        />
-
+        android:fontFamily="sans-serif-condensed"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textColor="#0E0E0E"
+        android:entries="@array/form_vag"/>
+        </LinearLayout>
         <LinearLayout
             android:id="@+id/ree3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <EditText
-                android:id="@+id/uniq_e_tab3"
-                android:layout_width="200dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
+            <TextView
+                android:layout_width="170dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginStart="5dp"
-                android:hint="Абсолютна похибка"
-                android:inputType="numberDecimal|numberSigned"
-                />
+                android:layout_marginTop="10dp"
+                android:text="Абсолютна похибка"
+                android:fontFamily="sans-serif-condensed"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:textColor="#0E0E0E"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/uniq_e_tab3"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:textColor="#0E0E0E"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:inputType="numberDecimal|numberSigned"/>
+            <View
+                android:layout_width="170dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="#333"/>
+            </LinearLayout>
             <Button
                 android:id="@+id/check_tab3"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="10dp"
+                android:layout_width="170dp"
+                android:layout_marginStart="10dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
                 android:onClick="onClickTab3"
-                android:text="Перевірка"
-                android:layout_marginStart="10dp" />
+                android:text="Висновок"
+                android:layout_marginLeft="10dp" />
+
         </LinearLayout>
 
 
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/forms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
     </LinearLayout>
     <LinearLayout
-        android:id="@+id/forms"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
-    </LinearLayout>
-
+        <TextView
+            android:layout_width="540dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Визначення порога чутливості пристрою"
+            android:fontFamily="sans-serif-condensed"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:textColor="#0E0E0E"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp" />
+        <View
+            android:layout_width="540dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="#333"/>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -78,10 +177,10 @@
 
         <TextView
             android:layout_width="150dp"
-            android:layout_height="80dp"
+            android:layout_height="90dp"
             android:layout_marginStart="30dp"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:layout_weight="1"
             android:fontFamily="sans-serif-condensed"
             android:textAlignment="center"
@@ -101,7 +200,7 @@
         <EditText
             android:id="@+id/ves1"
             android:layout_width="150dp"
-            android:layout_height="39dp"
+            android:layout_height="55dp"
             android:layout_marginStart="30dp"
             android:layout_marginLeft="30dp"
             android:fontFamily="sans-serif-condensed"
@@ -110,13 +209,19 @@
             android:textColor="#0E0E0E"
             android:textSize="20sp"
             android:textStyle="bold"
+            android:background="@null"
             android:inputType="numberDecimal|numberSigned"/>
-
+        <View
+            android:layout_width="150dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:background="#333"/>
 
         <EditText
             android:id="@+id/ves2"
             android:layout_width="150dp"
-            android:layout_height="39dp"
+            android:layout_height="55dp"
             android:layout_marginStart="30dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="8dp"
@@ -126,12 +231,20 @@
             android:textColor="#0E0E0E"
             android:textSize="20sp"
             android:textStyle="bold"
+            android:background="@null"
             android:inputType="numberDecimal|numberSigned"/>
+
+        <View
+            android:layout_width="150dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:background="#333"/>
 
         <EditText
             android:id="@+id/ves3"
             android:layout_width="150dp"
-            android:layout_height="39dp"
+            android:layout_height="55dp"
             android:layout_marginStart="30dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="8dp"
@@ -141,8 +254,14 @@
             android:textColor="#0E0E0E"
             android:textSize="20sp"
             android:textStyle="bold"
+            android:background="@null"
             android:inputType="numberDecimal|numberSigned"/>
-
+        <View
+            android:layout_width="150dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:background="#333"/>
 
 
     </LinearLayout>
@@ -152,8 +271,8 @@
         android:orientation="vertical">
         <TextView
             android:layout_width="190dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="30dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="10dp"
             android:layout_weight="1"
             android:fontFamily="sans-serif-condensed"
             android:textAlignment="center"
@@ -161,8 +280,7 @@
             android:text="Значення чутливості"
             android:textColor="#0E0E0E"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:inputType="numberDecimal|numberSigned"/>
+            android:textStyle="bold"/>
         <View
             android:layout_width="190dp"
             android:layout_height="1dp"
@@ -171,19 +289,26 @@
         <EditText
             android:id="@+id/zch1"
             android:layout_width="190dp"
-            android:layout_height="39dp"
+            android:layout_height="55dp"
             android:fontFamily="sans-serif-condensed"
             android:textAlignment="center"
             android:gravity="center_horizontal"
             android:textColor="#0E0E0E"
             android:textSize="20sp"
             android:textStyle="bold"
+            android:background="@null"
             android:inputType="numberDecimal|numberSigned"/>
+        <View
+            android:layout_width="150dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:background="#333"/>
 
         <EditText
             android:id="@+id/zch2"
             android:layout_width="190dp"
-            android:layout_height="39dp"
+            android:layout_height="55dp"
             android:fontFamily="sans-serif-condensed"
             android:layout_marginTop="8dp"
             android:textAlignment="center"
@@ -191,13 +316,21 @@
             android:textColor="#0E0E0E"
             android:textSize="20sp"
             android:textStyle="bold"
+            android:background="@null"
             android:inputType="numberDecimal|numberSigned"/>
+
+        <View
+            android:layout_width="150dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:background="#333"/>
 
 
         <EditText
             android:id="@+id/zch3"
             android:layout_width="190dp"
-            android:layout_height="39dp"
+            android:layout_height="55dp"
             android:layout_marginTop="8dp"
             android:fontFamily="sans-serif-condensed"
             android:textAlignment="center"
@@ -205,8 +338,15 @@
             android:textColor="#0E0E0E"
             android:textSize="20sp"
             android:textStyle="bold"
+            android:background="@null"
             android:inputType="numberDecimal|numberSigned"/>
 
+        <View
+            android:layout_width="150dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:background="#333"/>
 
     </LinearLayout>
         <LinearLayout
@@ -214,15 +354,16 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
         <Button
-            android:layout_width="100dp"
-            android:layout_height="50dp"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:id="@+id/check_tab4"
-            android:text="перевірка"
+            android:text="Висновок"
             android:onClick="onClickTab4"
             android:layout_marginStart="10dp" />
 
     </LinearLayout>
+</LinearLayout>
 </LinearLayout>
 </LinearLayout>

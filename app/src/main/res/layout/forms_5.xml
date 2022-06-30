@@ -11,10 +11,10 @@
 
     <TextView
         android:layout_width="150dp"
-        android:layout_height="80dp"
+        android:layout_height="95dp"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:layout_weight="1"
         android:fontFamily="sans-serif-condensed"
         android:textAlignment="center"
@@ -22,8 +22,7 @@
         android:text="Номер навантаження"
         android:textColor="#0E0E0E"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:inputType="numberDecimal|numberSigned" />
+        android:textStyle="bold"/>
         <View
             android:layout_width="150dp"
             android:layout_height="1dp"
@@ -33,7 +32,7 @@
             android:background="#333"/>
         <TextView
             android:layout_width="150dp"
-            android:layout_height="39dp"
+            android:layout_height="41dp"
             android:layout_marginStart="30dp"
             android:layout_marginLeft="30dp"
             android:fontFamily="sans-serif-condensed"
@@ -42,8 +41,7 @@
             android:text="1"
             android:textColor="#0E0E0E"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:inputType="numberDecimal|numberSigned"/>
+            android:textStyle="bold"/>
 
         <View
             android:layout_width="150dp"
@@ -53,7 +51,7 @@
             android:background="#333"/>
         <TextView
             android:layout_width="150dp"
-            android:layout_height="39dp"
+            android:layout_height="41dp"
             android:layout_marginStart="30dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="8dp"
@@ -63,8 +61,7 @@
             android:text="2"
             android:textColor="#0E0E0E"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:inputType="numberDecimal|numberSigned"/>
+            android:textStyle="bold"/>
         <View
             android:layout_width="150dp"
             android:layout_height="1dp"
@@ -74,7 +71,7 @@
             android:background="#333"/>
         <TextView
             android:layout_width="150dp"
-            android:layout_height="39dp"
+            android:layout_height="41dp"
             android:layout_marginStart="30dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="7dp"
@@ -84,8 +81,7 @@
             android:text="3"
             android:textColor="#0E0E0E"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:inputType="numberDecimal|numberSigned"/>
+            android:textStyle="bold"/>
 
         <View
             android:layout_width="150dp"
@@ -96,7 +92,7 @@
             android:background="#333"/>
         <TextView
             android:layout_width="150dp"
-            android:layout_height="39dp"
+            android:layout_height="41dp"
             android:layout_marginStart="30dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="8dp"
@@ -106,8 +102,7 @@
             android:text="4"
             android:textColor="#0E0E0E"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:inputType="numberDecimal|numberSigned"/>
+            android:textStyle="bold"/>
         <View
             android:layout_width="150dp"
             android:layout_height="1dp"
@@ -117,7 +112,7 @@
             android:background="#333"/>
         <TextView
             android:layout_width="150dp"
-            android:layout_height="39dp"
+            android:layout_height="41dp"
             android:layout_marginStart="30dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="8dp"
@@ -127,8 +122,7 @@
             android:text="5"
             android:textColor="#0E0E0E"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:inputType="numberDecimal|numberSigned"/>
+            android:textStyle="bold"/>
 
         <View
             android:layout_width="150dp"
@@ -143,8 +137,8 @@
         android:orientation="vertical">
     <TextView
         android:layout_width="150dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="30dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="10dp"
         android:layout_weight="1"
         android:fontFamily="sans-serif-condensed"
         android:textAlignment="center"
@@ -152,8 +146,7 @@
         android:text="Номінальне знпчення маси гир"
         android:textColor="#0E0E0E"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:inputType="numberDecimal|numberSigned"/>
+        android:textStyle="bold"/>
         <View
             android:layout_width="150dp"
             android:layout_height="1dp"
@@ -162,7 +155,8 @@
         <EditText
             android:id="@+id/mg1"
             android:layout_width="150dp"
-            android:layout_height="wrap_content"
+            android:layout_height="41dp"
+            android:background="@null"
             android:fontFamily="sans-serif-condensed"
             android:textAlignment="center"
             android:gravity="center_horizontal"
@@ -170,12 +164,17 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:inputType="numberDecimal|numberSigned"/>
-
+        <View
+            android:layout_width="150dp"
+            android:layout_height="1dp"
+            android:background="#333"/>
 
         <EditText
             android:id="@+id/mg2"
             android:layout_width="150dp"
-            android:layout_height="wrap_content"
+            android:layout_height="42dp"
+            android:background="@null"
+            android:layout_marginTop="8dp"
             android:fontFamily="sans-serif-condensed"
             android:textAlignment="center"
             android:gravity="center_horizontal"
@@ -183,11 +182,17 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:inputType="numberDecimal|numberSigned"/>
+        <View
+            android:layout_width="150dp"
+            android:layout_height="1dp"
+            android:background="#333"/>
 
         <EditText
             android:id="@+id/mg3"
             android:layout_width="150dp"
-            android:layout_height="wrap_content"
+            android:layout_height="41dp"
+            android:background="@null"
+            android:layout_marginTop="8dp"
             android:fontFamily="sans-serif-condensed"
             android:textAlignment="center"
             android:gravity="center_horizontal"
@@ -195,11 +200,17 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:inputType="numberDecimal|numberSigned"/>
+        <View
+            android:layout_width="150dp"
+            android:layout_height="1dp"
+            android:background="#333"/>
 
         <EditText
             android:id="@+id/mg4"
             android:layout_width="150dp"
-            android:layout_height="wrap_content"
+            android:layout_height="42dp"
+            android:background="@null"
+            android:layout_marginTop="8dp"
             android:fontFamily="sans-serif-condensed"
             android:textAlignment="center"
             android:gravity="center_horizontal"
@@ -207,11 +218,17 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:inputType="numberDecimal|numberSigned"/>
+        <View
+            android:layout_width="150dp"
+            android:layout_height="1dp"
+            android:background="#333"/>
 
         <EditText
             android:id="@+id/mg5"
             android:layout_width="150dp"
-            android:layout_height="wrap_content"
+            android:layout_height="41dp"
+            android:background="@null"
+            android:layout_marginTop="8dp"
             android:fontFamily="sans-serif-condensed"
             android:textAlignment="center"
             android:gravity="center_horizontal"
@@ -219,6 +236,10 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:inputType="numberDecimal|numberSigned"/>
+        <View
+            android:layout_width="150dp"
+            android:layout_height="1dp"
+            android:background="#333"/>
 
     </LinearLayout>
     <LinearLayout
@@ -227,8 +248,8 @@
         android:orientation="vertical">
     <TextView
         android:layout_width="150dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="30dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="10dp"
         android:layout_weight="1"
         android:fontFamily="sans-serif-condensed"
         android:textAlignment="center"
@@ -236,8 +257,7 @@
         android:text="Виміряне знпчення маси гир"
         android:textColor="#0E0E0E"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:inputType="numberDecimal|numberSigned"/>
+        android:textStyle="bold"/>
         <View
             android:layout_width="150dp"
             android:layout_height="1dp"
@@ -246,7 +266,8 @@
         <EditText
             android:id="@+id/vmg1"
             android:layout_width="150dp"
-            android:layout_height="wrap_content"
+            android:layout_height="41dp"
+            android:background="@null"
             android:fontFamily="sans-serif-condensed"
             android:textAlignment="center"
             android:gravity="center_horizontal"
@@ -254,12 +275,18 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:inputType="numberDecimal|numberSigned"/>
+        <View
+            android:layout_width="150dp"
+            android:layout_height="1dp"
+            android:background="#333"/>
 
 
         <EditText
             android:id="@+id/vmg2"
             android:layout_width="150dp"
-            android:layout_height="wrap_content"
+            android:layout_height="41dp"
+            android:background="@null"
+            android:layout_marginTop="9dp"
             android:fontFamily="sans-serif-condensed"
             android:textAlignment="center"
             android:gravity="center_horizontal"
@@ -267,12 +294,18 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:inputType="numberDecimal|numberSigned"/>
+        <View
+            android:layout_width="150dp"
+            android:layout_height="1dp"
+            android:background="#333"/>
 
 
         <EditText
             android:id="@+id/vmg3"
             android:layout_width="150dp"
-            android:layout_height="wrap_content"
+            android:layout_height="41dp"
+            android:background="@null"
+            android:layout_marginTop="8dp"
             android:fontFamily="sans-serif-condensed"
             android:textAlignment="center"
             android:gravity="center_horizontal"
@@ -280,11 +313,17 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:inputType="numberDecimal|numberSigned"/>
+        <View
+            android:layout_width="150dp"
+            android:layout_height="1dp"
+            android:background="#333"/>
 
         <EditText
             android:id="@+id/vmg4"
             android:layout_width="150dp"
-            android:layout_height="wrap_content"
+            android:layout_height="41dp"
+            android:background="@null"
+            android:layout_marginTop="9dp"
             android:fontFamily="sans-serif-condensed"
             android:textAlignment="center"
             android:gravity="center_horizontal"
@@ -292,11 +331,17 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:inputType="numberDecimal|numberSigned"/>
+        <View
+            android:layout_width="150dp"
+            android:layout_height="1dp"
+            android:background="#333"/>
 
         <EditText
             android:id="@+id/vmg5"
             android:layout_width="150dp"
-            android:layout_height="wrap_content"
+            android:layout_height="41dp"
+            android:background="@null"
+            android:layout_marginTop="8dp"
             android:fontFamily="sans-serif-condensed"
             android:textAlignment="center"
             android:gravity="center_horizontal"
@@ -304,6 +349,10 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:inputType="numberDecimal|numberSigned"/>
+        <View
+            android:layout_width="150dp"
+            android:layout_height="1dp"
+            android:background="#333"/>
     </LinearLayout>
 
 
