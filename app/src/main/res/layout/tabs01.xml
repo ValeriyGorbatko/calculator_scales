@@ -58,7 +58,7 @@
                 android:textColor="#0E0E0E"
                 android:textSize="17sp"
                 android:textStyle="bold"
-                android:text="Виміряне значення маси гир" />
+                android:text="Виміряне значення маси гир г" />
 
             <EditText
                 android:id="@+id/vim_zn_gir"
