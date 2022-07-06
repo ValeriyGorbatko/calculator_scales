@@ -352,7 +352,7 @@ public class ThirdActivity extends AppCompatActivity
             {
                 SetButtonIdle(btn_tab1);
                 if(!MainActivity.IsValueValid(et_uniq_e_tab1.getText())) uniq_e_tab1 = 0;
-                else uniq_e_tab1 = Float.valueOf(et_uniq_e_tab1.getText().toString());
+                else uniq_e_tab1 = Math.abs(Float.valueOf(et_uniq_e_tab1.getText().toString()));
             }
         });
 
@@ -362,7 +362,7 @@ public class ThirdActivity extends AppCompatActivity
             {
                 SetButtonIdle(btn_tab2);
                 if(!MainActivity.IsValueValid(et_uniq_e_tab2.getText())) uniq_e_tab2 = 0;
-                else uniq_e_tab2 = Float.valueOf(et_uniq_e_tab2.getText().toString());
+                else uniq_e_tab2 = Math.abs(Float.valueOf(et_uniq_e_tab2.getText().toString()));
             }
         });
 
@@ -522,7 +522,7 @@ public class ThirdActivity extends AppCompatActivity
             {
                 SetButtonIdle(btn_tab3);
                 if(!MainActivity.IsValueValid(et_uniq_e_tab3.getText())) uniq_e_tab3 = 0;
-                else uniq_e_tab3 = Float.valueOf(et_uniq_e_tab3.getText().toString());
+                else uniq_e_tab3 = Math.abs(Float.valueOf(et_uniq_e_tab3.getText().toString()));
             }
         });
     }
@@ -663,7 +663,7 @@ public class ThirdActivity extends AppCompatActivity
             {
                 SetButtonIdle(btn_tab5);
                 if(!MainActivity.IsValueValid(et_uniq_e_tab5.getText())) uniq_e_tab5 = 0;
-                else uniq_e_tab5 = Float.valueOf(et_uniq_e_tab5.getText().toString());
+                else uniq_e_tab5 = Math.abs(Float.valueOf(et_uniq_e_tab5.getText().toString()));
             }
         });
     }
@@ -794,7 +794,7 @@ public class ThirdActivity extends AppCompatActivity
             {
                 SetButtonIdle(btn_tab6);
                 if(!MainActivity.IsValueValid(et_uniq_e_tab6.getText())) uniq_e_tab6 = 0;
-                else uniq_e_tab6 = Float.valueOf(et_uniq_e_tab6.getText().toString());
+                else uniq_e_tab6 = Math.abs(Float.valueOf(et_uniq_e_tab6.getText().toString()));
             }
         });
 
@@ -855,7 +855,7 @@ public class ThirdActivity extends AppCompatActivity
     }
 
     private void SaveToFile() {
-        String ten = "#,##"; //0,00
+        String ten = "#,###"; //0,00
         DecimalFormat decimalFormatter = new DecimalFormat(ten);
 
         SimpleDateFormat dateFormatter = new SimpleDateFormat("dd.MM.yyyy");
@@ -903,8 +903,15 @@ public class ThirdActivity extends AppCompatActivity
 
 
             //Таблица №1
-            content = content.replace("keyNomMass", decimalFormatter.format((MainActivity.GetScaleDivisionValue() * 10f) * 1000f));
-            content = content.replace("keyVimZna", String.valueOf(l0));
+
+            float nomMass = MainActivity.GetScaleDivisionValue();
+            float nomMass10 = nomMass * 10f;
+            float nomMass1000 = nomMass10 * 1000f;
+            content = content.replace("keyNomMass", decimalFormatter.format(nomMass1000));
+
+            float vimZna = l0 * 1000f;
+            content = content.replace("keyVimZna", String.valueOf(vimZna));
+
             content = content.replace("keyDodatkgir", String.valueOf(dL0));
             content = content.replace("keyZnabsolute", decimalFormatter.format(E0));
 
