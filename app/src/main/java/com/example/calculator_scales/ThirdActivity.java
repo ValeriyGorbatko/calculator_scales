@@ -420,12 +420,12 @@ public class ThirdActivity extends AppCompatActivity
     private boolean CheckContent1Tab1() {
         float e = MainActivity.GetScaleDivisionValue();
         float L0 = (e * 10f) * 1000f;
-        E0 = ((l0 * 1000f) - L0 + (e * 0.5f) - dL0) / 1000f;
+        E0 = (l0 - L0 + ((e * 0.5f) * 1000) - dL0);
 
         float factor = CheckValueByAccuracy(E0);
         boolean isUniqE = uniq_e_tab1 != 0;
         boolean inRange = isUniqE ? E0 >= -uniq_e_tab1 && E0 <= uniq_e_tab1 :factor != -1;
-        E0_output = isUniqE ? uniq_e_tab1 : (E0 * 1000f) * factor;
+        E0_output = isUniqE ? uniq_e_tab1 : E0 * factor;
         if(inRange)
         {
             float abs = Math.abs(E0_output);
@@ -608,12 +608,12 @@ public class ThirdActivity extends AppCompatActivity
         sensitivity = 1.4f * MainActivity.GetDivisionsValidValue();
 
         int successCount = 0;
-        for (int i = 0; i < count; i++)
+        for (int i = 0; i < 3; i++)
         {
             if(zch[i] <= sensitivity) successCount++;
         }
 
-        return successCount == count;
+        return successCount == 3;
     }
 
 
@@ -909,7 +909,7 @@ public class ThirdActivity extends AppCompatActivity
             float nomMass1000 = nomMass10 * 1000f;
             content = content.replace("keyNomMass", decimalFormatter.format(nomMass1000));
 
-            float vimZna = l0 * 1000f;
+            float vimZna = l0;
             content = content.replace("keyVimZna", String.valueOf(vimZna));
 
             content = content.replace("keyDodatkgir", String.valueOf(dL0));
