@@ -109,19 +109,19 @@ public class SecondActivity extends AppCompatActivity
     }
 
     private void SetButtonSuccess(Button btn) {
-     btn.setText("РАССЧИТАНО");
+     btn.setText("ПРИДАТНИЙ");
      int color = getResources().getColor(R.color.green);
      btn.setBackgroundColor(color);
     }
 
     private void SetButtonFail(Button btn) {
-     btn.setText("ОШИБКА");
+     btn.setText("ПОМИЛКА");
      int color = getResources().getColor(R.color.red);
      btn.setBackgroundColor(color);
     }
 
     private void SetButtonIdle(Button btn) {
-     btn.setText("РАСЧИТАТЬ");
+     btn.setText("ВИСНОВОК");
      btn.setBackgroundColor(getResources().getColor(R.color.bc));
     }
 
@@ -231,7 +231,7 @@ public class SecondActivity extends AppCompatActivity
     }
 
      private void SaveToFile() {
-         String ten = "#.##"; //0.00
+         String ten = "#,###"; //0.000
          DecimalFormat decimalFormatter = new DecimalFormat(ten);
 
          SimpleDateFormat dateFormatter = new SimpleDateFormat("dd.MM.yyyy");

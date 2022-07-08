@@ -8,26 +8,27 @@
 
     <TableLayout
         android:id="@+id/numiz"
-        android:layout_width="100dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginStart="10dp">
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp">
 
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
+            android:layout_height="match_parent"/>
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="42dp"
-            android:fontFamily="sans-serif-medium"
-            android:gravity="center_horizontal"
-            android:text="Номер вимірювання"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:fontFamily="sans-serif-condensed"
             android:textAlignment="center"
-            android:textColor="#222" />
+            android:gravity="center_horizontal"
+            android:textColor="#0E0E0E"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Номер вимірювання" />
         <View
             android:layout_width="20dp"
             android:layout_height="1dp"
@@ -236,11 +237,13 @@
 
     <TableLayout
         android:id="@+id/num_vim"
-        android:layout_width="200dp"
+        android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_toEndOf="@+id/numiz"
-        android:layout_toRightOf="@+id/numiz">
+        android:layout_toRightOf="@+id/numiz"
+        android:layout_marginStart="10dp">
 
 
         <TableRow
@@ -249,12 +252,14 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
-            android:gravity="center_horizontal"
-            android:text="Номер вимірювання"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif-condensed"
             android:textAlignment="center"
-            android:textColor="#222" />
+            android:gravity="center_horizontal"
+            android:textColor="#0E0E0E"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Номер вимірювання"/>
 
         <View
             android:layout_width="20dp"
@@ -266,27 +271,189 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="21dp"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center_horizontal"
-                android:text="Ліву"
-                android:textAlignment="center"
-                android:textColor="#222" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:background="#333" />
 
             <TextView
-                android:layout_width="100dp"
-                android:layout_height="21dp"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center_horizontal"
-                android:text="Праву"
+                android:layout_width="198dp"
+                android:layout_height="40dp"
+                android:fontFamily="sans-serif-condensed"
                 android:textAlignment="center"
-                android:textColor="#222" />
+                android:gravity="center_horizontal"
+                android:textColor="#0E0E0E"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Ліву" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:background="#333" />
+
+            <TextView
+                android:layout_width="198dp"
+                android:layout_height="40dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:textColor="#0E0E0E"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Праву" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:background="#333" />
         </LinearLayout>
-
         <View
-            android:layout_width="20dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
+                android:id="@+id/vl1"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222"
+                android:text="0"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
+                android:id="@+id/vp1"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222"
+                android:text="0"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+        </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
+                android:id="@+id/vl2"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222"
+                android:text="r1"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
+                android:id="@+id/vp2"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222"
+                android:text="0"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+        </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
+                android:id="@+id/vl3"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222"
+                android:text="r2"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
+                android:id="@+id/vp3"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222"
+                android:text="0"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+        </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
             android:layout_height="1dp"
             android:background="#333" />
 
@@ -294,493 +461,729 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
-                android:id="@+id/vl1"
-                android:layout_width="100dp"
+            <View
+                android:layout_width="1dp"
                 android:layout_height="25dp"
-                android:background="@null"
-                android:baselineAligned="false"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
-
-            <EditText
-                android:id="@+id/vp1"
-                android:layout_width="100dp"
-                android:layout_height="25dp"
-                android:background="@null"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/vl2"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
-                android:background="@null"
-                android:baselineAligned="false"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
-
-            <EditText
-                android:id="@+id/vp2"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
-                android:background="@null"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/vl3"
-                android:layout_width="100dp"
-                android:layout_height="25dp"
-                android:background="@null"
-                android:baselineAligned="false"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
-
-            <EditText
-                android:id="@+id/vp3"
-                android:layout_width="100dp"
-                android:layout_height="25dp"
-                android:background="@null"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
+                android:background="#333" />
+            <TextView
                 android:id="@+id/vl4"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
-
-            <EditText
+                android:text="0"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
                 android:id="@+id/vp4"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
+                android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
+                android:text="0"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
         </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
                 android:id="@+id/vl5"
-                android:layout_width="100dp"
+                android:layout_width="198dp"
                 android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
-
-            <EditText
+                android:text="P1"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
                 android:id="@+id/vp5"
-                android:layout_width="100dp"
+                android:layout_width="198dp"
                 android:layout_height="25dp"
                 android:background="@null"
+                android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
+                android:text="P"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
         </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
                 android:id="@+id/vl6"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
-
-            <EditText
+                android:text="P1 + r1"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
                 android:id="@+id/vp6"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
+                android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
+                android:text="P"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
         </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
                 android:id="@+id/vl7"
-                android:layout_width="100dp"
+                android:layout_width="198dp"
                 android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
-
-            <EditText
+                android:text="P1 + r2"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
                 android:id="@+id/vp7"
-                android:layout_width="100dp"
+                android:layout_width="198dp"
                 android:layout_height="25dp"
                 android:background="@null"
+                android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
+                android:text="P"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
         </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
                 android:id="@+id/vl8"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
-
-            <EditText
+                android:text="P1"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
                 android:id="@+id/vp8"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
+                android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
+                android:text="P"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
         </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
                 android:id="@+id/vl9"
-                android:layout_width="100dp"
+                android:layout_width="198dp"
                 android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
-
-            <EditText
+                android:text="P"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
                 android:id="@+id/vp9"
-                android:layout_width="100dp"
+                android:layout_width="198dp"
                 android:layout_height="25dp"
                 android:background="@null"
+                android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
+                android:text="P1"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
         </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
                 android:id="@+id/vl10"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
-
-            <EditText
+                android:text="0"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
                 android:id="@+id/vp10"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
+                android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
+                android:text="0"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
         </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
                 android:id="@+id/vl11"
-                android:layout_width="100dp"
+                android:layout_width="198dp"
                 android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
-
-            <EditText
+                android:text="P"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
                 android:id="@+id/vp11"
-                android:layout_width="100dp"
+                android:layout_width="198dp"
                 android:layout_height="25dp"
                 android:background="@null"
+                android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
+                android:text="P1"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
         </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
                 android:id="@+id/vl12"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
-
-            <EditText
+                android:text="0"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
                 android:id="@+id/vp12"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
+                android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
+                android:text="0"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
         </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
                 android:id="@+id/vl13"
-                android:layout_width="100dp"
+                android:layout_width="198dp"
                 android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
-
-            <EditText
+                android:text="P"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
                 android:id="@+id/vp13"
-                android:layout_width="100dp"
+                android:layout_width="198dp"
                 android:layout_height="25dp"
                 android:background="@null"
+                android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
+                android:text="P1"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
         </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
                 android:id="@+id/vl14"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
-
-            <EditText
+                android:text="0"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
                 android:id="@+id/vp14"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
+                android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
+                android:text="0"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
         </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
                 android:id="@+id/vl15"
-                android:layout_width="100dp"
+                android:layout_width="198dp"
                 android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
-
-            <EditText
+                android:text="P"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
                 android:id="@+id/vp15"
-                android:layout_width="100dp"
+                android:layout_width="198dp"
                 android:layout_height="25dp"
                 android:background="@null"
+                android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
+                android:text="P1"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
         </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
                 android:id="@+id/vl16"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
-                android:background="@null"
-                android:baselineAligned="false"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
-
-            <EditText
-                android:id="@+id/vp16"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
-                android:background="@null"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/vl17"
-                android:layout_width="100dp"
+                android:layout_width="198dp"
                 android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
-
-            <EditText
-                android:id="@+id/vp17"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
+                android:text="0"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
+                android:id="@+id/vp16"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
+                android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
+                android:text="0"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
         </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
-                android:id="@+id/vl18"
-                android:layout_width="100dp"
-                android:layout_height="27dp"
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
+                android:id="@+id/vl17"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
-
-            <EditText
-                android:id="@+id/vp18"
-                android:layout_width="100dp"
-                android:layout_height="27dp"
+                android:text="P"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
+                android:id="@+id/vp17"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
+                android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
+                android:text="P1"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
         </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
+                android:id="@+id/vl18"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222"
+                android:text="0"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <TextView
+                android:id="@+id/vp18"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222"
+                android:text="0"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+        </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
     </TableLayout>
     <TableLayout
-        android:layout_width="200dp"
+        android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_toEndOf="@+id/num_vim"
         android:layout_toRightOf="@+id/num_vim" >
 
@@ -791,13 +1194,14 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
-            android:gravity="center_horizontal"
-            android:text="Відлік за шкалою"
+            android:layout_height="50dp"
+            android:fontFamily="sans-serif-condensed"
             android:textAlignment="center"
-            android:textColor="#222"
-            android:inputType="numberDecimal|numberSigned"/>
+            android:gravity="center_horizontal"
+            android:textColor="#0E0E0E"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Відлік за шкалою"/>
 
         <View
             android:layout_width="20dp"
@@ -809,29 +1213,49 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:background="#333" />
             <TextView
-                android:layout_width="100dp"
-                android:layout_height="21dp"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center_horizontal"
-                android:text="L`"
+                android:layout_width="198dp"
+                android:layout_height="40dp"
+                android:fontFamily="sans-serif-condensed"
                 android:textAlignment="center"
-                android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
+                android:gravity="center_horizontal"
+                android:textColor="#0E0E0E"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="L`"/>
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:background="#333" />
             <TextView
-                android:layout_width="100dp"
-                android:layout_height="21dp"
-                android:fontFamily="sans-serif-medium"
-                android:gravity="center_horizontal"
-                android:text="L``"
+                android:layout_width="198dp"
+                android:layout_height="40dp"
+                android:fontFamily="sans-serif-condensed"
                 android:textAlignment="center"
-                android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
+                android:gravity="center_horizontal"
+                android:textColor="#0E0E0E"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="L``"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:background="#333" />
         </LinearLayout>
 
         <View
-            android:layout_width="20dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
+
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
             android:layout_height="1dp"
             android:background="#333" />
 
@@ -839,503 +1263,926 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shl1"
-                android:layout_width="100dp"
+                android:layout_width="198dp"
                 android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
-
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shp1"
-                android:layout_width="100dp"
+                android:layout_width="198dp"
                 android:layout_height="25dp"
                 android:background="@null"
+                android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+
         </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shl2"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
-
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shp2"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
+                android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
         </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shl3"
-                android:layout_width="100dp"
+                android:layout_width="198dp"
                 android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
-
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shp3"
-                android:layout_width="100dp"
+                android:layout_width="198dp"
                 android:layout_height="25dp"
                 android:background="@null"
+                android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
         </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shl4"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
-
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shp4"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
+                android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
         </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shl5"
-                android:layout_width="100dp"
+                android:layout_width="198dp"
                 android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
-
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shp5"
-                android:layout_width="100dp"
+                android:layout_width="198dp"
                 android:layout_height="25dp"
                 android:background="@null"
+                android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
         </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shl6"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
-
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shp6"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
+                android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
         </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shl7"
-                android:layout_width="100dp"
+                android:layout_width="198dp"
                 android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
-
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shp7"
-                android:layout_width="100dp"
+                android:layout_width="198dp"
                 android:layout_height="25dp"
                 android:background="@null"
+                android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
         </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shl8"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
-
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shp8"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
+                android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
         </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shl9"
-                android:layout_width="100dp"
+                android:layout_width="198dp"
                 android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
-
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shp9"
-                android:layout_width="100dp"
+                android:layout_width="198dp"
                 android:layout_height="25dp"
                 android:background="@null"
+                android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
         </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shl10"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
-
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shp10"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
+                android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
         </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shl11"
-                android:layout_width="100dp"
+                android:layout_width="198dp"
                 android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
-
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shp11"
-                android:layout_width="100dp"
+                android:layout_width="198dp"
                 android:layout_height="25dp"
                 android:background="@null"
+                android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
         </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shl12"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
-
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shp12"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
+                android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
         </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shl13"
-                android:layout_width="100dp"
+                android:layout_width="198dp"
                 android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
-
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shp13"
-                android:layout_width="100dp"
+                android:layout_width="198dp"
                 android:layout_height="25dp"
                 android:background="@null"
+                android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
         </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shl14"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
-
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shp14"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
+                android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
         </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shl15"
-                android:layout_width="100dp"
+                android:layout_width="198dp"
                 android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
-
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shp15"
-                android:layout_width="100dp"
+                android:layout_width="198dp"
                 android:layout_height="25dp"
                 android:background="@null"
+                android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
         </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shl16"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
-                android:background="@null"
-                android:baselineAligned="false"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
-
-            <EditText
-                android:id="@+id/shp16"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
-                android:background="@null"
-                android:gravity="center_horizontal"
-                android:selectAllOnFocus="true"
-                android:textAlignment="center"
-                android:textColor="#222"
-                android:inputType="numberDecimal|numberSigned"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/shl17"
-                android:layout_width="100dp"
+                android:layout_width="198dp"
                 android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
-
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
-                android:id="@+id/shp17"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
+                android:id="@+id/shp16"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
+                android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
         </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
-                android:id="@+id/shl18"
-                android:layout_width="100dp"
-                android:layout_height="27dp"
+                android:id="@+id/shl17"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
                 android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <EditText
+                android:id="@+id/shp17"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222"
+                android:inputType="numberDecimal|numberSigned"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+        </LinearLayout>
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
+            <EditText
+                android:id="@+id/shl18"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:selectAllOnFocus="true"
+                android:textAlignment="center"
+                android:textColor="#222"
+                android:inputType="numberDecimal|numberSigned"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
             <EditText
                 android:id="@+id/shp18"
-                android:layout_width="100dp"
-                android:layout_height="27dp"
+                android:layout_width="198dp"
+                android:layout_height="25dp"
                 android:background="@null"
+                android:baselineAligned="false"
                 android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="17sp"
                 android:selectAllOnFocus="true"
                 android:textAlignment="center"
                 android:textColor="#222"
                 android:inputType="numberDecimal|numberSigned"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#333" />
         </LinearLayout>
-        <LinearLayout
-            android:id="@+id/rre"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="vertical">
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="400dp"
+            android:layout_height="1dp"
+            android:background="#333" />
 
-            <Button
-                android:id="@+id/calculate_btn"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="10dp"
-                android:text="Перевірка"
-                android:layout_marginStart="10dp" />
-        </LinearLayout>
     </TableLayout>
 
+    <LinearLayout
+        android:id="@+id/rre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/num_vim"
+        android:layout_alignStart="@+id/numiz"
+        android:layout_alignLeft="@+id/numiz"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_horizontal"
+            android:text="Еталона гіря для рівноваги: "
+            android:textAlignment="center"
+            android:textColor="#0E0E0E"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/uniq_e_tab1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_horizontal"
+            android:inputType="numberDecimal|numberSigned"
+            android:textAlignment="center"
+            android:textColor="#0E0E0E"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/calculate_btn"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="Висновок"
+            android:textColor="#333" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rre"
+        android:layout_alignStart="@+id/rre"
+        android:layout_alignLeft="@+id/rre"
+        android:layout_alignEnd="@+id/rre"
+        android:layout_alignRight="@+id/rre"
+        android:background="#333" />
 </RelativeLayout>

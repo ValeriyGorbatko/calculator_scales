@@ -12,10 +12,10 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="540dp"
+            android:layout_width="550dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Визначення основної абсолютної похибки ід розташування"
+            android:text="Визначення основної абсолютної похибки від розташування вантажу"
             android:fontFamily="sans-serif-condensed"
             android:textAlignment="center"
             android:gravity="center_horizontal"
@@ -25,7 +25,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp" />
         <View
-            android:layout_width="540dp"
+            android:layout_width="550dp"
             android:layout_height="1dp"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
@@ -71,6 +71,7 @@
         android:textAlignment="center"
         android:gravity="center_horizontal"
         android:textColor="#0E0E0E"
+        android:background="@color/bc"
         android:entries="@array/form_vag"/>
         </LinearLayout>
         <LinearLayout
@@ -99,7 +100,7 @@
                 android:textStyle="bold"/>
             <EditText
                 android:id="@+id/uniq_e_tab3"
-                android:layout_width="170dp"
+                android:layout_width="165dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginStart="5dp"
@@ -125,6 +126,7 @@
                 android:layout_marginTop="10dp"
                 android:onClick="onClickTab3"
                 android:text="Висновок"
+                android:textColor="@color/bg"
                 android:layout_marginLeft="10dp" />
 
         </LinearLayout>
@@ -361,6 +363,7 @@
             android:id="@+id/check_tab4"
             android:text="Висновок"
             android:onClick="onClickTab4"
+            android:textColor="@color/bg"
             android:layout_marginStart="10dp" />
 
     </LinearLayout>
