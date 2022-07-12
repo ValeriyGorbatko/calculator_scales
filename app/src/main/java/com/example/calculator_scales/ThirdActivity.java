@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TabHost;
 import android.widget.TabWidget;
+import android.widget.TextView;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -554,8 +555,8 @@ public class ThirdActivity extends AppCompatActivity
         for (int i = 0; i < veszchCount; i++)
         {
             int vesId = getResources().getIdentifier("ves" + (i + 1),"id", getPackageName());
-            EditText et_ves = findViewById(vesId);
-            et_ves.setText(ves[i] + "");
+            TextView tv_ves = findViewById(vesId);
+            tv_ves.setText(ves[i] + "");
 
             int zchId = getResources().getIdentifier("zch" + (i + 1),"id", getPackageName());
             EditText et_zch = findViewById(zchId);
@@ -593,7 +594,7 @@ public class ThirdActivity extends AppCompatActivity
             float factor = CheckValueByAccuracy(mgDiff[i]);
             boolean isUniqE = uniq_e_tab3 != 0;
             boolean inRange = isUniqE ? mgDiff[i] >= -uniq_e_tab3 && mgDiff[i] <= uniq_e_tab3 : factor != -1;
-            mgvmg_output[i] = isUniqE ? uniq_e_tab3 : mgDiff[i] * factor;
+            mgvmg_output[i] = isUniqE ? uniq_e_tab3 : MainActivity.GetScaleDivisionValue() * factor;
             if(inRange)
             {
                 float abs = Math.abs(mgvmg_output[i]);
@@ -855,7 +856,7 @@ public class ThirdActivity extends AppCompatActivity
     }
 
     private void SaveToFile() {
-        String ten = "#,###"; //0,00
+        String ten = "#.###"; //0,00
         DecimalFormat decimalFormatter = new DecimalFormat(ten);
 
         SimpleDateFormat dateFormatter = new SimpleDateFormat("dd.MM.yyyy");
@@ -1012,7 +1013,8 @@ public class ThirdActivity extends AppCompatActivity
 
             key = "Dzpch1";
             origin = "<w:t>" + key + "</w:t>";
-            newVal = origin.replace(key, decimalFormatter.format(sensitivity));
+            String sens = decimalFormatter.format(sensitivity);
+            newVal = origin.replace(key, sens);
             content = content.replace(origin, newVal);
 
             content = content.replace("keytable4", successContent2Tab4 ? "Придатний" : "Не придатний");

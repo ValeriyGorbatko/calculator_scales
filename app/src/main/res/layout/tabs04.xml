@@ -704,36 +704,301 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp">
         <TextView
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:text="Абсолютна похибка"
+            android:text="Границы абсолютної похибки"
             android:fontFamily="sans-serif-condensed"
             android:textAlignment="center"
             android:gravity="center_horizontal"
             android:textColor="#0E0E0E"
-            android:textSize="14sp"
+            android:textSize="16sp"
             android:textStyle="bold"/>
-        <EditText
-            android:id="@+id/uniq_e_tab6"
-            android:layout_width="170dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            android:textColor="#0E0E0E"
-            android:inputType="numberDecimal|numberSigned"/>
-        <View
-            android:layout_width="170dp"
-
-            android:layout_height="1dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:background="#333"/>
-            </LinearLayout>
+                <EditText
+                    android:id="@+id/uniq_e_tab6"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAlignment="center"
+                    android:textColor="#0E0E0E"
+                    android:gravity="center_horizontal"
+                    android:textSize="17sp"
+                    android:inputType="numberDecimal|numberSigned"/>
+                <View
+                    android:layout_width="190dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="#333"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center_horizontal"
+                        android:text="від:"
+                        android:textAlignment="center"
+                        android:textColor="#0E0E0E"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+                    <EditText
+                        android:id="@+id/pv1"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textAlignment="center"
+                        android:textColor="#0E0E0E"
+                        android:gravity="center_horizontal"
+                        android:textSize="17sp"
+                        android:inputType="numberDecimal|numberSigned"/>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#333"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center_horizontal"
+                        android:text="до:"
+                        android:textAlignment="center"
+                        android:textColor="#0E0E0E"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+                    <EditText
+                        android:id="@+id/pd1"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textAlignment="center"
+                        android:textColor="#0E0E0E"
+                        android:gravity="center_horizontal"
+                        android:textSize="17sp"
+                        android:inputType="numberDecimal|numberSigned"/>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#333"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="190dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="#333"/>
+                <EditText
+                    android:id="@+id/uniq_e_tab62"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAlignment="center"
+                    android:textColor="#0E0E0E"
+                    android:gravity="center_horizontal"
+                    android:textSize="17sp"
+                    android:inputType="numberDecimal|numberSigned"/>
+                <View
+                    android:layout_width="190dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="#333"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center_horizontal"
+                        android:text="від:"
+                        android:textAlignment="center"
+                        android:textColor="#0E0E0E"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+                    <EditText
+                        android:id="@+id/pv2"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textAlignment="center"
+                        android:textColor="#0E0E0E"
+                        android:gravity="center_horizontal"
+                        android:textSize="17sp"
+                        android:inputType="numberDecimal|numberSigned"/>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#333"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center_horizontal"
+                        android:text="до:"
+                        android:textAlignment="center"
+                        android:textColor="#0E0E0E"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+                    <EditText
+                        android:id="@+id/pd2"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textAlignment="center"
+                        android:textColor="#0E0E0E"
+                        android:gravity="center_horizontal"
+                        android:textSize="17sp"
+                        android:inputType="numberDecimal|numberSigned"/>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#333"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="190dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="#333"/>
+                <EditText
+                    android:id="@+id/uniq_e_tab63"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAlignment="center"
+                    android:textColor="#0E0E0E"
+                    android:gravity="center_horizontal"
+                    android:textSize="17sp"
+                    android:inputType="numberDecimal|numberSigned"/>
+                <View
+                    android:layout_width="190dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="#333"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center_horizontal"
+                        android:text="від:"
+                        android:textAlignment="center"
+                        android:textColor="#0E0E0E"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+                    <EditText
+                        android:id="@+id/pv3"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textAlignment="center"
+                        android:textColor="#0E0E0E"
+                        android:gravity="center_horizontal"
+                        android:textSize="17sp"
+                        android:inputType="numberDecimal|numberSigned"/>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#333"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="center_horizontal"
+                        android:text="від:"
+                        android:textAlignment="center"
+                        android:textColor="#0E0E0E"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+                    <EditText
+                        android:id="@+id/pd3"
+                        android:layout_width="54dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textAlignment="center"
+                        android:textColor="#0E0E0E"
+                        android:gravity="center_horizontal"
+                        android:textSize="17sp"
+                        android:inputType="numberDecimal|numberSigned"/>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#333"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="190dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="#333"/>
 
         <Button
             android:id="@+id/check_tab6"
@@ -750,20 +1015,19 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginTop="200dp"
-            android:layout_marginStart="70dp"
-            android:layout_marginLeft="70dp">
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp">
         <Button
             android:id="@+id/protocol_button"
             android:layout_width="250dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="10dp"
+            android:layout_height="0dp"
             android:layout_weight="1"
             android:text="Запис результата"
             android:onClick="onClick"
-            android:layout_marginStart="10dp"
             android:textSize="20sp"
             android:textStyle="bold"/>
         </LinearLayout>
     </LinearLayout>
+</LinearLayout>
 </LinearLayout>
 </LinearLayout>

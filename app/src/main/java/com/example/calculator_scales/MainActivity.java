@@ -177,7 +177,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             editor.putFloat(divisions_valid_key, Float.valueOf(in_divisions_valid.getText().toString()));
         else return false;
 
-        editor.putString(zvt_type_key, in_divisions_valid.getText().toString());
+        editor.putString(zvt_type_key, in_zvt_type.getText().toString());
         editor.putString(pidrozdil_key, in_pidrozdil.getText().toString());
         editor.putString(factory_number_key, in_factory_number.getText().toString());
         editor.putString(owner_key, in_owner.getText().toString());

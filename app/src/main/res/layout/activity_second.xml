@@ -2151,9 +2151,45 @@
             android:textColor="#0E0E0E"
             android:textSize="22sp"
             android:textStyle="bold" />
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_horizontal"
+            android:text="ліва:"
+            android:textAlignment="center"
+            android:textColor="#0E0E0E"
+            android:textSize="22sp"
+            android:textStyle="bold" />
         <EditText
-            android:id="@+id/uniq_e_tab1"
+            android:id="@+id/etal_al"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_horizontal"
+            android:inputType="numberDecimal|numberSigned"
+            android:textAlignment="center"
+            android:textColor="#0E0E0E"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_horizontal"
+            android:text="права:"
+            android:textAlignment="center"
+            android:textColor="#0E0E0E"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/etal_ap"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"

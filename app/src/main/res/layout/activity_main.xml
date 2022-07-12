@@ -238,7 +238,7 @@
         android:layout_alignRight="@+id/min_nav"
         android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
-        android:text="Мінімальне навантаження КГ"
+        android:text="Мінімальне навантаження,кг"
         android:textAlignment="center"
         android:textColor="#111"
         android:textSize="17sp" />
@@ -269,7 +269,7 @@
         android:layout_alignRight="@+id/max_nav"
         android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
-        android:text="Максимальне навантаження КГ"
+        android:text="Максимальне навантаження,кг"
         android:textAlignment="center"
         android:textColor="#111"
         android:textSize="17sp" />
@@ -297,7 +297,7 @@
         android:layout_alignRight="@+id/scale_division"
         android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
-        android:text="Ціна повірочної поділки шкали КГ"
+        android:text="Ціна повірочної поділки шкали,кг"
         android:textAlignment="center"
         android:textColor="#111"
         android:textSize="17sp" />
@@ -324,7 +324,7 @@
         android:layout_alignRight="@+id/divisions_valid"
         android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
-        android:text="Ціна поділки дійсна КГ"
+        android:text="Ціна поділки дійсна,кг"
         android:textAlignment="center"
         android:textColor="#111"
         android:textSize="17sp" />

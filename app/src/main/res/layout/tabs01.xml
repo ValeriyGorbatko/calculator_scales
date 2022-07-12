@@ -10,26 +10,25 @@
 
 
     <LinearLayout
-        android:id="@+id/c"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Визначення основної абсолютної похибки пристрою установки на нуль"
+            android:layout_width="480dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
             android:fontFamily="sans-serif-condensed"
-            android:textAlignment="center"
             android:gravity="center_horizontal"
+            android:text="Визначення основної абсолютної похибки пристрою установки на нуль"
+            android:textAlignment="center"
             android:textColor="#0E0E0E"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp" />
+            android:textStyle="bold" />
         <View
-            android:layout_width="600dp"
+            android:layout_width="480dp"
             android:layout_height="1dp"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
@@ -38,16 +37,59 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:layout_marginStart="10dp">
+            <LinearLayout
+                android:id="@+id/e"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal"
+                    android:textColor="#0E0E0E"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:text="Виміряне значення маси гир,г" />
+
+                <TextView
+                    android:id="@+id/nom_zn_gir"
+                    android:layout_width="150dp"
+                    android:layout_height="53dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal"
+                    android:textColor="#0E0E0E"/>
+                <View
+                    android:layout_width="150dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="#333"/>
+
+            </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/e"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:orientation="vertical">
             <TextView
-                android:layout_width="190dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
@@ -58,11 +100,11 @@
                 android:textColor="#0E0E0E"
                 android:textSize="17sp"
                 android:textStyle="bold"
-                android:text="Виміряне значення маси гир г" />
+                android:text="Виміряне значення маси гир,г" />
 
             <EditText
                 android:id="@+id/vim_zn_gir"
-                android:layout_width="190dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginStart="10dp"
@@ -72,7 +114,7 @@
                 android:textColor="#0E0E0E"
                 android:inputType="numberDecimal|numberSigned"/>
             <View
-                android:layout_width="190dp"
+                android:layout_width="150dp"
                 android:layout_height="1dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
@@ -87,12 +129,12 @@
             android:layout_marginTop="10dp"
             android:orientation="vertical">
             <TextView
-                android:layout_width="205dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="10dp"
-                android:text="Загальна маса додаткових гир"
+                android:text="Загальна маса додаткових гир,г"
                 android:fontFamily="sans-serif-condensed"
                 android:textAlignment="center"
                 android:gravity="center_horizontal"
@@ -102,7 +144,7 @@
 
             <EditText
                 android:id="@+id/zag_mass_dgir"
-                android:layout_width="200dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginStart="5dp"
@@ -112,19 +154,20 @@
                 android:textColor="#0E0E0E"
                 android:inputType="numberDecimal|numberSigned"/>
             <View
-                android:layout_width="190dp"
+                android:layout_width="150dp"
                 android:layout_height="1dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
                 android:background="#333"/>
 
         </LinearLayout>
-
+            </LinearLayout>
         <LinearLayout
             android:id="@+id/rre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
             android:orientation="vertical">
             <TextView
                 android:layout_width="200dp"
@@ -132,7 +175,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="10dp"
-                android:text="Абсолютна похибка"
+                android:text="Границі абсолютнї похибки"
                 android:fontFamily="sans-serif-condensed"
                 android:textAlignment="center"
                 android:gravity="center_horizontal"
@@ -178,7 +221,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
         android:orientation="vertical">
 
         <TextView
@@ -741,12 +783,12 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="10dp"
-                android:text="Абсолютна похибка"
+                android:text="Границі абсолютної похибки"
                 android:fontFamily="sans-serif-condensed"
                 android:textAlignment="center"
                 android:gravity="center_horizontal"
@@ -767,6 +809,266 @@
                 android:gravity="center_horizontal"
                 android:textSize="17sp"
                 android:inputType="numberDecimal|numberSigned"/>
+            <View
+                android:layout_width="190dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="#333"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center_horizontal"
+                    android:text="від:"
+                    android:textAlignment="center"
+                    android:textColor="#0E0E0E"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            <EditText
+                android:id="@+id/gpv1"
+                android:layout_width="59dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textAlignment="center"
+                android:textColor="#0E0E0E"
+                android:gravity="center_horizontal"
+                android:textSize="17sp"
+                android:inputType="numberDecimal|numberSigned"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:background="#333"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center_horizontal"
+                    android:text="до:"
+                    android:textAlignment="center"
+                    android:textColor="#0E0E0E"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/gpd1"
+                    android:layout_width="59dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAlignment="center"
+                    android:textColor="#0E0E0E"
+                    android:gravity="center_horizontal"
+                    android:textSize="17sp"
+                    android:inputType="numberDecimal|numberSigned"/>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#333"/>
+            </LinearLayout>
+            <View
+                android:layout_width="190dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="#333"/>
+            <EditText
+                android:id="@+id/uniq_e_tab22"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textAlignment="center"
+                android:textColor="#0E0E0E"
+                android:gravity="center_horizontal"
+                android:textSize="17sp"
+                android:inputType="numberDecimal|numberSigned"/>
+            <View
+                android:layout_width="190dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="#333"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center_horizontal"
+                    android:text="від:"
+                    android:textAlignment="center"
+                    android:textColor="#0E0E0E"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/gpv2"
+                    android:layout_width="59dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAlignment="center"
+                    android:textColor="#0E0E0E"
+                    android:gravity="center_horizontal"
+                    android:textSize="17sp"
+                    android:inputType="numberDecimal|numberSigned"/>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#333"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center_horizontal"
+                    android:text="до:"
+                    android:textAlignment="center"
+                    android:textColor="#0E0E0E"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/gpd2"
+                    android:layout_width="59dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAlignment="center"
+                    android:textColor="#0E0E0E"
+                    android:gravity="center_horizontal"
+                    android:textSize="17sp"
+                    android:inputType="numberDecimal|numberSigned"/>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#333"/>
+            </LinearLayout>
+            <View
+                android:layout_width="190dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="#333"/>
+            <EditText
+                android:id="@+id/uniq_e_tab23"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textAlignment="center"
+                android:textColor="#0E0E0E"
+                android:gravity="center_horizontal"
+                android:textSize="17sp"
+                android:inputType="numberDecimal|numberSigned"/>
+            <View
+                android:layout_width="190dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="#333"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center_horizontal"
+                    android:text="від:"
+                    android:textAlignment="center"
+                    android:textColor="#0E0E0E"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/gpv3"
+                    android:layout_width="59dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAlignment="center"
+                    android:textColor="#0E0E0E"
+                    android:gravity="center_horizontal"
+                    android:textSize="17sp"
+                    android:inputType="numberDecimal|numberSigned"/>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#333"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center_horizontal"
+                    android:text="від:"
+                    android:textAlignment="center"
+                    android:textColor="#0E0E0E"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/gpd3"
+                    android:layout_width="59dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAlignment="center"
+                    android:textColor="#0E0E0E"
+                    android:gravity="center_horizontal"
+                    android:textSize="17sp"
+                    android:inputType="numberDecimal|numberSigned"/>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#333"/>
+            </LinearLayout>
             <View
                 android:layout_width="190dp"
                 android:layout_height="1dp"

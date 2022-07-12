@@ -23,8 +23,6 @@ public class SecondActivity extends AppCompatActivity
  {
      private int count = 18;
 
-     private String[] vl = new String[count];
-     private String[] vp = new String[count];
      private float[] shl = new float[count];
      private float[] shp = new float[count];
      private float[] srv = new float[count];
@@ -41,6 +39,9 @@ public class SecondActivity extends AppCompatActivity
      private float d4;
 
      private float dP0;
+     private float dl;
+
+     private float etal_a;
 
      Button calculate_btn;
 
@@ -57,14 +58,6 @@ public class SecondActivity extends AppCompatActivity
 
         for (int i = 0; i < count; i++)
         {
-            int vlId = getResources().getIdentifier("vl" + (i + 1), "id", getPackageName());
-            EditText et_vl = findViewById(vlId);
-            et_vl.addTextChangedListener(SubscribeEditText(i, et_vl, calculate_btn, vl));
-
-            int vpId = getResources().getIdentifier("vp" + (i + 1), "id", getPackageName());
-            EditText et_vp = findViewById(vpId);
-            et_vp.addTextChangedListener(SubscribeEditText(i, et_vp, calculate_btn, vp));
-
             int shlId = getResources().getIdentifier("shl" + (i + 1), "id", getPackageName());
             EditText et_shl = findViewById(shlId);
             et_shl.addTextChangedListener(SubscribeEditText(i, et_shl, calculate_btn, shl));
@@ -73,6 +66,17 @@ public class SecondActivity extends AppCompatActivity
             EditText et_shp = findViewById(shpId);
             et_shp.addTextChangedListener(SubscribeEditText(i, et_shp, calculate_btn, shp));
         }
+
+        EditText et_etal_a = findViewById(R.id.etal_a);
+        et_etal_a.addTextChangedListener(new SecondActivity.TextChangedListener<EditText>(et_etal_a) {
+            @Override
+            public void onTextChanged(EditText target, Editable s)
+            {
+                SetButtonIdle(calculate_btn);
+                if(!MainActivity.IsValueValid(et_etal_a.getText())) etal_a = 0;
+                else etal_a = Math.abs(Float.valueOf(et_etal_a.getText().toString()));
+            }
+        });
 
         calculate_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -202,8 +206,8 @@ public class SecondActivity extends AppCompatActivity
         dL4 = srv[14] + srv[15];
         dL5 = srv[16] + srv[17];
 
-        d1 = srv[1] - ((srv[0] + srv[3]) / 2f) - Float.valueOf(vl[1]);
-        d2 = srv[2] - ((srv[0] + srv[3]) / 2f) - Float.valueOf(vl[2]);
+        d1 = srv[1] - ((srv[0] + srv[3]) / 2f) - Float.valueOf(shl[1]);
+        d2 = srv[2] - ((srv[0] + srv[3]) / 2f) - Float.valueOf(shl[2]);
 
         boolean success1 = false;
         float d1_abs = Math.abs(d1);
@@ -213,8 +217,8 @@ public class SecondActivity extends AppCompatActivity
         success1 = d1_success && d2_success;
 
 
-        d3 = srv[5] - ((srv[4] + srv[7]) / 2f) - Float.valueOf(vl[1]);
-        d4 = srv[6] - ((srv[4] + srv[7]) / 2f) - Float.valueOf(vl[2]);
+        d3 = srv[5] - ((srv[4] + srv[7]) / 2f) - Float.valueOf(shl[1]);
+        d4 = srv[6] - ((srv[4] + srv[7]) / 2f) - Float.valueOf(shl[2]);
 
         boolean success2 = false;
         float d3_abs = Math.abs(d3);
@@ -222,6 +226,8 @@ public class SecondActivity extends AppCompatActivity
         boolean d3_success = d3_abs >= 0.75f;
         boolean d4_success = d4_abs >= 0.75f;
         success2 = d3_success && d4_success;
+
+        dl = Math.abs((etal_a / 2) - (1/2) * ((srv[7] + srv[8]) - (srv[3] + srv[9])));
 
         float[] tmp = new float[] { srv[9], srv[11], srv[13], srv[15], srv[17] };
         Pair pair = GetMinMax(tmp);
@@ -280,16 +286,6 @@ public class SecondActivity extends AppCompatActivity
 
             for (int i = 0; i < count; i++)
             {
-                key = "keyLeft" + (i + 1);
-                origin = "<w:t>" + key + "</w:t>";
-                newVal = origin.replace(key, vl[i]);
-                content = content.replace(origin, newVal);
-
-                key = "keyRight" + (i + 1);
-                origin = "<w:t>" + key + "</w:t>";
-                newVal = origin.replace(key, vp[i]);
-                content = content.replace(origin, newVal);
-
                 key = "keyLt" + (i + 1);
                 origin = "<w:t>" + key + "</w:t>";
                 newVal = origin.replace(key, String.valueOf(shl[i]));
@@ -333,12 +329,12 @@ public class SecondActivity extends AppCompatActivity
 
              key = "keyRo";
              origin = "<w:t>" + key + "</w:t>";
-             newVal = origin.replace(key, String.valueOf(vl[1]));
+             newVal = origin.replace(key, String.valueOf(shl[1]));
              content = content.replace(origin, newVal);
 
              key = "keyRtw";
              origin = "<w:t>" + key + "</w:t>";
-             newVal = origin.replace(key, String.valueOf(vl[2]));
+             newVal = origin.replace(key, String.valueOf(shl[2]));
              content = content.replace(origin, newVal);
 
              key = "keyBn1";
@@ -363,7 +359,7 @@ public class SecondActivity extends AppCompatActivity
 
              key = "keyRp";
              origin = "<w:t>" + key + "</w:t>";
-             newVal = origin.replace(key, "УТОЧНИТЬ!!!");
+             newVal = origin.replace(key, String.valueOf(dl));
              content = content.replace(origin, newVal);
 
              key = "keyPl";
