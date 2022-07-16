@@ -41,7 +41,8 @@ public class SecondActivity extends AppCompatActivity
      private float dP0;
      private float dl;
 
-     private float etal_a;
+     private float etal_ap;
+     private float etal_al;
 
      Button calculate_btn;
 
@@ -67,14 +68,25 @@ public class SecondActivity extends AppCompatActivity
             et_shp.addTextChangedListener(SubscribeEditText(i, et_shp, calculate_btn, shp));
         }
 
-        EditText et_etal_a = findViewById(R.id.etal_a);
-        et_etal_a.addTextChangedListener(new SecondActivity.TextChangedListener<EditText>(et_etal_a) {
+        EditText et_etal_ap = findViewById(R.id.etal_ap);
+        et_etal_ap.addTextChangedListener(new SecondActivity.TextChangedListener<EditText>(et_etal_ap) {
             @Override
             public void onTextChanged(EditText target, Editable s)
             {
                 SetButtonIdle(calculate_btn);
-                if(!MainActivity.IsValueValid(et_etal_a.getText())) etal_a = 0;
-                else etal_a = Math.abs(Float.valueOf(et_etal_a.getText().toString()));
+                if(!MainActivity.IsValueValid(et_etal_ap.getText())) etal_ap = 0;
+                else etal_ap = Math.abs(Float.valueOf(et_etal_ap.getText().toString()));
+            }
+        });
+
+        EditText et_etal_al = findViewById(R.id.etal_al);
+        et_etal_al.addTextChangedListener(new SecondActivity.TextChangedListener<EditText>(et_etal_al) {
+            @Override
+            public void onTextChanged(EditText target, Editable s)
+            {
+                SetButtonIdle(calculate_btn);
+                if(!MainActivity.IsValueValid(et_etal_al.getText())) etal_al = 0;
+                else etal_al = Math.abs(Float.valueOf(et_etal_al.getText().toString()));
             }
         });
 
@@ -227,7 +239,11 @@ public class SecondActivity extends AppCompatActivity
         boolean d4_success = d4_abs >= 0.75f;
         success2 = d3_success && d4_success;
 
-        dl = Math.abs((etal_a / 2) - (1/2) * ((srv[7] + srv[8]) - (srv[3] + srv[9])));
+        float biggest_a = 0;
+        if(etal_al > etal_ap) biggest_a = etal_al;
+        else if(etal_ap > etal_al) biggest_a = etal_ap;
+
+        dl = biggest_a > 0 ? Math.abs((biggest_a / 2) - (1/2) * ((srv[7] + srv[8]) - (srv[3] + srv[9]))) : 0;
 
         float[] tmp = new float[] { srv[9], srv[11], srv[13], srv[15], srv[17] };
         Pair pair = GetMinMax(tmp);
@@ -362,9 +378,14 @@ public class SecondActivity extends AppCompatActivity
              newVal = origin.replace(key, String.valueOf(dl));
              content = content.replace(origin, newVal);
 
+
+             String keyPLValue = "";
+             if(etal_al > etal_ap) keyPLValue = "Ліва";
+             else if(etal_ap > etal_al) keyPLValue = "Права";
+
              key = "keyPl";
              origin = "<w:t>" + key + "</w:t>";
-             newVal = origin.replace(key, "УТОЧНИТЬ!!!");
+             newVal = origin.replace(key, keyPLValue);
              content = content.replace(origin, newVal);
 
              key = "keyNen";

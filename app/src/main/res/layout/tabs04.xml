@@ -120,15 +120,14 @@
             android:layout_height="1dp"
             android:background="#333"/>
 
-        <EditText
+        <TextView
             android:id="@+id/nz1"
             android:layout_width="170dp"
             android:layout_height="33dp"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:background="@null"
-            android:textColor="#0E0E0E"
-            android:inputType="numberDecimal|numberSigned"/>
+            android:textColor="#0E0E0E"/>
         <View
             android:layout_width="170dp"
             android:layout_marginStart="10dp"
@@ -136,15 +135,14 @@
             android:layout_height="1dp"
             android:background="#333"/>
 
-        <EditText
+        <TextView
             android:id="@+id/nz2"
             android:layout_width="170dp"
             android:layout_height="33dp"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:background="@null"
-            android:textColor="#0E0E0E"
-            android:inputType="numberDecimal|numberSigned"/>
+            android:textColor="#0E0E0E"/>
         <View
             android:layout_width="170dp"
             android:layout_height="1dp"
@@ -152,30 +150,28 @@
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:background="#333"/>
-        <EditText
+        <TextView
             android:id="@+id/nz3"
             android:layout_width="170dp"
             android:layout_height="33dp"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:background="@null"
-            android:textColor="#0E0E0E"
-            android:inputType="numberDecimal|numberSigned"/>
+            android:textColor="#0E0E0E"/>
         <View
             android:layout_width="170dp"
             android:layout_height="1dp"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:background="#333"/>
-        <EditText
+        <TextView
             android:id="@+id/nz4"
             android:layout_width="170dp"
             android:layout_height="33dp"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:background="@null"
-            android:textColor="#0E0E0E"
-            android:inputType="numberDecimal|numberSigned"/>
+            android:textColor="#0E0E0E"/>
         <View
             android:layout_width="170dp"
             android:layout_height="1dp"
@@ -183,15 +179,14 @@
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:background="#333"/>
-        <EditText
+        <TextView
             android:id="@+id/nz5"
             android:layout_width="170dp"
             android:layout_height="33dp"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:background="@null"
-            android:textColor="#0E0E0E"
-            android:inputType="numberDecimal|numberSigned"/>
+            android:textColor="#0E0E0E"/>
         <View
             android:layout_width="170dp"
             android:layout_height="1dp"
@@ -201,15 +196,14 @@
             android:background="#333"/>
 
 
-        <EditText
+        <TextView
             android:id="@+id/nz6"
             android:layout_width="170dp"
             android:layout_height="33dp"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:background="@null"
-            android:textColor="#0E0E0E"
-            android:inputType="numberDecimal|numberSigned"/>
+            android:textColor="#0E0E0E"/>
         <View
             android:layout_width="170dp"
             android:layout_height="1dp"
@@ -218,15 +212,14 @@
             android:layout_marginTop="1dp"
             android:background="#333"/>
 
-        <EditText
+        <TextView
             android:id="@+id/nz7"
             android:layout_width="170dp"
             android:layout_height="33dp"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:background="@null"
-            android:textColor="#0E0E0E"
-            android:inputType="numberDecimal|numberSigned"/>
+            android:textColor="#0E0E0E"/>
         <View
             android:layout_width="170dp"
             android:layout_height="1dp"
@@ -234,30 +227,28 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="1dp"
             android:background="#333"/>
-        <EditText
+        <TextView
             android:id="@+id/nz8"
             android:layout_width="170dp"
             android:layout_height="33dp"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:background="@null"
-            android:textColor="#0E0E0E"
-            android:inputType="numberDecimal|numberSigned"/>
+            android:textColor="#0E0E0E"/>
         <View
             android:layout_width="170dp"
             android:layout_height="1dp"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:background="#333"/>
-        <EditText
+        <TextView
             android:id="@+id/nz9"
             android:layout_width="170dp"
             android:layout_height="33dp"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:background="@null"
-            android:textColor="#0E0E0E"
-            android:inputType="numberDecimal|numberSigned"/>
+            android:textColor="#0E0E0E"/>
         <View
             android:layout_width="170dp"
             android:layout_height="1dp"
@@ -265,15 +256,14 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="1dp"
             android:background="#333"/>
-        <EditText
+        <TextView
             android:id="@+id/nz10"
             android:layout_width="170dp"
             android:layout_height="33dp"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:background="@null"
-            android:textColor="#0E0E0E"
-            android:inputType="numberDecimal|numberSigned"/>
+            android:textColor="#0E0E0E"/>
         <View
             android:layout_width="170dp"
             android:layout_height="1dp"
@@ -721,7 +711,7 @@
             android:textSize="16sp"
             android:textStyle="bold"/>
                 <EditText
-                    android:id="@+id/uniq_e_tab6"
+                    android:id="@+id/uniq_e_tab6_0"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -814,7 +804,7 @@
                     android:layout_marginLeft="10dp"
                     android:background="#333"/>
                 <EditText
-                    android:id="@+id/uniq_e_tab62"
+                    android:id="@+id/uniq_e_tab6_1"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -907,7 +897,7 @@
                     android:layout_marginLeft="10dp"
                     android:background="#333"/>
                 <EditText
-                    android:id="@+id/uniq_e_tab63"
+                    android:id="@+id/uniq_e_tab6_2"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"

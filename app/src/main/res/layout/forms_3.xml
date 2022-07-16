@@ -108,7 +108,7 @@
             android:fontFamily="sans-serif-condensed"
             android:textAlignment="center"
             android:gravity="center_horizontal"
-            android:text="Номінальне знпчення маси гир"
+            android:text="Номінальне значення маси гир"
             android:textColor="#0E0E0E"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -185,7 +185,7 @@
             android:fontFamily="sans-serif-condensed"
             android:textAlignment="center"
             android:gravity="center_horizontal"
-            android:text="Виміряне знпчення маси гир"
+            android:text="Виміряне значення маси гир"
             android:textColor="#0E0E0E"
             android:textSize="20sp"
             android:textStyle="bold"/>

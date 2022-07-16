@@ -16,6 +16,8 @@ import android.widget.TabHost;
 import android.widget.TabWidget;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -26,6 +28,7 @@ import java.lang.reflect.Array;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 public class ThirdActivity extends AppCompatActivity
 {
@@ -48,7 +51,6 @@ public class ThirdActivity extends AppCompatActivity
     private float E0_output;
 
     private float uniq_e_tab1;
-    private float uniq_e_tab2;
 
     Button btn_tab1;
     Button btn_tab2;
@@ -57,7 +59,8 @@ public class ThirdActivity extends AppCompatActivity
     EditText et_zag_mass_dgir;
 
     EditText et_uniq_e_tab1;
-    EditText et_uniq_e_tab2;
+
+    MainActivity.AccuracyRange[] accuracyData_tab2 = new MainActivity.AccuracyRange[3];
 
     boolean successContent1Tab1 = false;
     boolean successContent1Tab2 = false;
@@ -118,12 +121,10 @@ public class ThirdActivity extends AppCompatActivity
     private float[] nz1_output = new float[nzTotal];
     private float[] nz2_output = new float[nzTotal];
 
-    private float uniq_e_tab6;
-
     Button btn_tab6;
     Button btn_protocol;
 
-    EditText et_uniq_e_tab6;
+    MainActivity.AccuracyRange[] accuracyData_tab6 = new MainActivity.AccuracyRange[3];
 
     boolean successContent4Tab6 = false;
 
@@ -233,16 +234,56 @@ public class ThirdActivity extends AppCompatActivity
         };
     }
 
-    private float CheckValueByAccuracy(float value) {
-        MainActivity.AccuracyData accuracyData = MainActivity.accuracyData[MainActivity.GetAccuracyIndex()];
-        for (int a = 0; a < accuracyData.Range.length; a++)
+    private TextChangedListener<EditText> SubscribeAccuracyEditText(int index, String id, EditText editText, Button btn, MainActivity.AccuracyRange[] range) {
+        return new TextChangedListener<EditText>(editText)
         {
-            MainActivity.AccuracyRange range = accuracyData.Range[a];
-            if (value >= range.Min && value <= range.Max)
+            public void onTextChanged(EditText target, Editable s)
             {
-                return range.Factor;
+                SetButtonIdle(btn);
+                float value = 0;
+                if(MainActivity.IsValueValid(s)) value = Float.valueOf(s.toString());
+
+                if(id == "Factor")
+                {
+                    range[index].Factor = value;
+                }
+                else if(id == "Min")
+                {
+                    range[index].Min = value;
+                }
+                else if(id == "Max")
+                {
+                    range[index].Max = value;
+                }
+            }
+        };
+    }
+
+    private float CheckValueByAccuracy(float value, MainActivity.AccuracyRange[] accuracyData)
+    {
+        if(accuracyData != null && accuracyData.length > 0)
+        {
+            for (int d = 0; d < accuracyData.length; d++) {
+                MainActivity.AccuracyRange range = accuracyData[d];
+                if (value >= range.Min && value <= range.Max)
+                {
+                    return range.Factor;
+                }
             }
         }
+        else
+        {
+            MainActivity.AccuracyData defaultAccuracyData = MainActivity.accuracyData[MainActivity.GetAccuracyIndex()];
+            for (int a = 0; a < defaultAccuracyData.Range.length; a++)
+            {
+                MainActivity.AccuracyRange range = defaultAccuracyData.Range[a];
+                if (value >= range.Min && value <= range.Max)
+                {
+                    return range.Factor;
+                }
+            }
+        }
+
         return -1;
     }
 
@@ -303,6 +344,18 @@ public class ThirdActivity extends AppCompatActivity
         return pair;
     }
 
+    private boolean IsAccuracyUniq(MainActivity.AccuracyRange[] accuracyData)
+    {
+        for (int d = 0; d < accuracyData.length; d++) 
+        {
+            MainActivity.AccuracyRange range = accuracyData[d];
+            if (range.Min != 0 || range.Max != 0 || range.Factor != 0)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 
     //Content 1
     private void InitContent1() {
@@ -312,7 +365,6 @@ public class ThirdActivity extends AppCompatActivity
         et_vim_zn_gir = findViewById(R.id.vim_zn_gir);
         et_zag_mass_dgir = findViewById(R.id.zag_mass_dgir);
         et_uniq_e_tab1 = findViewById(R.id.uniq_e_tab1);
-        et_uniq_e_tab2 = findViewById(R.id.uniq_e_tab2);
 
         SetButtonIdle(btn_tab1);
         SetButtonIdle(btn_tab2);
@@ -357,16 +409,6 @@ public class ThirdActivity extends AppCompatActivity
             }
         });
 
-        et_uniq_e_tab2.addTextChangedListener(new TextChangedListener<EditText>(et_uniq_e_tab2) {
-            @Override
-            public void onTextChanged(EditText target, Editable s)
-            {
-                SetButtonIdle(btn_tab2);
-                if(!MainActivity.IsValueValid(et_uniq_e_tab2.getText())) uniq_e_tab2 = 0;
-                else uniq_e_tab2 = Math.abs(Float.valueOf(et_uniq_e_tab2.getText().toString()));
-            }
-        });
-
         btn_tab1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
@@ -392,7 +434,7 @@ public class ThirdActivity extends AppCompatActivity
         float maxVal = MainActivity.GetMaxNavValue();
         nominalValues[total - 1] = maxVal;
 
-        EditText[] nominalInputs = new EditText[total];
+        TextView[] nominalInputs = new TextView[total];
         for(int i = 0; i < nominalInputs.length; i++)
         {
             int id = getResources().getIdentifier("n" + (i + 1), "id", getPackageName());
@@ -416,6 +458,26 @@ public class ThirdActivity extends AppCompatActivity
         {
             nominalInputs[i].setText(String.valueOf(nominalValues[i]));
         }
+
+        for(int i = 0; i < accuracyData_tab2.length; i++)
+        {
+            accuracyData_tab2[i] = new MainActivity.AccuracyRange(0, 0, 0);
+        }
+
+        for(int i = 0; i < accuracyData_tab2.length; i++)
+        {
+            int uniq_e_id = getResources().getIdentifier("uniq_e_id_tab2_" + i, "id", getPackageName());
+            EditText et_uniq_e = findViewById(uniq_e_id);
+            SubscribeAccuracyEditText(i, "Factor", et_uniq_e, btn_tab2, accuracyData_tab2);
+
+            int gpv_id = getResources().getIdentifier("gpv_" + (i + 1), "id", getPackageName());
+            EditText et_gpv = findViewById(gpv_id);
+            SubscribeAccuracyEditText(i, "Min", et_gpv, btn_tab2, accuracyData_tab2);
+
+            int gpd_id = getResources().getIdentifier("gpd_" + (i + 1), "id", getPackageName());
+            EditText et_gpd = findViewById(gpd_id);
+            SubscribeAccuracyEditText(i, "Max", et_gpd, btn_tab2, accuracyData_tab2);
+        }
     }
 
     private boolean CheckContent1Tab1() {
@@ -423,7 +485,7 @@ public class ThirdActivity extends AppCompatActivity
         float L0 = (e * 10f) * 1000f;
         E0 = (l0 - L0 + ((e * 0.5f) * 1000) - dL0);
 
-        float factor = CheckValueByAccuracy(E0);
+        float factor = CheckValueByAccuracy(E0, null);
         boolean isUniqE = uniq_e_tab1 != 0;
         boolean inRange = isUniqE ? E0 >= -uniq_e_tab1 && E0 <= uniq_e_tab1 :factor != -1;
         E0_output = isUniqE ? uniq_e_tab1 : E0 * factor;
@@ -449,10 +511,10 @@ public class ThirdActivity extends AppCompatActivity
             float value = nnDiff[i];
             if(value <= 0) value = nrDiff[i];
 
-            float factor = CheckValueByAccuracy(value);
-            boolean isUniqE = uniq_e_tab2 != 0;
-            boolean inRange = isUniqE ? value >= -uniq_e_tab2 && value <= uniq_e_tab2 : factor != -1;
-            nnnr_output[i] = isUniqE ? uniq_e_tab2 : MainActivity.GetScaleDivisionValue() * factor;
+            boolean isUniq = IsAccuracyUniq(accuracyData_tab2);
+            float factor = CheckValueByAccuracy(value, isUniq ? accuracyData_tab2 : null);
+            boolean inRange = factor != -1;
+            nnnr_output[i] = isUniq ? factor : MainActivity.GetScaleDivisionValue() * factor;
             if(inRange)
             {
                 float abs = Math.abs(nnnr_output[i]);
@@ -591,14 +653,14 @@ public class ThirdActivity extends AppCompatActivity
         for (int i = 0; i < count; i++)
         {
             mgDiff[i] = vmg[i] - Math.round(MainActivity.GetMaxNavValue() / 3f);
-            float factor = CheckValueByAccuracy(mgDiff[i]);
+            float factor = CheckValueByAccuracy(Math.abs(mgDiff[i]), null);
             boolean isUniqE = uniq_e_tab3 != 0;
-            boolean inRange = isUniqE ? mgDiff[i] >= -uniq_e_tab3 && mgDiff[i] <= uniq_e_tab3 : factor != -1;
+            boolean inRange = isUniqE ? Math.abs(mgDiff[i]) >= -uniq_e_tab3 && Math.abs(mgDiff[i]) <= uniq_e_tab3 : factor != -1;
             mgvmg_output[i] = isUniqE ? uniq_e_tab3 : MainActivity.GetScaleDivisionValue() * factor;
             if(inRange)
             {
                 float abs = Math.abs(mgvmg_output[i]);
-                if(mgDiff[i] >= -abs && mgDiff[i] <= abs) successCount++;
+                if(Math.abs(mgDiff[i]) >= -abs && Math.abs(mgDiff[i]) <= abs) successCount++;
             }
         }
 
@@ -685,8 +747,8 @@ public class ThirdActivity extends AppCompatActivity
         et_diff_max.setText(String.valueOf(diff_max));
 
         //надо ли домножать...................................................................................
-        float factor1 = CheckValueByAccuracy(diff_hmax);
-        float factor2 = CheckValueByAccuracy(diff_max);
+        float factor1 = CheckValueByAccuracy(diff_hmax, null);
+        float factor2 = CheckValueByAccuracy(diff_max, null);
 
         boolean isUniqE = uniq_e_tab5 != 0;
 
@@ -703,8 +765,6 @@ public class ThirdActivity extends AppCompatActivity
     private void InitContent4() {
         btn_tab6 = findViewById(R.id.check_tab6);
         SetButtonIdle(btn_tab6);
-
-        et_uniq_e_tab6 = findViewById(R.id.uniq_e_tab6);
 
         btn_protocol = findViewById(R.id.protocol_button);
         btn_protocol.setText("Зберегти");
@@ -755,8 +815,8 @@ public class ThirdActivity extends AppCompatActivity
             nz1[i - 1] = newValue;
 
             int nzId = getResources().getIdentifier("nz" + i, "id", getPackageName());
-            EditText et_nz = findViewById(nzId);
-            et_nz.setText(String.valueOf(newValue));
+            TextView tv_nz = findViewById(nzId);
+            tv_nz.setText(String.valueOf(newValue));
         }
 
         for (int i = 1; i <= nzTotal; i++)
@@ -771,8 +831,8 @@ public class ThirdActivity extends AppCompatActivity
             nz2[i - 1] = newValue;
 
             int nzId = getResources().getIdentifier("nz" + (i + nzTotal), "id", getPackageName());
-            EditText et_nz = findViewById(nzId);
-            et_nz.setText(String.valueOf(newValue));
+            TextView tv_nz = findViewById(nzId);
+            tv_nz.setText(String.valueOf(newValue));
         }
 
         btn_tab6.setOnClickListener(new View.OnClickListener() {
@@ -789,16 +849,6 @@ public class ThirdActivity extends AppCompatActivity
             }
         });
 
-        et_uniq_e_tab6.addTextChangedListener(new TextChangedListener<EditText>(et_uniq_e_tab6) {
-            @Override
-            public void onTextChanged(EditText target, Editable s)
-            {
-                SetButtonIdle(btn_tab6);
-                if(!MainActivity.IsValueValid(et_uniq_e_tab6.getText())) uniq_e_tab6 = 0;
-                else uniq_e_tab6 = Math.abs(Float.valueOf(et_uniq_e_tab6.getText().toString()));
-            }
-        });
-
         btn_protocol.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
@@ -809,6 +859,26 @@ public class ThirdActivity extends AppCompatActivity
                 btn_protocol.setBackgroundColor(color);
             }
         });
+
+        for(int i = 0; i < accuracyData_tab6.length; i++)
+        {
+            accuracyData_tab6[i] = new MainActivity.AccuracyRange(0, 0, 0);
+        }
+
+        for(int i = 0; i < accuracyData_tab6.length; i++)
+        {
+            int uniq_e_id = getResources().getIdentifier("uniq_e_id_tab6_" + i, "id", getPackageName());
+            EditText et_uniq_e = findViewById(uniq_e_id);
+            SubscribeAccuracyEditText(i, "Factor", et_uniq_e, btn_tab6, accuracyData_tab6);
+
+            int pv_id = getResources().getIdentifier("pv_" + (i + 1), "id", getPackageName());
+            EditText et_pv = findViewById(pv_id);
+            SubscribeAccuracyEditText(i, "Min", et_pv, btn_tab6, accuracyData_tab6);
+
+            int pd_id = getResources().getIdentifier("pd_" + (i + 1), "id", getPackageName());
+            EditText et_pd = findViewById(pd_id);
+            SubscribeAccuracyEditText(i, "Max", et_pd, btn_tab6, accuracyData_tab6);
+        }
     }
 
     private boolean CheckContent4Tab6() {
@@ -821,7 +891,7 @@ public class ThirdActivity extends AppCompatActivity
             nz2Diff2[i] = nzr2[i] - nz2[i];
         }
 
-        boolean isUniqE = uniq_e_tab6 != 0;
+        boolean isUniq = IsAccuracyUniq(accuracyData_tab6);
 
         int successCount = 0;
         for (int i = 0; i < nzTotal; i++)
@@ -829,10 +899,10 @@ public class ThirdActivity extends AppCompatActivity
             float value1 = nz1Diff1[i];
             if(value1 <= 0) value1 = nz1Diff2[i];
 
-            float factor1 = CheckValueByAccuracy(value1);
+            float factor1 = CheckValueByAccuracy(value1, isUniq ? accuracyData_tab6 : null);
 
-            boolean inRange1 = isUniqE ? value1 >= -uniq_e_tab6 && value1 <= uniq_e_tab6 : factor1 != -1;
-            nz1_output[i] = isUniqE ? uniq_e_tab6 : MainActivity.GetScaleDivisionValue() * factor1;
+            boolean inRange1 = factor1 != -1;
+            nz1_output[i] = isUniq ? factor1 : MainActivity.GetScaleDivisionValue() * factor1;
             if(inRange1)
             {
                 float abs = Math.abs(nz1_output[i]);
@@ -842,9 +912,9 @@ public class ThirdActivity extends AppCompatActivity
             float value2 = nz2Diff1[i];
             if(value2 <= 0) value2 = nz2Diff2[i];
 
-            float factor2 = CheckValueByAccuracy(value2);
-            boolean inRange2 = isUniqE ? value2 >= -uniq_e_tab6 && value2 <= uniq_e_tab6 : factor2 != -1;
-            nz2_output[i] = isUniqE ? uniq_e_tab6 : MainActivity.GetScaleDivisionValue() * factor2;
+            float factor2 = CheckValueByAccuracy(value2, isUniq ? accuracyData_tab6 : null);
+            boolean inRange2 = factor2 != -1;
+            nz2_output[i] = isUniq ? factor2 : MainActivity.GetScaleDivisionValue() * factor2;
             if(inRange2)
             {
                 float abs = Math.abs(nz2_output[i]);
@@ -911,9 +981,9 @@ public class ThirdActivity extends AppCompatActivity
             content = content.replace("keyNomMass", decimalFormatter.format(nomMass1000));
 
             float vimZna = l0;
-            content = content.replace("keyVimZna", String.valueOf(vimZna));
+            content = content.replace("keyVimZna", decimalFormatter.format(vimZna));
 
-            content = content.replace("keyDodatkgir", String.valueOf(dL0));
+            content = content.replace("keyDodatkgir", decimalFormatter.format(dL0));
             content = content.replace("keyZnabsolute", decimalFormatter.format(E0));
 
             key = "Gdoap1";
@@ -929,32 +999,32 @@ public class ThirdActivity extends AppCompatActivity
             {
                 key = "kNM" + (i + 1);
                 origin = "<w:t>" + key + "</w:t>";
-                newVal = origin.replace(key, String.valueOf(nominalValues[i]));
+                newVal = origin.replace(key, decimalFormatter.format(nominalValues[i]));
                 content = content.replace(origin, newVal);
 
                 key = "keyNavant" + (i + 1);
                 origin = "<w:t>" + key + "</w:t>";
-                newVal = origin.replace(key, String.valueOf(nn[i]));
+                newVal = origin.replace(key, decimalFormatter.format(nn[i]));
                 content = content.replace(origin, newVal);
 
                 key = "keyRozvant" + (i + 1);
                 origin = "<w:t>" + key + "</w:t>";
-                newVal = origin.replace(key, String.valueOf(nr[i]));
+                newVal = origin.replace(key, decimalFormatter.format(nr[i]));
                 content = content.replace(origin, newVal);
 
                 key = "keyAbsNavant" + (i + 1);
                 origin = "<w:t>" + key + "</w:t>";
-                newVal = origin.replace(key, String.valueOf(nnDiff[i]));
+                newVal = origin.replace(key, decimalFormatter.format(nnDiff[i]));
                 content = content.replace(origin, newVal);
 
                 key = "keyAbsRozvant" + (i + 1);
                 origin = "<w:t>" + key + "</w:t>";
-                newVal = origin.replace(key, String.valueOf(nrDiff[i]));
+                newVal = origin.replace(key, decimalFormatter.format(nrDiff[i]));
                 content = content.replace(origin, newVal);
 
                 key = "Gdoap" + (i + 2);
                 origin = "<w:t>" + key + "</w:t>";
-                newVal = origin.replace(key, String.valueOf(nnnr_output[i]));
+                newVal = origin.replace(key, decimalFormatter.format(nnnr_output[i]));
                 content = content.replace(origin, newVal);
             }
             content = content.replace("keytable2", successContent1Tab2 ? "Придатний" : "Не придатний");
@@ -969,27 +1039,27 @@ public class ThirdActivity extends AppCompatActivity
                 origin = "<w:t>" + key + "</w:t>";
                 float value = 0;
                 if(i < mg.length) value = mg[i];
-                newVal = origin.replace(key, String.valueOf(value));
+                newVal = origin.replace(key, decimalFormatter.format(value));
                 content = content.replace(origin, newVal);
 
                 key = "Vzmg" + (i + 1);
                 origin = "<w:t>" + key + "</w:t>";
                 value = 0;
                 if(i < vmg.length) value = vmg[i];
-                newVal = origin.replace(key, String.valueOf(value));
+                newVal = origin.replace(key, decimalFormatter.format(value));
                 content = content.replace(origin, newVal);
 
                 key = "Zap" + (i + 1);
                 origin = "<w:t>" + key + "</w:t>";
                 value = 0;
                 if(i < mgDiff.length) value = mgDiff[i];
-                newVal = origin.replace(key, String.valueOf(value));
+                newVal = origin.replace(key, decimalFormatter.format(value));
                 content = content.replace(origin, newVal);
             }
 
             key = "Gdoap13";
             origin = "<w:t>" + key + "</w:t>";
-            newVal = origin.replace(key, String.valueOf(mgvmg_output[0]));
+            newVal = origin.replace(key, decimalFormatter.format(mgvmg_output[0]));
             content = content.replace(origin, newVal);
 
             content = content.replace("keytable3", successContent2Tab3 ? "Придатний" : "Не придатний");
@@ -1001,13 +1071,13 @@ public class ThirdActivity extends AppCompatActivity
                 key = "kNM" + (i + 17);
                 origin = "<w:t>" + key + "</w:t>";
                 float value = ves[i];
-                newVal = origin.replace(key, String.valueOf(value));
+                newVal = origin.replace(key, decimalFormatter.format(value));
                 content = content.replace(origin, newVal);
 
                 key = "Zch" + (i + 1);
                 origin = "<w:t>" + key + "</w:t>";
                 value = zch[i];
-                newVal = origin.replace(key, String.valueOf(value));
+                newVal = origin.replace(key, decimalFormatter.format(value));
                 content = content.replace(origin, newVal);
             }
 
@@ -1026,103 +1096,103 @@ public class ThirdActivity extends AppCompatActivity
                 key = "Pm" + (i + 1);
                 origin = "<w:t>" + key + "</w:t>";
                 float value = isActiveContent3 ? hmax[i] : 0;
-                newVal = origin.replace(key, String.valueOf(value));
+                newVal = origin.replace(key, decimalFormatter.format(value));
                 content = content.replace(origin, newVal);
 
                 key = "M" + (i + 1);
                 origin = "<w:t>" + key + "</w:t>";
                 value = isActiveContent3 ? max[i] : 0;
-                newVal = origin.replace(key, String.valueOf(value));
+                newVal = origin.replace(key, decimalFormatter.format(value));
                 content = content.replace(origin, newVal);
             }
 
             key = "Pm11";
             origin = "<w:t>" + key + "</w:t>";
-            newVal = origin.replace(key, String.valueOf(isActiveContent3 ? diff_hmax : 0));
+            newVal = origin.replace(key, decimalFormatter.format(isActiveContent3 ? diff_hmax : 0));
             content = content.replace(origin, newVal);
 
             key = "M11";
             origin = "<w:t>" + key + "</w:t>";
-            newVal = origin.replace(key, String.valueOf(isActiveContent3 ? diff_max : 0));
+            newVal = origin.replace(key, decimalFormatter.format(isActiveContent3 ? diff_max : 0));
             content = content.replace(origin, newVal);
 
             key = "Pm12";
             origin = "<w:t>" + key + "</w:t>";
-            newVal = origin.replace(key, String.valueOf(isActiveContent3 ? uniq_e_tab5 != 0 ? uniq_e_tab5 : _1e1 : 0));
+            newVal = origin.replace(key, decimalFormatter.format(isActiveContent3 ? uniq_e_tab5 != 0 ? uniq_e_tab5 : _1e1 : 0));
             content = content.replace(origin, newVal);
 
             key = "M12";
             origin = "<w:t>" + key + "</w:t>";
-            newVal = origin.replace(key, String.valueOf(isActiveContent3 ? uniq_e_tab5 != 0 ? uniq_e_tab5 : _1e2 : 0));
+            newVal = origin.replace(key, decimalFormatter.format(isActiveContent3 ? uniq_e_tab5 != 0 ? uniq_e_tab5 : _1e2 : 0));
             content = content.replace(origin, newVal);
 
             content = content.replace("keytable5", isActiveContent3 ? successContent3Tab5 ? "Придатний" : "Не придатний" : "Не використовується");
 
 
             //Таблица №6
-            content = content.replace("Zt1", String.valueOf(zt1));
-            content = content.replace("Zt2", String.valueOf(zt2));
+            content = content.replace("Zt1", decimalFormatter.format(zt1));
+            content = content.replace("Zt2", decimalFormatter.format(zt2));
 
             for (int i = 1; i <= nzTotal; i++)
             {
                 key = "Nzmg" + i;
                 origin = "<w:t>" + key + "</w:t>";
-                newVal = origin.replace(key, String.valueOf(nz1[i - 1]));
+                newVal = origin.replace(key, decimalFormatter.format(nz1[i - 1]));
                 content = content.replace(origin, newVal);
 
                 key = "Nzmg" + (i + nzTotal);
                 origin = "<w:t>" + key + "</w:t>";
-                newVal = origin.replace(key, String.valueOf(nz2[i - 1]));
+                newVal = origin.replace(key, decimalFormatter.format(nz2[i - 1]));
                 content = content.replace(origin, newVal);
 
                 key = "vzPn" + i;
                 origin = "<w:t>" + key + "</w:t>";
-                newVal = origin.replace(key, String.valueOf(nzn1[i - 1]));
+                newVal = origin.replace(key, decimalFormatter.format(nzn1[i - 1]));
                 content = content.replace(origin, newVal);
 
                 key = "vzPn" + (i + nzTotal);
                 origin = "<w:t>" + key + "</w:t>";
-                newVal = origin.replace(key, String.valueOf(nzn2[i - 1]));
+                newVal = origin.replace(key, decimalFormatter.format(nzn2[i - 1]));
                 content = content.replace(origin, newVal);
 
                 key = "vzPr" + i;
                 origin = "<w:t>" + key + "</w:t>";
-                newVal = origin.replace(key, String.valueOf(nzr1[i - 1]));
+                newVal = origin.replace(key, decimalFormatter.format(nzr1[i - 1]));
                 content = content.replace(origin, newVal);
 
                 key = "vzPr" + (i + nzTotal);
                 origin = "<w:t>" + key + "</w:t>";
-                newVal = origin.replace(key, String.valueOf(nzr2[i - 1]));
+                newVal = origin.replace(key, decimalFormatter.format(nzr2[i - 1]));
                 content = content.replace(origin, newVal);
 
                 key = "Zppn" + i;
                 origin = "<w:t>" + key + "</w:t>";
-                newVal = origin.replace(key, String.valueOf(nz1Diff1[i - 1]));
+                newVal = origin.replace(key, decimalFormatter.format(nz1Diff1[i - 1]));
                 content = content.replace(origin, newVal);
 
                 key = "Zppn" + (i + nzTotal);
                 origin = "<w:t>" + key + "</w:t>";
-                newVal = origin.replace(key, String.valueOf(nz2Diff1[i - 1]));
+                newVal = origin.replace(key, decimalFormatter.format(nz2Diff1[i - 1]));
                 content = content.replace(origin, newVal);
 
                 key = "Zppr" + i;
                 origin = "<w:t>" + key + "</w:t>";
-                newVal = origin.replace(key, String.valueOf(nz1Diff2[i - 1]));
+                newVal = origin.replace(key, decimalFormatter.format(nz1Diff2[i - 1]));
                 content = content.replace(origin, newVal);
 
                 key = "Zppr" + (i + nzTotal);
                 origin = "<w:t>" + key + "</w:t>";
-                newVal = origin.replace(key, String.valueOf(nz2Diff2[i - 1]));
+                newVal = origin.replace(key, decimalFormatter.format(nz2Diff2[i - 1]));
                 content = content.replace(origin, newVal);
 
                 key = "Gdoap" + (i + 13);
                 origin = "<w:t>" + key + "</w:t>";
-                newVal = origin.replace(key, String.valueOf(nz1_output[i - 1]));
+                newVal = origin.replace(key, decimalFormatter.format(nz1_output[i - 1]));
                 content = content.replace(origin, newVal);
 
                 key = "Gdoap" + (i + 13 + nzTotal);
                 origin = "<w:t>" + key + "</w:t>";
-                newVal = origin.replace(key, String.valueOf(nz2_output[i - 1]));
+                newVal = origin.replace(key, decimalFormatter.format(nz2_output[i - 1]));
                 content = content.replace(origin, newVal);
             }
             content = content.replace("keytable6", successContent4Tab6 ? "Придатний" : "Не придатний");
